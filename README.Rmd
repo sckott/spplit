@@ -1,0 +1,64 @@
+spenv
+=====
+
+[![Build Status](https://travis-ci.org/ropenscilabs/spenv.svg)](https://travis-ci.org/ropenscilabs/spenv)
+
+`spenv` - add environmental data to spatial data
+
+See the [Wiki](https://github.com/ropenscilabs/spenv/wiki) for some documentation.
+
+Package API:
+
+* `sp_mutate` - get env data for occ data input - not ready yet
+* `sp_extract_gridded` - extract env gridded data
+* `sp_extract_pt` - extract env point data
+* `sp_query` - query for env data - not ready yet
+* `find_locs` - find locations/stations/etc. based on occ data input - internal fxn used in `sp_mutate`
+
+## Install
+
+```{r eval=FALSE}
+devtools::install_github("ropenscilabs/spenv")
+```
+
+```{r}
+library("spenv")
+```
+
+## Example: pt env data
+
+```{r eval=FALSE}
+file <- system.file("examples", "obis_mola_mola.csv", package = "spenv")
+dat <- read.csv(file)
+head(dat)
+```
+
+```{r eval=FALSE}
+res <- sp_extract_pt(x = dat[1:10,], radius = 100)
+res[[1]]
+```
+
+## Example: gridded env data
+
+```{r}
+library("spocc")
+res <- occ(query = 'Mola mola', from = 'obis', limit = 200)
+res_df <- occ2df(res)
+out <- sp_extract_gridded(res_df)
+head(out)
+```
+
+Map it
+
+"map"
+
+## Contributors
+
+* Tom Webb
+* Samuel Bosch
+* Scott Chamberlain
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/spenv/issues).
+* License: MIT
