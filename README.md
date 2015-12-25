@@ -14,5 +14,6 @@ Possible workflow:
 
 ## Meta
 
+* A collaboration with [California Academy of Sciences](http://www.calacademy.org/)
 * Please [report any issues or bugs](https://github.com/ropenscilabs/spplit/issues).
 * License: MIT
