@@ -8,4 +8,6 @@ URL: https://github.com/ropenscilabs/spplit
 BugReports: https://github.com/ropenscilabs/spplit/issues
 Imports:
     spocc,
-    rbhl
+    rbhl,
+    whisker
+RoxygenNote: 5.0.1
