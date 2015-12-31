@@ -1,8 +1,8 @@
 #' Explore what data is available
 #'
-#' @export
 #' @param variable Query for a variable
 #' @param source Query for a data source
+#' @keywords internal
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_search(geometry = geom)

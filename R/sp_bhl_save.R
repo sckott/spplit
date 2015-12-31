@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param x input
+#' @param path (character) Path to save to
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ(geometry = geom, limit = 5)

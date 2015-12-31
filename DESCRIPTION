@@ -9,5 +9,6 @@ BugReports: https://github.com/ropenscilabs/spplit/issues
 Imports:
     spocc,
     rbhl,
-    whisker
+    whisker,
+    magrittr
 RoxygenNote: 5.0.1

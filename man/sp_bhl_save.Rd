@@ -8,6 +8,8 @@ sp_bhl_save(x, path = NULL)
 }
 \arguments{
 \item{x}{input}
+
+\item{path}{(character) Path to save to}
 }
 \description{
 Save OCR corpus
