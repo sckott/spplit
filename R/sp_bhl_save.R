@@ -2,7 +2,6 @@
 #'
 #' @export
 #' @param x input
-#' @param path (character) Path to save to
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ(geometry = geom, limit = 5)
@@ -10,11 +9,15 @@
 #' x <- unlist(x, FALSE)
 #' x %>% sp_bhl_save()
 #' }
-sp_bhl_save <- function(x, path = NULL) {
-  if (is.null(path)) path <- basename(tempfile(fileext = ".txt"))
-  path <- file.path(Sys.getenv("HOME"), path)
+sp_bhl_save <- function(x) {
+  # if (is.null(path)) path <- basename(tempfile(fileext = ".txt"))
+  # path <- file.path(Sys.getenv("HOME"), path)
+  x <- unlist(x, recursive = FALSE)
+  base <- gsub("-|\\s|:", "_", Sys.time())
+  dir.create(base)
   for (i in seq_along(x)) {
-    cat(x[[i]], file = path, append = TRUE)
+    ff <- file.path(base, paste0(names(x)[i], ".txt"))
+    cat(x[[i]], file = ff)
   }
-  message("ocr text written to ", path)
+  message("ocr text written to files in ", base)
 }

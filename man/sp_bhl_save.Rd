@@ -4,12 +4,10 @@
 \alias{sp_bhl_save}
 \title{Save OCR corpus}
 \usage{
-sp_bhl_save(x, path = NULL)
+sp_bhl_save(x)
 }
 \arguments{
 \item{x}{input}
-
-\item{path}{(character) Path to save to}
 }
 \description{
 Save OCR corpus
