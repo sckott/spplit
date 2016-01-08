@@ -26,7 +26,7 @@ devtools::install_github("ropenscilabs/spplit")
 library("spplit")
 ```
 
-## Example - connect GBIF species occurrence data to BHL
+## Example - connect iDigBio species occurrence data to BHL
 
 
 ```r
@@ -47,7 +47,7 @@ res %>% sp_bhl_save()
 ```
 
 ```
-## ocr text written to files in 2016_01_06_15_53_08
+## ocr text written to files in 2016_01_08_10_17_54
 ```
 
 b) Mine the text
@@ -55,6 +55,13 @@ b) Mine the text
 
 ```r
 library("tm")
+```
+
+```
+## Loading required package: NLP
+```
+
+```r
 src <- VectorSource(unlist(res, use.names = FALSE))
 corp <- VCorpus(src)
 corp <- tm_map(corp, removeWords, stopwords("english"))
