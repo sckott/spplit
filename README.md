@@ -1,6 +1,8 @@
 spplit
 ======
 
+
+
 [![Build Status](https://travis-ci.org/ropenscilabs/spplit.svg?branch=master)](https://travis-ci.org/ropenscilabs/spplit)
 
 `spplit` - connect species occurrence data to literature
@@ -46,22 +48,11 @@ a) Save text to disk (or any database, etc.)
 res %>% sp_bhl_save()
 ```
 
-```
-## ocr text written to files in 2016_01_08_10_17_54
-```
-
 b) Mine the text
 
 
 ```r
 library("tm")
-```
-
-```
-## Loading required package: NLP
-```
-
-```r
 src <- VectorSource(unlist(res, use.names = FALSE))
 corp <- VCorpus(src)
 corp <- tm_map(corp, removeWords, stopwords("english"))
@@ -69,13 +60,10 @@ corp <- tm_map(corp, stripWhitespace)
 corp <- tm_map(corp, removePunctuation)
 tdm <- TermDocumentMatrix(corp)
 findFreqTerms(tdm, lowfreq = 10)
-```
-
-```
-##  [1] "328"        "albizia"    "bot"        "brown"      "fig"       
-##  [6] "genera"     "java"       "key"        "long"       "lophantha" 
-## [11] "malesia"    "merr"       "new"        "non"        "schefflera"
-## [16] "species"    "the"        "tubers"
+#>  [1] "328"        "albizia"    "bot"        "brown"      "fig"       
+#>  [6] "genera"     "java"       "key"        "long"       "lophantha" 
+#> [11] "malesia"    "merr"       "new"        "non"        "schefflera"
+#> [16] "species"    "the"        "tubers"
 ```
 
 ## Meta
@@ -83,3 +71,5 @@ findFreqTerms(tdm, lowfreq = 10)
 * A collaboration with [California Academy of Sciences](http://www.calacademy.org/)
 * Please [report any issues or bugs](https://github.com/ropenscilabs/spplit/issues)
 * License: MIT
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+
