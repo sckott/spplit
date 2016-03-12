@@ -1,7 +1,15 @@
 language: r
-sudo: required
-before_install:
-- sudo apt-get install libv8-dev
+sudo: false
+cache: packages
+
+addons:
+  apt:
+    packages:
+      - libv8-dev
+
 notifications:
+  email:
+    on_success: change
+    on_failure: change    
   slack:
     secure: ZPo6IGe//8es/9NG7hbYAIPbAXYVgPFDMpN0/mUK2VaAi6ZimNuNzDpMiTama/5ITmt3/tu1fq93+VHgVsJhtlEtRnlzl7/pP1Mc+XdJUJJfoCMS4e85/L7MzMkv/3HLGbNlElJgaYy4eOgikxXNzDo87wzWHIKNp77Iv2L7eAy66KzBx5eWZ4nhStO5JtS/obZ+zxpjohUm/lEgJG7247X4fHcIT2dVj5AEOSyyF93XjyB+Fi64TrF4DvkrlTZcpi7QgdzhNhyiT4ZFKCnWHynlVKqRmBHYNX7x6MVmuXabsjL+iI9Tbt9HUHRRGygmbhIHXLMOHwn/hMxjVGnYcjFlEsg8nmMlFyEMvdq5xjvCR41QZwxvfYr+PQGZySbOWo2SJ5RYKvgOq3SKyYycFypF+Aj5Kpe/iXyoHesefsRAEBO5jSl0wCEKDzdpnqIuQ8PQ2yMQvj+i+heVHgS9u0xdaUvxGGbY43U/7MMuknl/IO4UB/y2pNOfB4v4ryhwYJU6mabrZ/hcUMmMVHzy2e27waeQFXlYVmQIpB8XkaCQRCd3hQIDR7q0Xv1VJrJ1R2s/g9TP4uRwmjv5I1AapwFFvjDAzrwURSPTpq0Iui5M0Dx7w/hvCSm6nMZVv1y4D04Cw/RLjXxRImQOnzTpb9FAxd5ZgavEMaN9iISYP7Y=
