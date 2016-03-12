@@ -9,16 +9,20 @@ viewer(input = NULL, output = NULL, browse = TRUE)
 \arguments{
 \item{input}{Input}
 
-\item{output}{Path and file name for output file. If NULL, a temp file is used.}
+\item{output}{Path and file name for output file. If \code{NULL}, a temp file is used.}
 
 \item{browse}{Browse file in your default browse immediately after file creation.
-If FALSE, the file is written, but not opened.}
+If \code{FALSE}, the file is written, but not opened.}
 }
 \description{
 Browse highlighted fragments in your default browser
 }
 \examples{
 \dontrun{
+geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+res <- sp_occ(geometry = geom)
+x <- res \%>\% sp_list() \%>\% sp_bhl_meta()
+out <- x[1:3] \%>\% sp_bhl_ocr
 viewer(out)
 }
 }

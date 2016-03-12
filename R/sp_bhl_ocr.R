@@ -10,8 +10,8 @@
 #' x[1:3] %>% sp_bhl_ocr
 #' }
 sp_bhl_ocr <- function(x) {
-  lapply(x, function(w) {
+  structure(lapply(x, function(w) {
     ids <- w$pages$PageID
     setNames(lapply(ids, bhl_getpageocrtext), ids)
-  })
+  }), class = "bhl_ocr")
 }

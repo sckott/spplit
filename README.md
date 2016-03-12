@@ -45,7 +45,7 @@ a) Save text to disk (or any database, etc.)
 
 
 ```r
-res %>% sp_bhl_save()
+res %>% sp_bhl_save(dir_path = tempdir())
 ```
 
 b) Mine the text
@@ -65,6 +65,21 @@ findFreqTerms(tdm, lowfreq = 10)
 #> [11] "malesia"    "merr"       "new"        "non"        "schefflera"
 #> [16] "species"    "the"        "tubers"
 ```
+
+## Viewer
+
+there's a tool for visualizing results from OCR. It's still a work in progress.
+
+
+```r
+geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+res <- sp_occ(geometry = geom)
+x <- res %>% sp_list() %>% sp_bhl_meta()
+out <- x[1:3] %>% sp_bhl_ocr
+viewer(out)
+```
+
+![image](inst/img/viewer_eg1.png)
 
 ## Meta
 
