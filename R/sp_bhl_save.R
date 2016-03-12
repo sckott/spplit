@@ -2,7 +2,7 @@
 #'
 #' @export
 #' @param x input
-#' @param dir base directory to put files into. Default: \code{.}, current working directory
+#' @param dir_path base directory to put files into. Default: \code{.}, current working directory
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ(geometry = geom, limit = 5)

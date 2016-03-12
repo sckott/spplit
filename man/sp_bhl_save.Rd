@@ -9,7 +9,7 @@ sp_bhl_save(x, dir_path = ".")
 \arguments{
 \item{x}{input}
 
-\item{dir}{base directory to put files into. Default: \code{.}, current working directory}
+\item{dir_path}{base directory to put files into. Default: \code{.}, current working directory}
 }
 \description{
 Save OCR corpus
