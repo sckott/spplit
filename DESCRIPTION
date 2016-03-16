@@ -1,11 +1,12 @@
 Package: spplit
 Title: Find Related Literature Data For Species Occurrences
 Description: Find related literature data for species occurrences.
-Version: 0.0.1.9300
+Version: 0.0.1.9390
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
 URL: https://github.com/ropenscilabs/spplit
 BugReports: https://github.com/ropenscilabs/spplit/issues
+LazyData: true
 Imports:
     spocc,
     rbhl,

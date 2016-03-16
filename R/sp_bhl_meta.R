@@ -12,15 +12,19 @@ sp_bhl_meta <- function(x) {
   out <- list()
   for (i in seq_along(x)) {
     # search to get namebankid
-    z <- bhl_namesearch(name = x[[i]])
-    # get BHL pages with that namebankid
-    yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'])
-    # get page details for each result
-    out[[i]] <- lapply(yy$data$Titles.Items, function(z) {
-      pgs <- do.call("rbind.data.frame", z$Pages)
-      z$Pages <- NULL
-      list(data = z, pages = pgs)
-    })
+    z <- tryCatch(bhl_namesearch(name = x[[i]]), error = function(e) e)
+    if (z$data[1, 'NameBankID'] == "" || inherits(z, "error")) {
+      out[[i]] <- NULL
+    } else {
+      # get BHL pages with that namebankid
+      yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'])
+      # get page details for each result
+      out[[i]] <- lapply(yy$data$Titles.Items, function(z) {
+        pgs <- do.call("rbind.data.frame", z$Pages)
+        z$Pages <- NULL
+        list(data = z, pages = pgs)
+      })
+    }
   }
-  unlist(out, recursive = FALSE)
+  unlist(spcl(out), recursive = FALSE)
 }

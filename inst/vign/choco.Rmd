@@ -1,0 +1,26 @@
+Spiders in Choco
+================
+
+load WKT string defining Choco, note this may not be very precise
+
+```{r}
+wkt <- readLines(system.file("examples", "choco.txt", package = "spplit"))
+```
+
+xxxx
+
+```{r}
+# FIXME: need to also allow specify taxonomic query
+res <- sp_occ(geometry = wkt, limit = 1000)
+res %>% sp_list()
+x <- res %>% sp_list() %>% sp_bhl_meta()
+ocred <- x[1:10] %>% sp_bhl_ocr
+ocred %>% sp_bhl_save()
+#' #res %>% sp_list() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
+```
+
+```{r}
+library("httr")
+res <- sp_occ(geometry = wkt, limit = 100, idig_args = c(class = 'arachnida'))
+```
+

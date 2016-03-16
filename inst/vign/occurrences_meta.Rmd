@@ -1,0 +1,46 @@
+Get metadata on CAS datasets from different occurrence data providers
+
+## setup
+
+```{r}
+library("dplyr")
+library("rgbif")
+```
+
+## Dataset keys for CAS
+
+### GBIF
+
+```{r}
+x <- rgbif::datasets(query = "CAS")
+dat <- x$data[grep("^CAS", x$data$title), ]
+```
+
+the keys
+
+```{r}
+dat$key
+```
+
+in context
+
+```{r}
+dat %>% 
+  select(title, key, doi)
+```
+
+### iDigBio
+
+There's no easy way to get iDigBio dataset identifers from their API, so we've included
+a dataset in the package with the identifiers for each dataset - some datasets have 
+many identifiers.
+
+```{r}
+idigbio_recordsets
+```
+
+just botany
+
+```{r}
+idigbio_recordsets$Botany
+```

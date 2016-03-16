@@ -7,15 +7,24 @@
 sp_list(x)
 }
 \arguments{
-\item{x}{input}
+\item{x}{Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}}
 }
 \description{
 Get a species list
 }
+\details{
+only accepts objects of class \code{occdat} right now
+}
 \examples{
 \dontrun{
+# idigbio
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ(geometry = geom)
+res <- sp_occ_idigbio(geometry = geom)
+res \%>\% sp_list()
+
+# gbif
+geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+res <- sp_occ_gbif(geometry = geom)
 res \%>\% sp_list()
 }
 }

@@ -3,3 +3,5 @@
 .RData
 cache/
 usecases.md
+/inst/ignore/*
+
