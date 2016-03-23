@@ -5,10 +5,12 @@
 #' @param geometry WKT or bounding box, optional
 #' @param limit (integer) Number results to return
 #' @param cas_coll (character) CAS collection name OR a collection code. See Details.
-#' @param args additional args to idigbio, see xxxx
-#' @param ... Curl options passed to \code{\link[httr]{GET}}
+#' @param args additional args to GBIF, see \code{\link[rgbif]{occ_search}} for
+#' the options. Any parameters you can pass to \code{occ_search} you can pass to
+#' this parameter.
+#' @param ... Further options passed to \code{\link[spocc]{occ}}
 #' @details This has hard-coded internal settings to get data from the
-#' Cal Academy of Sciences collections within iDigBio
+#' Cal Academy of Sciences collections within GBIF
 #'
 #' @section cas_coll options:
 #' \itemize{

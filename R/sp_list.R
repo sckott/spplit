@@ -2,7 +2,8 @@
 #'
 #' @export
 #' @param x Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}
-#' @details only accepts objects of class \code{occdat} right now
+#' @details only accepts objects of class \code{occdatind} right now
+#' @return gives a character vector of unique taxon list
 #' @examples \dontrun{
 #' # idigbio
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'

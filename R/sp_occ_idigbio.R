@@ -5,8 +5,10 @@
 #' @param geometry WKT or bounding box, optional
 #' @param limit (integer) Number results to return
 #' @param cas_coll (character) CAS collection name OR a collection code. See Details.
-#' @param args additional args to idigbio, see xxxx
-#' @param ... Curl options passed to \code{\link[httr]{GET}}
+#' @param args additional args to iDigBio, see
+#' \url{https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields} and
+#' \url{https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format}
+#' @param ... Further options passed to \code{\link[spocc]{occ}}
 #' @details This has hard-coded internal settings to get data from the
 #' Cal Academy of Sciences collections within iDigBio
 #'
@@ -32,19 +34,26 @@
 #' #res %>% sp_list() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
 #'
 #' # geometry and class arachnida
-#' sp_occ_idigbio(geometry = geom, args = c(class='arachnida'))
+#' sp_occ_idigbio(geometry = geom, args = c(order = 'Asterales'))
+#' sp_occ_idigbio(geometry = geom, args = c(order = 'squamata'), cas_coll = "herpetology")
 #'
 #' # just class arachnida - FIXME, no results
-#' # sp_occ_idigbio(args = c(class='arachnida'))
+#' library("httr")
+#' # sp_occ_idigbio(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 #'
 #' # specify CAS collection (default: botany)
 #' sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
+#' sp_occ_idigbio(geometry = geom, cas_coll = "botany")
+#' sp_occ_idigbio(geometry = geom, cas_coll = "herpetology")
+#' sp_occ_idigbio(geometry = geom, cas_coll = "all")
 #' }
 sp_occ_idigbio <- function(query = NULL, geometry = NULL, limit = 10,
                            cas_coll = "botany", args = NULL, ...) {
 
-  cas_coll <- match.arg(cas_coll, names(idigbio_recordsets), several.ok = TRUE)
-  rsets <- idigbio_recordsets[[cas_coll]]
+  cas_coll <- match.arg(cas_coll, c("all", names(idigbio_recordsets)), several.ok = TRUE)
+  if (cas_coll == "all") cas_coll <- names(idigbio_recordsets)
+  rsets <- unname(unlist(idigbio_recordsets[cas_coll]))
+
   occ(query = query, geometry = geometry, limit = limit, from = "idigbio",
       idigbioopts =
         list(rq = c(list(recordset = rsets), args) ), ...)$idigbio

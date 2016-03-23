@@ -16,9 +16,11 @@ sp_occ_idigbio(query = NULL, geometry = NULL, limit = 10,
 
 \item{cas_coll}{(character) CAS collection name OR a collection code. See Details.}
 
-\item{args}{additional args to idigbio, see xxxx}
+\item{args}{additional args to iDigBio, see
+\url{https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields} and
+\url{https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format}}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Further options passed to \code{\link[spocc]{occ}}}
 }
 \description{
 Search for occurrences in iDigBio
@@ -52,13 +54,18 @@ ocred \%>\% sp_bhl_save()
 #res \%>\% sp_list() \%>\% sp_bhl_meta() \%>\% sp_bhl_ocr \%>\% sp_bhl_save()
 
 # geometry and class arachnida
-sp_occ_idigbio(geometry = geom, args = c(class='arachnida'))
+sp_occ_idigbio(geometry = geom, args = c(order = 'Asterales'))
+sp_occ_idigbio(geometry = geom, args = c(order = 'squamata'), cas_coll = "herpetology")
 
 # just class arachnida - FIXME, no results
-# sp_occ_idigbio(args = c(class='arachnida'))
+library("httr")
+# sp_occ_idigbio(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 
 # specify CAS collection (default: botany)
 sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
+sp_occ_idigbio(geometry = geom, cas_coll = "botany")
+sp_occ_idigbio(geometry = geom, cas_coll = "herpetology")
+sp_occ_idigbio(geometry = geom, cas_coll = "all")
 }
 }
 

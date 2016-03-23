@@ -16,16 +16,18 @@ sp_occ_gbif(query = NULL, geometry = NULL, limit = 10,
 
 \item{cas_coll}{(character) CAS collection name OR a collection code. See Details.}
 
-\item{args}{additional args to idigbio, see xxxx}
+\item{args}{additional args to GBIF, see \code{\link[rgbif]{occ_search}} for
+the options. Any parameters you can pass to \code{occ_search} you can pass to
+this parameter.}
 
-\item{...}{Curl options passed to \code{\link[httr]{GET}}}
+\item{...}{Further options passed to \code{\link[spocc]{occ}}}
 }
 \description{
 Search for occurrences in GBIF
 }
 \details{
 This has hard-coded internal settings to get data from the
-Cal Academy of Sciences collections within iDigBio
+Cal Academy of Sciences collections within GBIF
 }
 \section{cas_coll options}{
 

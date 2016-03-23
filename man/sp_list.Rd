@@ -9,11 +9,14 @@ sp_list(x)
 \arguments{
 \item{x}{Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}}
 }
+\value{
+gives a character vector of unique taxon list
+}
 \description{
 Get a species list
 }
 \details{
-only accepts objects of class \code{occdat} right now
+only accepts objects of class \code{occdatind} right now
 }
 \examples{
 \dontrun{
