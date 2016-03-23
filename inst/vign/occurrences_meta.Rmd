@@ -1,3 +1,19 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{spplit dataset metadata}
+%\VignetteEncoding{UTF-8}
+-->
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+	comment = "#>",
+	collapse = TRUE,
+	warning = FALSE,
+	message = FALSE
+)
+```
+
+
 Get metadata on CAS datasets from different occurrence data providers
 
 ## setup
@@ -29,6 +45,8 @@ dat %>%
   select(title, key, doi)
 ```
 
+> the CAS dataset identifiers are also included in this package, see ?gbif_datasets
+
 ### iDigBio
 
 There's no easy way to get iDigBio dataset identifers from their API, so we've included
@@ -42,5 +60,5 @@ idigbio_recordsets
 just botany
 
 ```{r}
-idigbio_recordsets$Botany
+idigbio_recordsets$botany
 ```

@@ -12,9 +12,15 @@ Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrme
 URL: https://github.com/ropenscilabs/spplit
 BugReports: https://github.com/ropenscilabs/spplit/issues
 LazyData: true
+VignetteBuilder: knitr
 Imports:
     spocc (>= 0.4.5.9800),
     rbhl,
     whisker,
     magrittr
+Suggests:
+    roxygen2 (>= 5.0.1),
+    knitr,
+    testthat,
+    rgbif (>= 0.9.2.9740)
 RoxygenNote: 5.0.1

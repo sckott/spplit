@@ -1,0 +1,112 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{spplit dataset metadata}
+%\VignetteEncoding{UTF-8}
+-->
+
+
+
+
+Get metadata on CAS datasets from different occurrence data providers
+
+## setup
+
+
+```r
+library("dplyr")
+library("rgbif")
+```
+
+## Dataset keys for CAS
+
+### GBIF
+
+
+```r
+x <- rgbif::datasets(query = "CAS")
+dat <- x$data[grep("^CAS", x$data$title), ]
+```
+
+the keys
+
+
+```r
+dat$key
+#> [1] "14f3151a-e95d-493c-a40d-d9938ef62954"
+#> [2] "44bcde48-ac71-46f2-bf73-24fc3c008b6c"
+#> [3] "6ce7290f-47f6-4046-8356-371f5b6749df"
+#> [4] "4f29b6ab-20c0-4479-8795-4915bedcebd1"
+#> [5] "cece4fc2-1fec-4bb5-a335-7252548e3f0b"
+#> [6] "f934f8e2-32ca-46a7-b2f8-b032a4740454"
+#> [7] "5d6c10bd-ea31-4363-8b79-58c96d859f5b"
+```
+
+in context
+
+
+```r
+dat %>% 
+  select(title, key, doi)
+#>                            title                                  key
+#> 7           CAS Entomology (ENT) 14f3151a-e95d-493c-a40d-d9938ef62954
+#> 9  CAS Invertebrate Zoology (IZ) 44bcde48-ac71-46f2-bf73-24fc3c008b6c
+#> 10           CAS Mammalogy (MAM) 6ce7290f-47f6-4046-8356-371f5b6749df
+#> 11         CAS Ornithology (ORN) 4f29b6ab-20c0-4479-8795-4915bedcebd1
+#> 12        CAS Herpetology (HERP) cece4fc2-1fec-4bb5-a335-7252548e3f0b
+#> 13              CAS Botany (BOT) f934f8e2-32ca-46a7-b2f8-b032a4740454
+#> 14         CAS Ichthyology (ICH) 5d6c10bd-ea31-4363-8b79-58c96d859f5b
+#>                    doi
+#> 7  doi:10.15468/3ibpmo
+#> 9  doi:10.15468/tiac99
+#> 10 doi:10.15468/dhbozg
+#> 11 doi:10.15468/ozz2u5
+#> 12 doi:10.15468/bvoyqy
+#> 13 doi:10.15468/7gudyo
+#> 14 doi:10.15468/efh2ib
+```
+
+> the CAS dataset identifiers are also included in this package, see ?gbif_datasets
+
+### iDigBio
+
+There's no easy way to get iDigBio dataset identifers from their API, so we've included
+a dataset in the package with the identifiers for each dataset - some datasets have 
+many identifiers.
+
+
+```r
+idigbio_recordsets
+#> $entomology
+#> [1] "87c45c90-ba1d-409e-a9d7-9baf5a5cbb1c"
+#> [2] "ded380b5-1ba2-4089-8e0c-0aa1b4140785"
+#> 
+#> $herpetology
+#> [1] "51b958bb-9d5f-48d7-9a97-e372c0c747c3"
+#> 
+#> $ichthyology
+#> [1] "beb74dc2-22ea-49e4-b1e3-bedb8e06e8f2"
+#> 
+#> $`invertebrate zoology & geology`
+#> [1] "bd61c458-b865-4b05-9f1f-735c49066e55"
+#> 
+#> $ornithology
+#> [1] "b8cbed64-5126-46bd-97aa-43627743aba7"
+#> 
+#> $mammalogy
+#> [1] "14a8f79f-eab7-48da-ad50-bda142703820"
+#> 
+#> $botany
+#> [1] "1ffce054-8e3e-4209-9ff4-c26fa6c24c2f"
+#> [2] "8dc14464-57b3-423e-8cb0-950ab8f36b6f"
+#> [3] "26f7cbde-fbcb-4500-80a9-a99daa0ead9d"
+```
+
+just botany
+
+
+```r
+idigbio_recordsets$botany
+#> [1] "1ffce054-8e3e-4209-9ff4-c26fa6c24c2f"
+#> [2] "8dc14464-57b3-423e-8cb0-950ab8f36b6f"
+#> [3] "26f7cbde-fbcb-4500-80a9-a99daa0ead9d"
+```
