@@ -16,10 +16,12 @@ viewer <- function(input=NULL, output=NULL, browse=TRUE) {
   UseMethod("viewer")
 }
 
+#' @export
 viewer.default <- function(input=NULL, output=NULL, browse=TRUE) {
   stop(sprintf("input of class '%s' not supported", class(input)), call. = FALSE)
 }
 
+#' @export
 viewer.bhl_ocr <- function(input=NULL, output=NULL, browse=TRUE) {
 
   if (is.null(input)) {

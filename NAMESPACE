@@ -2,6 +2,8 @@
 
 S3method(sp_list,default)
 S3method(sp_list,occdatind)
+S3method(viewer,bhl_ocr)
+S3method(viewer,default)
 export("%>%")
 export(sp_bhl_meta)
 export(sp_bhl_ocr)
