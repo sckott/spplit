@@ -4,4 +4,5 @@
 cache/
 usecases.md
 /inst/ignore/*
-
+/inst/vign/choco.Rmd
+/inst/examples/choco.txt
