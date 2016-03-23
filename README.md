@@ -18,8 +18,11 @@ Possible workflow:
 
 ## Install
 
+install dev versions of `rgbif` and `spocc` first, then install `spplit`
+
 
 ```r
+devtools::install_github(c("ropensci/rgbif@wkt-polys", "ropensci/spocc"))
 devtools::install_github("ropenscilabs/spplit")
 ```
 
@@ -33,7 +36,7 @@ library("spplit")
 
 ```r
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ(geometry = geom, limit = 3) %>% 
+res <- sp_occ_idigbio(geometry = geom, limit = 3) %>% 
   sp_list() %>% 
   sp_bhl_meta() %>% .[1:3] %>% 
   sp_bhl_ocr()
