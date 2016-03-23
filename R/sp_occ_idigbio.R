@@ -31,7 +31,11 @@
 #' ocred %>% sp_bhl_save()
 #' #res %>% sp_list() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
 #'
+#' # geometry and class arachnida
 #' sp_occ_idigbio(geometry = geom, args = c(class='arachnida'))
+#'
+#' # just class arachnida - FIXME, no results
+#' # sp_occ_idigbio(args = c(class='arachnida'))
 #'
 #' # specify CAS collection (default: botany)
 #' sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
@@ -43,6 +47,6 @@ sp_occ_idigbio <- function(query = NULL, geometry = NULL, limit = 10,
   rsets <- idigbio_recordsets[[cas_coll]]
   occ(query = query, geometry = geometry, limit = limit, from = "idigbio",
       idigbioopts =
-        list(rq = c(list(recordset = rsets), args) ), ...)
+        list(rq = c(list(recordset = rsets), args) ), ...)$idigbio
 }
 

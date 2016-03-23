@@ -39,11 +39,13 @@ Cal Academy of Sciences collections within iDigBio
  \item botany
 }
 
-OR a recordset, see \code{\link{gbif_datasets}}
+OR a dataset key, see \code{\link{gbif_datasets}}
 }
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+geom <- 'POLYGON((30.1 10.1, 10 20, 20 60, 60 60, 30.1 10.1))'
+
 res <- sp_occ_gbif(geometry = geom)
 res \%>\% sp_list()
 x <- res \%>\% sp_list() \%>\% sp_bhl_meta()
@@ -52,9 +54,16 @@ ocred \%>\% sp_bhl_save()
 #res \%>\% sp_list() \%>\% sp_bhl_meta() \%>\% sp_bhl_ocr \%>\% sp_bhl_save()
 
 sp_occ_gbif(geometry = geom, args = c(basisOfRecord = 'PRESERVED_SPECIMEN'))
+sp_occ_gbif(geometry = geom, args = c(basisOfRecord = 'OBSERVATION'))
+sp_occ_gbif(geometry = geom, args = c(basisOfRecord = 'HUMAN_OBSERVATION'))
 
 # specify CAS collection (default: botany)
 sp_occ_gbif(geometry = geom, cas_coll = "entomology")
+## many
+res <- sp_occ_gbif(cas_coll = c("entomology", "botany"))
+res$gbif$data
+## all
+sp_occ_gbif(cas_coll = "all")
 }
 }
 

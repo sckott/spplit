@@ -24,12 +24,18 @@ sp_list.default <- function(x) {
 }
 
 #' @export
-sp_list.occdat <- function(x) {
+sp_list.occdatind <- function(x) {
+  # spname <- switch(
+  #   attributes(x)$searched,
+  #   idigbio = paste(x$idigbio$data[[1]]$genus, x$idigbio$data[[1]]$specificepithet),
+  #   gbif = paste(x$gbif$data[[1]]$genus, x$gbif$data[[1]]$specificEpithet)
+  # )
   spname <- switch(
-    attributes(x)$searched,
-    idigbio = paste(x$idigbio$data[[1]]$genus, x$idigbio$data[[1]]$specificepithet),
-    gbif = paste(x$gbif$data[[1]]$genus, x$gbif$data[[1]]$specificEpithet)
+    x$meta$source,
+    idigbio = paste(x$data[[1]]$genus, x$data[[1]]$specificepithet),
+    gbif = paste(x$data[[1]]$genus, x$data[[1]]$specificEpithet)
   )
+
   spname <- sort(unique(spname))
   tolower(spname[!vapply(spname, function(x) grepl("NA", x), logical(1))])
 }

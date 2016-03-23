@@ -51,7 +51,11 @@ ocred <- x[1:10] \%>\% sp_bhl_ocr
 ocred \%>\% sp_bhl_save()
 #res \%>\% sp_list() \%>\% sp_bhl_meta() \%>\% sp_bhl_ocr \%>\% sp_bhl_save()
 
+# geometry and class arachnida
 sp_occ_idigbio(geometry = geom, args = c(class='arachnida'))
+
+# just class arachnida - FIXME, no results
+# sp_occ_idigbio(args = c(class='arachnida'))
 
 # specify CAS collection (default: botany)
 sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
