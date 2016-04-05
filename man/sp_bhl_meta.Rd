@@ -4,10 +4,12 @@
 \alias{sp_bhl_meta}
 \title{Get BHL metadata based on a species list}
 \usage{
-sp_bhl_meta(x)
+sp_bhl_meta(x, key = NULL)
 }
 \arguments{
 \item{x}{input}
+
+\item{key}{api key, optional}
 }
 \description{
 Get BHL metadata based on a species list
