@@ -18,8 +18,7 @@ Save OCR corpus
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 5)
-x <- res \%>\% sp_list() \%>\% sp_bhl_meta() \%>\% .[1:3] \%>\% sp_bhl_ocr()
-x <- unlist(x, FALSE)
+(x <- res \%>\% sp_list() \%>\% sp_bhl_meta() \%>\% .[1:3] \%>\% sp_bhl_ocr())
 x \%>\% sp_bhl_save()
 }
 }
