@@ -15,3 +15,13 @@ sp_bhl_ocr <- function(x) {
     setNames(lapply(ids, bhl_getpageocrtext), ids)
   }), class = "bhl_ocr")
 }
+
+#' @export
+print.bhl_ocr <- function(x, ...) {
+  cat("<bhl ocr'ed text>", sep = "\n")
+  cat(paste0("  Count: ", length(x)), sep = "\n")
+  cat("  Docs (doc id / character count - 1st 10): ", sep = "\n")
+  for (i in seq_along(x)) {
+    cat(sprintf("    %s / %s", names(x[[i]]), nchar(x[[i]][[1]])), sep = "\n")
+  }
+}
