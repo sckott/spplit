@@ -33,11 +33,9 @@ sp_bhl_meta <- function(x, key = NULL) {
               z,
               pgs[, !names(pgs) %in%  c('Volume', 'Year')],
               by = "ItemID")
-            #list(data = z, pages = pgs)
           }), class = 'bhl_meta_single')
     }
   }
-  #unlist(spcl(out), recursive = FALSE)
   structure(spcl(out), class = "bhl_meta")
 }
 

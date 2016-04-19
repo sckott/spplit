@@ -7,7 +7,8 @@
 viewer(input = NULL, output = NULL, browse = TRUE)
 }
 \arguments{
-\item{input}{Input}
+\item{input}{An object of class \code{bhl_ocr}, from a call to \code{sp_bhl_ocr},
+or a list of such objects}
 
 \item{output}{Path and file name for output file. If \code{NULL}, a temp file is used.}
 
@@ -20,9 +21,14 @@ Browse highlighted fragments in your default browser
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ(geometry = geom)
+res <- sp_occ_gbif(geometry = geom)
 x <- res \%>\% sp_list() \%>\% sp_bhl_meta()
 out <- x[1:3] \%>\% sp_bhl_ocr
+
+# view a single species
+viewer(out$`allium amplectens`)
+
+# view many - opens a new tab for each
 viewer(out)
 }
 }

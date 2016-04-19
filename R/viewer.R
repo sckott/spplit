@@ -1,15 +1,21 @@
 #' Browse highlighted fragments in your default browser
 #'
 #' @export
-#' @param input Input
+#' @param input An object of class \code{bhl_ocr}, from a call to \code{sp_bhl_ocr},
+#' or a list of such objects
 #' @param output Path and file name for output file. If \code{NULL}, a temp file is used.
 #' @param browse Browse file in your default browse immediately after file creation.
 #'    If \code{FALSE}, the file is written, but not opened.
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ(geometry = geom)
+#' res <- sp_occ_gbif(geometry = geom)
 #' x <- res %>% sp_list() %>% sp_bhl_meta()
 #' out <- x[1:3] %>% sp_bhl_ocr
+#'
+#' # view a single species
+#' viewer(out$`allium amplectens`)
+#'
+#' # view many - opens a new tab for each
 #' viewer(out)
 #' }
 viewer <- function(input=NULL, output=NULL, browse=TRUE) {
@@ -22,12 +28,17 @@ viewer.default <- function(input=NULL, output=NULL, browse=TRUE) {
 }
 
 #' @export
+viewer.list <- function(input=NULL, output=NULL, browse=TRUE) {
+  lapply(input, viewer)
+}
+
+#' @export
 viewer.bhl_ocr <- function(input=NULL, output=NULL, browse=TRUE) {
 
   if (is.null(input)) {
     stop("Please supply some input", call. = FALSE)
   }
-  if (!is(unclass(input), "list")) {
+  if (!inherits(unclass(input), "list")) {
     stop("Please supply a list object", call. = FALSE)
   }
 
