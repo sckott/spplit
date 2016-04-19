@@ -2,7 +2,7 @@
 % Please edit documentation in R/sp_list.R
 \name{sp_list}
 \alias{sp_list}
-\title{Get a species list}
+\title{Get a species list (unique set of taxon names)}
 \usage{
 sp_list(x)
 }
@@ -13,7 +13,7 @@ sp_list(x)
 gives a character vector of unique taxon list
 }
 \description{
-Get a species list
+Get a species list (unique set of taxon names)
 }
 \details{
 only accepts objects of class \code{occdatind} right now

@@ -1,4 +1,4 @@
-#' Get a species list
+#' Get a species list (unique set of taxon names)
 #'
 #' @export
 #' @param x Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}

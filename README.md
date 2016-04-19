@@ -22,7 +22,7 @@ install dev versions of `rgbif` and `spocc` first, then install `spplit`
 
 
 ```r
-devtools::install_github(c("ropensci/rgbif@wkt-polys", "ropensci/spocc"))
+devtools::install_github("ropensci/spocc")
 devtools::install_github("ropenscilabs/spplit")
 ```
 
@@ -48,7 +48,7 @@ a) Save text to disk (or any database, etc.)
 
 
 ```r
-res %>% sp_bhl_save(dir_path = tempdir())
+res %>% sp_bhl_save()
 ```
 
 b) Mine the text

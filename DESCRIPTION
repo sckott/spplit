@@ -24,7 +24,6 @@ Suggests:
     roxygen2 (>= 5.0.1),
     knitr,
     testthat,
-    rgbif (>= 0.9.2.9740)
-Remotes: ropensci/rgbif@wkt-polys,
-  ropensci/spocc
+    rgbif (>= 0.9.3)
+Remotes: ropensci/spocc
 RoxygenNote: 5.0.1

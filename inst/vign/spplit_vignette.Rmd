@@ -1,0 +1,61 @@
+<!--
+%\VignetteEngine{knitr::knitr}
+%\VignetteIndexEntry{Introduction to spplit}
+%\VignetteEncoding{UTF-8}
+-->
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+	comment = "#>",
+	collapse = TRUE,
+	warning = FALSE,
+	message = FALSE
+)
+```
+
+Introduction to spplit
+======================
+
+A typical workflow may look like: 
+
+* Search for occurrences from GBIF or iDigBio
+* Get a species list
+* Get BHL metadata
+* Get BHL OCR'ed text
+* Save text to disk for later use - OR - analyze data
+
+## load spplit
+
+```{r}
+library("spplit")
+```
+
+## Get occurrences
+
+```{r}
+"xxx"
+```
+
+## Get a species list
+
+```{r}
+"xxx"
+```
+
+## Get BHL metadata
+
+```{r}
+"xxx"
+```
+
+## Get OCR text
+
+```{r}
+"xxx"
+```
+
+## Save text to disk
+
+```{r}
+"xxx"
+```
