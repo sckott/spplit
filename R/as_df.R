@@ -1,0 +1,36 @@
+#' Convert to a data.frame
+#'
+#' @export
+#' @param x an object of class \code{bhl_meta} or \code{bhl_meta_single}.
+#' \code{\link{sp_bhl_meta}} outputs an object of class \code{bhl_meta}, composed
+#' of objects of class \code{bhl_meta_single}.
+#' @return If \code{bhl_meta} a single data.frame. If \code{bhl_meta_single},
+#' a list of data.frame's of length equal to that of the input list.
+#' @examples \dontrun{
+#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+#' res <- sp_occ_gbif(geometry = geom)
+#' res %>% sp_list()
+#' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
+#'
+#' ##
+#' as_df(x$`allium amplectens`)
+#' as_df(x$`allium falcifolium`)
+#' as_df(x)
+#' }
+as_df <- function(x) {
+  UseMethod("as_df")
+}
+
+#' @export
+as_df.bhl_meta <- function(x) {
+  lapply(x, function(z) {
+    df <- data.table::setDF(data.table::rbindlist(z, fill = TRUE, use.names = TRUE))
+    tibble::as_data_frame(df)
+  })
+}
+
+#' @export
+as_df.bhl_meta_single <- function(x) {
+  df <- data.table::setDF(data.table::rbindlist(x, fill = TRUE, use.names = TRUE))
+  tibble::as_data_frame(df)
+}

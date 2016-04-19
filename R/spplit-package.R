@@ -3,6 +3,8 @@
 #' @importFrom spocc occ
 #' @importFrom rbhl bhl_namesearch bhl_namegetdetail bhl_getpageocrtext
 #' @importFrom whisker whisker.render
+#' @importFrom data.table setDF rbindlist
+#' @importFrom tibble as_data_frame
 #' @name spplit-package
 #' @aliases spplit
 #' @docType package

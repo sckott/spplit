@@ -7,7 +7,10 @@
 sp_bhl_ocr(x)
 }
 \arguments{
-\item{x}{input}
+\item{x}{An object of class \code{bhl_meta} or \code{bhl_meta_single}}
+}
+\value{
+An object of class \code{bhl_ocr}, or a list of such objects
 }
 \description{
 Get BHL OCR text
@@ -15,10 +18,18 @@ Get BHL OCR text
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ(geometry = geom)
-res \%>\% sp_list()
-x <- res \%>\% sp_list() \%>\% sp_bhl_meta()
-x[1:3] \%>\% sp_bhl_ocr
+res <- sp_occ_gbif(geometry = geom)
+(x <- res \%>\% sp_list() \%>\% sp_bhl_meta())
+
+# pass in a single taxon
+sp_bhl_ocr(x$`allium amplectens`)
+sp_bhl_ocr(x$`castilleja rubicundula`)
+
+# or many taxa
+sp_bhl_ocr(x[1:2])
+
+# or all of them at once
+sp_bhl_ocr(x)
 }
 }
 

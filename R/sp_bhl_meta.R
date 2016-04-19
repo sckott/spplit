@@ -5,9 +5,13 @@
 #' @param key api key, optional
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ(geometry = geom)
+#' res <- sp_occ_gbif(geometry = geom)
 #' res %>% sp_list()
-#' x <- res %>% sp_list() %>% sp_bhl_meta()
+#' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
+#'
+#' # combine all into a data.frame
+#' as_df(x$`allium amplectens`)
+#' as_df(x)
 #' }
 sp_bhl_meta <- function(x, key = NULL) {
   out <- list()
@@ -20,12 +24,36 @@ sp_bhl_meta <- function(x, key = NULL) {
       # get BHL pages with that namebankid
       yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key)
       # get page details for each result
-      out[[i]] <- lapply(yy$data$Titles.Items, function(z) {
-        pgs <- do.call("rbind.data.frame", z$Pages)
-        z$Pages <- NULL
-        list(data = z, pages = pgs)
-      })
+      out[[x[i]]] <-
+        structure(
+          lapply(yy$data$Titles.Items, function(z) {
+            pgs <- do.call("rbind.data.frame", z$Pages)
+            z$Pages <- NULL
+            merge(
+              z,
+              pgs[, !names(pgs) %in%  c('Volume', 'Year')],
+              by = "ItemID")
+            #list(data = z, pages = pgs)
+          }), class = 'bhl_meta_single')
     }
   }
-  unlist(spcl(out), recursive = FALSE)
+  #unlist(spcl(out), recursive = FALSE)
+  structure(spcl(out), class = "bhl_meta")
+}
+
+#' @export
+print.bhl_meta <- function(x, ...) {
+  cat_n("<bhl metadata>")
+  cat_n(paste0("  Count: ", length(x)))
+  cat_n("  taxon / no. items / total pages [1st 10]: ")
+  for (i in nomas(seq_along(x))) {
+    cat_n(
+      sprintf(
+        "    %s / %s / %s",
+        names(x[i]),
+        length(x[[i]]),
+        sum(vapply(x[[i]], NROW, 1))
+      )
+    )
+  }
 }

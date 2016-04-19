@@ -8,6 +8,9 @@
 #' res <- sp_occ_gbif(geometry = geom, limit = 5)
 #' (x <- res %>% sp_list() %>% sp_bhl_meta() %>% .[1:3] %>% sp_bhl_ocr())
 #' x %>% sp_bhl_save()
+#'
+#' # you can just save some ocr'ed elements
+#'
 #' }
 sp_bhl_save <- function(x, dir_path = ".") {
   UseMethod("sp_bhl_save")
