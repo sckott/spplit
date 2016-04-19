@@ -10,7 +10,10 @@ sp_bhl_save(x, dir_path = ".", taxon = NULL)
 \item{x}{An object of class \code{bhl_ocr} from a call to \code{\link{sp_bhl_ocr}},
 or a list of such objects. if a list, can be named or unnamed.}
 
-\item{dir_path}{base directory to put files into. Default: \code{.}, current working directory}
+\item{dir_path}{base directory to put files into. Default: \code{.}, current working
+directory}
+
+\item{taxon}{(character) A taxonomic name to use for the folder name. optional}
 }
 \description{
 Save OCR corpus

@@ -3,7 +3,9 @@
 #' @export
 #' @param x An object of class \code{bhl_ocr} from a call to \code{\link{sp_bhl_ocr}},
 #' or a list of such objects. if a list, can be named or unnamed.
-#' @param dir_path base directory to put files into. Default: \code{.}, current working directory
+#' @param dir_path base directory to put files into. Default: \code{.}, current working
+#' directory
+#' @param taxon (character) A taxonomic name to use for the folder name. optional
 #' @details Each object passed in has their OCR'ed text blobs written into a folder, where
 #' each file is a separate OCR blob, named by the page ID for that OCRed blob. If pass in a
 #' named object with the taxon name, the folder uses the taxon name - if no names on objects

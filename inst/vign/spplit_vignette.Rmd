@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 Introduction to spplit
 ======================
 
-A typical workflow may look like: 
+A typical workflow looks like: 
 
 * Search for occurrences from GBIF or iDigBio
 * Get a species list
