@@ -51,7 +51,7 @@ sp_occ_gbif <- function(query = NULL, geometry = NULL, limit = 10,
                         cas_coll = "botany", args = NULL, ...) {
 
   cas_coll <- match.arg(cas_coll, c("all", names(gbif_datasets)), several.ok = TRUE)
-  if (cas_coll == "all") cas_coll <- names(gbif_datasets)
+  if (length(cas_coll) == 1 && all(cas_coll == "all")) cas_coll <- names(gbif_datasets)
   dset <- unname(unlist(gbif_datasets[cas_coll]))
   occ(query = query, geometry = geometry, limit = limit, from = "gbif",
       gbifopts = Filter(function(z) length(z) != 0, spcl(c(list(datasetKey = dset), as.list(args)))), ...)$gbif

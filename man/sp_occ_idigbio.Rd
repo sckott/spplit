@@ -62,10 +62,14 @@ library("httr")
 # sp_occ_idigbio(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 
 # specify CAS collection (default: botany)
+## single
 sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
 sp_occ_idigbio(geometry = geom, cas_coll = "botany")
 sp_occ_idigbio(geometry = geom, cas_coll = "herpetology")
+## all collections
 sp_occ_idigbio(geometry = geom, cas_coll = "all")
+## multiple collections
+sp_occ_idigbio(geometry = geom, cas_coll = c("entomology", "herpetology"))
 }
 }
 

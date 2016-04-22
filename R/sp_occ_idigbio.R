@@ -42,16 +42,20 @@
 #' # sp_occ_idigbio(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 #'
 #' # specify CAS collection (default: botany)
+#' ## single
 #' sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
 #' sp_occ_idigbio(geometry = geom, cas_coll = "botany")
 #' sp_occ_idigbio(geometry = geom, cas_coll = "herpetology")
+#' ## all collections
 #' sp_occ_idigbio(geometry = geom, cas_coll = "all")
+#' ## multiple collections
+#' sp_occ_idigbio(geometry = geom, cas_coll = c("entomology", "herpetology"))
 #' }
 sp_occ_idigbio <- function(query = NULL, geometry = NULL, limit = 10,
                            cas_coll = "botany", args = NULL, ...) {
 
   cas_coll <- match.arg(cas_coll, c("all", names(idigbio_recordsets)), several.ok = TRUE)
-  if (cas_coll == "all") cas_coll <- names(idigbio_recordsets)
+  if (length(cas_coll) == 1 && all(cas_coll == "all")) cas_coll <- names(idigbio_recordsets)
   rsets <- unname(unlist(idigbio_recordsets[cas_coll]))
 
   occ(query = query, geometry = geometry, limit = limit, from = "idigbio",
