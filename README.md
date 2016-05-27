@@ -22,7 +22,7 @@ install dev versions of `rgbif` and `spocc` first, then install `spplit`
 
 
 ```r
-devtools::install_github("ropensci/spocc")
+devtools::install_github(c("ropensci/rgbif", "ropensci/spocc"))
 devtools::install_github("ropenscilabs/spplit")
 ```
 
