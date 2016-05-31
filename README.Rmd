@@ -39,6 +39,10 @@ library("spplit")
 
 ## Example - connect iDigBio species occurrence data to BHL
 
+For access to Biodiveristy Heritage Library data, you'll need an API key from them.
+To get one fill out the brief form at [http://www.biodiversitylibrary.org/getapikey.aspx](http://www.biodiversitylibrary.org/getapikey.aspx) -
+they'll ask for your name and email address.
+
 ```{r cache=TRUE}
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_idigbio(geometry = geom, limit = 3) %>% 
