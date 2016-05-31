@@ -2,6 +2,10 @@
 #'
 #' @export
 #' @param x An object of class \code{bhl_meta} or \code{bhl_meta_single}
+#' @param key api key, required. Go to \url{http://www.biodiversitylibrary.org/getapikey.aspx}
+#' to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
+#' an R option or env variable. See \strong{BHL Authentication} section in
+#' \code{\link[spplit]{spplit-package}}
 #' @return An object of class \code{bhl_ocr}, or a list of such objects
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
@@ -18,32 +22,32 @@
 #' # or all of them at once
 #' sp_bhl_ocr(x)
 #' }
-sp_bhl_ocr <- function(x) {
+sp_bhl_ocr <- function(x, key = NULL) {
   UseMethod("sp_bhl_ocr")
 }
 
 #' @export
-sp_bhl_ocr.default <- function(x) {
+sp_bhl_ocr.default <- function(x, key = NULL) {
   stop("No sp_bhl_ocr() method for objects of class ", class(x), call. = FALSE)
 }
 
 #' @export
-sp_bhl_ocr.bhl_meta <- function(x) {
-  lapply(x, sp_bhl_ocr)
+sp_bhl_ocr.bhl_meta <- function(x, key = NULL) {
+  lapply(x, sp_bhl_ocr, key = key)
 }
 
 #' @export
-sp_bhl_ocr.bhl_meta_single <- function(x) {
+sp_bhl_ocr.bhl_meta_single <- function(x, key = NULL) {
   toclz(lapply(x, function(w) {
-    setNames(lapply(w$PageID, bhl_getpageocrtext), w$PageID)
+    setNames(lapply(w$PageID, bhl_getpageocrtext, key = key), w$PageID)
   }), "bhl_ocr")
 }
 
 #' @export
-sp_bhl_ocr.list <- function(x) {
+sp_bhl_ocr.list <- function(x, key = NULL) {
   lapply(x, function(w) {
     if (!class(w) %in% c("bhl_meta_single", "bhl_meta")) stop("All inputs must be of class 'bhl_meta_single'", call. = FALSE)
-    sp_bhl_ocr(w)
+    sp_bhl_ocr(w, key = key)
   })
 }
 
