@@ -18,6 +18,9 @@ sp_bhl_meta <- function(x, key = NULL) {
   for (i in seq_along(x)) {
     # search to get namebankid
     z <- tryCatch(bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
+    if (grepl("API key for BHL", z$message)) {
+      stop("need an API key for BHL, go to http://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
+    }
     if (z$data[1, 'NameBankID'] == "" || inherits(z, "error")) {
       out[[i]] <- NULL
     } else {
