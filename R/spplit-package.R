@@ -31,6 +31,21 @@
 #'  \code{bhl_meta_single} objects
 #' }
 #'
+#' @section BHL Authentication:
+#' For access to Biodiveristy Heritage Library data, you'll need an API key from them.
+#' To get one fill out the brief form at \url{http://www.biodiversitylibrary.org/getapikey.aspx} -
+#' they'll ask for your name and email address.
+#'
+#' To use the key, do one of:
+#' \itemize{
+#'  \item pass it in the \code{key} parameter in \code{\link{sp_bhl_meta}}
+#'  and \code{\link{sp_bhl_ocr}}
+#'  \item store as an environment variable either in your `.Renviron` file, or wherever you
+#'  store your environment variables (e.g., \code{.bashrc}, or \code{.bash_profile},
+#'  or \code{.zshrc})
+#'  \item store as an R option in your \code{.Rprofile} file
+#' }
+#'
 #' @examples \dontrun{
 #' library("spplit")
 #'
