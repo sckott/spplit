@@ -11,8 +11,8 @@ sp_bhl_meta(x, key = NULL)
 
 \item{key}{api key, required. Go to \url{http://www.biodiversitylibrary.org/getapikey.aspx}
 to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
-an R option or env variable. See \strong{BHL Authentication} section in
-\code{\link[spplit]{spplit-package}}}
+an R option (as \code{bhl_key}) or environment variable (as \code{BHL_KEY}). See
+\strong{BHL Authentication} section in \code{\link[spplit]{spplit-package}} for more}
 }
 \description{
 Get BHL metadata based on a species list

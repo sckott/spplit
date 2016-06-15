@@ -40,10 +40,10 @@
 #' \itemize{
 #'  \item pass it in the \code{key} parameter in \code{\link{sp_bhl_meta}}
 #'  and \code{\link{sp_bhl_ocr}}
-#'  \item store as an environment variable either in your `.Renviron` file, or wherever you
-#'  store your environment variables (e.g., \code{.bashrc}, or \code{.bash_profile},
-#'  or \code{.zshrc})
-#'  \item store as an R option in your \code{.Rprofile} file
+#'  \item store as an environment variable (as \code{BHL_KEY}) either in your `.Renviron`
+#'  file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
+#'  \code{.bash_profile}, or \code{.zshrc})
+#'  \item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
 #' }
 #'
 #' @examples \dontrun{
