@@ -56,3 +56,6 @@ sp_occ_gbif <- function(query = NULL, geometry = NULL, limit = 10,
   occ(query = query, geometry = geometry, limit = limit, from = "gbif",
       gbifopts = Filter(function(z) length(z) != 0, spcl(c(list(datasetKey = dset), as.list(args)))), ...)$gbif
 }
+
+
+#occ(query = query, limit = 10, from = "gbif", gbifopts = Filter(function(z) length(z) != 0, spcl(c(list(datasetKey = dset), as.list(args)))))
