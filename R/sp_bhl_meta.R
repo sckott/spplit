@@ -11,12 +11,33 @@
 #' res <- sp_occ_gbif(geometry = geom)
 #' res %>% sp_list()
 #' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
+#' # x <- res %>% sp_bhl_meta()
 #'
 #' # combine all into a data.frame
 #' as_df(x$`allium amplectens`)
 #' as_df(x)
 #' }
 sp_bhl_meta <- function(x, key = NULL) {
+  UseMethod("sp_bhl_meta")
+}
+
+#' @export
+sp_bhl_meta.default <- function(x, key = NULL) {
+  stop("no sp_bhl_meta method for ", class(x), call. = FALSE)
+}
+
+#' @export
+sp_bhl_meta.list <- function(x, key = NULL) {
+  sp_bhl_meta(unlist(x), key = key)
+}
+
+#' @export
+sp_bhl_meta.occdatind <- function(x, key = NULL) {
+  sp_bhl_meta(sp_list(x), key = key)
+}
+
+#' @export
+sp_bhl_meta.character <- function(x, key = NULL) {
   out <- list()
   for (i in seq_along(x)) {
     # search to get namebankid
@@ -62,4 +83,10 @@ print.bhl_meta <- function(x, ...) {
       )
     )
   }
+}
+
+
+#' @export
+`[.bhl_meta` <- function(x, i) {
+  structure(unclass(x)[i], class = "bhl_meta")
 }

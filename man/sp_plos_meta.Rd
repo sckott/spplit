@@ -36,8 +36,12 @@ with above defaults.
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 300)
-x <- res \%>\% sp_list()
-z <- x \%>\% sp_plos_meta()
+
+# get species list first, then pass to sp_plos_meta
+res \%>\% sp_list() \%>\% sp_plos_meta()
+
+# or, pass directly to sp_plos_meta, and species list is extracted automatically
+res \%>\% sp_plos_meta()
 
 # combine all into a data.frame
 as_df(z$`allium amplectens`)

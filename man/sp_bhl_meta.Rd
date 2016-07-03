@@ -23,6 +23,7 @@ geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.0
 res <- sp_occ_gbif(geometry = geom)
 res \%>\% sp_list()
 x <- res \%>\% sp_list() \%>\% .[1:2] \%>\% sp_bhl_meta()
+# x <- res \%>\% sp_bhl_meta()
 
 # combine all into a data.frame
 as_df(x$`allium amplectens`)
