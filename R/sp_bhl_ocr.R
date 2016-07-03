@@ -39,7 +39,7 @@ sp_bhl_ocr.bhl_meta <- function(x, key = NULL) {
 #' @export
 sp_bhl_ocr.bhl_meta_single <- function(x, key = NULL) {
   toclz(lapply(x, function(w) {
-    setNames(lapply(w$PageID, bhl_getpageocrtext, key = key), w$PageID)
+    stats::setNames(lapply(w$PageID, bhl_getpageocrtext, key = key), w$PageID)
   }), "bhl_ocr")
 }
 

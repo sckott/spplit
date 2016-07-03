@@ -76,10 +76,9 @@ print.plos_meta <- function(x, ...) {
 }
 
 #' @export
-print.plos_meta_single <- function(z, ...) {
-  cat_n(paste0("<plos metadata - single> ", attr(z, "taxon")))
-  #cat_n(paste0("  taxon: ", attr(z, "taxon")))
-  print(z$data)
+print.plos_meta_single <- function(x, ...) {
+  cat_n(paste0("<plos metadata - single> ", attr(x, "taxon")))
+  print(x$data)
 }
 
 #' @export

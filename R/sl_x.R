@@ -37,7 +37,7 @@ sp_search <- function(geometry = NULL, limit = 10) {
      ## take subset for testing
      out[[nms[i]]] <- lapply(alldat, function(w) {
        ids <- w$pages$PageID
-       setNames(lapply(ids, bhl_getpageocrtext), ids)
+       stats::setNames(lapply(ids, bhl_getpageocrtext), ids)
      })
    }
    out

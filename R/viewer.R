@@ -109,5 +109,5 @@ viewer.bhl_ocr <- function(input=NULL, output=NULL, browse=TRUE) {
     output <- tempfile(fileext = ".html")
   }
   write(rendered, file = output)
-  if (browse) browseURL(output) else output
+  if (browse) utils::browseURL(output) else output
 }

@@ -39,7 +39,7 @@ sp_plos_fetch.plos_meta_single <- function(x, ...) {
     stop("please install rplos", call. = FALSE)
   }
   yy <- rplos::plos_fulltext(x$data$id)
-  out <- setNames(list(yy), attr(x, "taxon"))
+  out <- stats::setNames(list(yy), attr(x, "taxon"))
   structure(out, class = "plos_fetch")
 }
 
