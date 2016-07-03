@@ -34,3 +34,13 @@ as_df.bhl_meta_single <- function(x) {
   df <- data.table::setDF(data.table::rbindlist(x, fill = TRUE, use.names = TRUE))
   tibble::as_data_frame(df)
 }
+
+#' @export
+as_df.plos_meta <- function(x) {
+  res <- lapply(Filter(function(z) NROW(z$data) != 0 && inherits(z$data, "data.frame"), x), "[[", "data")
+  df <- data.table::setDF(data.table::rbindlist(res, fill = TRUE, use.names = TRUE))
+  tibble::as_data_frame(df)
+}
+
+#' @export
+as_df.plos_meta_single <- function(x) x$data
