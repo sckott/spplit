@@ -28,7 +28,9 @@
 #'
 #' # combine all into a data.frame
 #' as_df(z$`allium amplectens`)
-#' as_df(z)
+#' df <- as_df(z)
+#' names(df)
+#' df$title
 #' }
 sp_plos_meta <- function(x, ...) {
   UseMethod("sp_plos_meta")

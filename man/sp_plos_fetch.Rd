@@ -20,10 +20,14 @@ Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ_gbif(geometry = geom, limit = 300)
+res <- sp_occ_gbif(geometry = geom, limit = 50)
 z <- res \%>\% sp_list() \%>\% sp_plos_meta()
 sp_plos_fetch(z[[1]])
 sp_plos_fetch(z[1:3])
+
+txt <- sp_plos_fetch(z[[3]])
+txt$`angelica californica`
+txt$`angelica californica`$`10.1371/journal.pone.0092265`
 }
 }
 

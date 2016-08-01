@@ -45,7 +45,9 @@ res \%>\% sp_plos_meta()
 
 # combine all into a data.frame
 as_df(z$`allium amplectens`)
-as_df(z)
+df <- as_df(z)
+names(df)
+df$title
 }
 }
 

@@ -6,10 +6,14 @@
 #' @details Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ_gbif(geometry = geom, limit = 300)
+#' res <- sp_occ_gbif(geometry = geom, limit = 50)
 #' z <- res %>% sp_list() %>% sp_plos_meta()
 #' sp_plos_fetch(z[[1]])
 #' sp_plos_fetch(z[1:3])
+#'
+#' txt <- sp_plos_fetch(z[[3]])
+#' txt$`angelica californica`
+#' txt$`angelica californica`$`10.1371/journal.pone.0092265`
 #' }
 sp_plos_fetch <- function(x, ...) {
   UseMethod("sp_plos_fetch")
@@ -27,8 +31,10 @@ sp_plos_fetch.plos_meta <- function(x, ...) {
   }
   out <- list()
   for (i in seq_along(x)) {
-    yy <- rplos::plos_fulltext(x[[i]]$data$id)
-    out[[attr(x[[i]], "taxon")]] <- yy
+    if (!all(is.na(x[[i]]$data))) {
+      yy <- rplos::plos_fulltext(x[[i]]$data$id)
+      out[[attr(x[[i]], "taxon")]] <- yy
+    }
   }
   structure(spcl(out), class = "plos_fetch")
 }
@@ -38,9 +44,13 @@ sp_plos_fetch.plos_meta_single <- function(x, ...) {
   if (!requireNamespace("rplos")) {
     stop("please install rplos", call. = FALSE)
   }
-  yy <- rplos::plos_fulltext(x$data$id)
-  out <- stats::setNames(list(yy), attr(x, "taxon"))
-  structure(out, class = "plos_fetch")
+  if (all(is.na(x$data))) {
+    stop("no data found in input", call. = FALSE)
+  } else {
+    yy <- rplos::plos_fulltext(x$data$id)
+    out <- stats::setNames(list(yy), attr(x, "taxon"))
+    structure(out, class = "plos_fetch")
+  }
 }
 
 #' @export
