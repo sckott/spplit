@@ -26,11 +26,6 @@ sp_list.default <- function(x) {
 
 #' @export
 sp_list.occdatind <- function(x) {
-  # spname <- switch(
-  #   attributes(x)$searched,
-  #   idigbio = paste(x$idigbio$data[[1]]$genus, x$idigbio$data[[1]]$specificepithet),
-  #   gbif = paste(x$gbif$data[[1]]$genus, x$gbif$data[[1]]$specificEpithet)
-  # )
   spname <- switch(
     x$meta$source,
     idigbio = paste(x$data[[1]]$genus, x$data[[1]]$specificepithet),
@@ -38,5 +33,16 @@ sp_list.occdatind <- function(x) {
   )
 
   spname <- sort(unique(spname))
-  tolower(spname[!vapply(spname, function(x) grepl("NA", x), logical(1))])
+  spname <- tolower(spname[!vapply(spname, function(x) grepl("NA", x), logical(1))])
+  structure(spname, class = "sptaxonomy")
+}
+
+#' @export
+`[.sptaxonomy` <- function(x, i, j, drop = TRUE) {
+  structure(unclass(x)[i], class = "sptaxonomy")
+}
+
+#' @export
+`[[.sptaxonomy` <- function(x, i) {
+  structure(unclass(x)[[i]], class = "sptaxonomy")
 }

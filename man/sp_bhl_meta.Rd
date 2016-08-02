@@ -23,11 +23,17 @@ geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.0
 res <- sp_occ_gbif(geometry = geom)
 res \%>\% sp_list()
 x <- res \%>\% sp_list() \%>\% .[1:2] \%>\% sp_bhl_meta()
-# x <- res \%>\% sp_bhl_meta()
 
 # combine all into a data.frame
-as_df(x$`allium amplectens`)
+as_df(x$`brachythecium albicans`)
 as_df(x)
+
+# with collector names/authors
+geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+res <- sp_occ_gbif(geometry = geom, limit = 50)
+authors <- res \%>\% sp_authors()
+outx <- structure(authors[1:15], class="spauthors") \%>\% sp_bhl_meta()
+outx
 }
 }
 

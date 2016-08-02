@@ -11,11 +11,17 @@
 #' res <- sp_occ_gbif(geometry = geom)
 #' res %>% sp_list()
 #' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
-#' # x <- res %>% sp_bhl_meta()
 #'
 #' # combine all into a data.frame
-#' as_df(x$`allium amplectens`)
+#' as_df(x$`brachythecium albicans`)
 #' as_df(x)
+#'
+#' # with collector names/authors
+#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+#' res <- sp_occ_gbif(geometry = geom, limit = 50)
+#' authors <- res %>% sp_authors()
+#' outx <- structure(authors[1:15], class="spauthors") %>% sp_bhl_meta()
+#' outx
 #' }
 sp_bhl_meta <- function(x, key = NULL) {
   UseMethod("sp_bhl_meta")
@@ -28,7 +34,7 @@ sp_bhl_meta.default <- function(x, key = NULL) {
 
 #' @export
 sp_bhl_meta.list <- function(x, key = NULL) {
-  sp_bhl_meta(unlist(x), key = key)
+  sp_bhl_meta(structure(unlist(x), class = "sptaxonomy"), key = key)
 }
 
 #' @export
@@ -37,8 +43,8 @@ sp_bhl_meta.occdatind <- function(x, key = NULL) {
 }
 
 #' @export
-sp_bhl_meta.character <- function(x, key = NULL) {
-  out <- list()
+sp_bhl_meta.sptaxonomy <- function(x, key = NULL) {
+  out <- vector(mode = "list", length = length(x))
   for (i in seq_along(x)) {
     # search to get namebankid
     z <- tryCatch(bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
@@ -67,6 +73,71 @@ sp_bhl_meta.character <- function(x, key = NULL) {
   }
   structure(spcl(out), class = "bhl_meta")
 }
+
+#' @export
+sp_bhl_meta.spauthors <- function(x, key = NULL) {
+  out <- vector(mode = "list", length = length(x))
+  for (i in seq_along(x)) {
+    cat(paste0("working on ", x[i]), sep = "\n")
+    z <- tryCatch(bhl_partsearch(author = x[i], key = key), error = function(e) e)
+    if (inherits(z, "error")) {
+      if (grepl("API key|Unauthorized", z$message)) {
+        stop("need an API key for BHL, or key incorrect, go to\nhttp://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
+      }
+    }
+
+    if (is.null(z$data) || inherits(z, "error")) {
+      out[[i]] <- NULL
+    } else {
+      # get page details for each result
+      partls <- vector(mode = "list", length = NROW(z$data))
+      for (j in seq_len(NROW(z$data))) {
+        pgs <- z$data[j, ]$Pages[[1]]
+        mn <- z$data[j, names(z$data) %in% c('PartUrl', 'PartID', 'ItemID', 'Title',
+                                             'ContainerTItle', 'Volume', 'Date', 'Authors')]
+        partls[[j]] <- if (NROW(pgs) == 0) {
+          mn
+        } else {
+          pgs <- pgs[, !names(pgs) %in%  c('Volume', 'Year', 'ItemID')]
+          suppressWarnings(cbind(mn, pgs))
+        }
+      }
+      out[[x[i]]] <- structure(partls, class = 'bhl_meta_single')
+    }
+  }
+  structure(spcl(out), class = "bhl_meta")
+}
+
+# sp_bhl_meta.character <- function(x, key = NULL) {
+#   out <- vector(mode = "list", length = length(x))
+#   for (i in seq_along(x)) {
+#     # search to get namebankid
+#     z <- tryCatch(bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
+#     if (inherits(z, "error")) {
+#       if (grepl("API key|Unauthorized", z$message)) {
+#         stop("need an API key for BHL, or key incorrect, go to\nhttp://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
+#       }
+#     }
+#     if (z$data[1, 'NameBankID'] == "" || inherits(z, "error")) {
+#       out[[i]] <- NULL
+#     } else {
+#       # get BHL pages with that namebankid
+#       yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key)
+#       # get page details for each result
+#       out[[x[i]]] <-
+#         structure(
+#           lapply(yy$data$Titles.Items, function(z) {
+#             pgs <- do.call("rbind.data.frame", z$Pages)
+#             z$Pages <- NULL
+#             merge(
+#               z,
+#               pgs[, !names(pgs) %in%  c('Volume', 'Year')],
+#               by = "ItemID")
+#           }), class = 'bhl_meta_single')
+#     }
+#   }
+#   structure(spcl(out), class = "bhl_meta")
+# }
 
 #' @export
 print.bhl_meta <- function(x, ...) {

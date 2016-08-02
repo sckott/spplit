@@ -16,3 +16,4 @@ cat_n <- function(...) cat(..., sep = "\n")
 
 nomas <- function(x) x[1:min(length(x), 10)]
 
+str_w <- function(x) gsub("^\\s|\\s$", "", x)
