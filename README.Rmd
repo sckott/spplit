@@ -85,7 +85,7 @@ res <- sp_occ_gbif(geometry = geom, limit = 3) %>%
 
 ```{r}
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ_gbif(geometry = geom, limit = 50)
+res <- sp_occ_gbif(geometry = geom, limit = 10)
 authors <- res %>% sp_authors()
 meta <- authors %>% sp_bhl_meta()
 meta[10] %>% sp_bhl_ocr()
