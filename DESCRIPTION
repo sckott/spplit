@@ -14,7 +14,7 @@ BugReports: https://github.com/ropenscilabs/spplit/issues
 LazyData: true
 VignetteBuilder: knitr
 Imports:
-    spocc (>= 0.4.5.9800),
+    spocc (>= 0.5.0),
     rbhl,
     whisker,
     magrittr,
@@ -26,5 +26,4 @@ Suggests:
     rgbif (>= 0.9.3),
     shiny,
     rplos
-Remotes: ropensci/spocc
 RoxygenNote: 5.0.1
