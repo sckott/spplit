@@ -8,6 +8,10 @@ sp_authors(x, which = "recorded")
 }
 \arguments{
 \item{x}{Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}}
+
+\item{which}{(character) one of "recorded" or "identified", for "recordedBy"
+or "identifiedBy". Default: "recorded". See \url{http://rs.tdwg.org/dwc/terms/}
+for more information}
 }
 \value{
 gives a character vector of unique taxon list
