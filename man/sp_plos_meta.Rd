@@ -4,10 +4,12 @@
 \alias{sp_plos_meta}
 \title{Get PLOS metadata based on a species list}
 \usage{
-sp_plos_meta(x, ...)
+sp_plos_meta(x, progress = TRUE, ...)
 }
 \arguments{
 \item{x}{(character/list) A vector or list of character strings to search on}
+
+\item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 
 \item{...}{curl options passed on to \code{\link[httr]{GET}}}
 }

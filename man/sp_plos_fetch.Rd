@@ -4,12 +4,14 @@
 \alias{sp_plos_fetch}
 \title{Get PLOS full text}
 \usage{
-sp_plos_fetch(x, ...)
+sp_plos_fetch(x, progess = TRUE, ...)
 }
 \arguments{
 \item{x}{An object of class \code{plos_meta} or \code{plos_meta_single}}
 
 \item{...}{curl options passed on to \code{\link[httr]{GET}}}
+
+\item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 }
 \description{
 Get PLOS full text

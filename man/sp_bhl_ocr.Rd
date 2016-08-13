@@ -4,7 +4,7 @@
 \alias{sp_bhl_ocr}
 \title{Get BHL OCR text}
 \usage{
-sp_bhl_ocr(x, key = NULL)
+sp_bhl_ocr(x, key = NULL, progress = TRUE)
 }
 \arguments{
 \item{x}{An object of class \code{bhl_meta} or \code{bhl_meta_single}}
@@ -13,6 +13,8 @@ sp_bhl_ocr(x, key = NULL)
 to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
 an R option or env variable. See \strong{BHL Authentication} section in
 \code{\link[spplit]{spplit-package}}}
+
+\item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 }
 \value{
 An object of class \code{bhl_ocr}, or a list of such objects
@@ -24,10 +26,10 @@ Get BHL OCR text
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom)
-(x <- res \%>\% sp_list() \%>\% sp_bhl_meta())
+(x <- res \%>\% sp_list() \%>\% .[1:2] \%>\% sp_bhl_meta())
 
 # pass in a single taxon
-sp_bhl_ocr(x$`allium amplectens`)
+res <- sp_bhl_ocr(x$`allium falcifolium`)
 sp_bhl_ocr(x$`castilleja rubicundula`)
 
 # or many taxa

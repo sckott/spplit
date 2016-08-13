@@ -5,6 +5,7 @@
 #' @importFrom whisker whisker.render
 #' @importFrom data.table setDF rbindlist
 #' @importFrom tibble as_data_frame
+#' @importFrom utils txtProgressBar setTxtProgressBar
 #' @name spplit-package
 #' @aliases spplit
 #' @docType package

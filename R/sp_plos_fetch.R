@@ -2,6 +2,7 @@
 #'
 #' @export
 #' @param x An object of class \code{plos_meta} or \code{plos_meta_single}
+#' @param progress (logical) print a progress bar. default: \code{TRUE}
 #' @param ... curl options passed on to \code{\link[httr]{GET}}
 #' @details Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
 #' @examples \dontrun{
@@ -15,22 +16,32 @@
 #' txt$`angelica californica`
 #' txt$`angelica californica`$`10.1371/journal.pone.0092265`
 #' }
-sp_plos_fetch <- function(x, ...) {
+sp_plos_fetch <- function(x, progess = TRUE, ...) {
   UseMethod("sp_plos_fetch")
 }
 
 #' @export
-sp_plos_fetch.default <- function(x, ...) {
+sp_plos_fetch.default <- function(x, progess = TRUE, ...) {
   stop("no sp_plos_fetch method for ", class(x), call. = FALSE)
 }
 
 #' @export
-sp_plos_fetch.plos_meta <- function(x, ...) {
+sp_plos_fetch.plos_meta <- function(x, progess = TRUE, ...) {
   if (!requireNamespace("rplos")) {
     stop("please install rplos", call. = FALSE)
   }
   out <- list()
+
+  if (progress) {
+    # initialize progress bar
+    pb <- txtProgressBar(min = 0, max = length(x), initial = 0, style = 3)
+    on.exit(close(pb))
+  }
+
   for (i in seq_along(x)) {
+    # iterate progress bar
+    if (progress) setTxtProgressBar(pb, i)
+
     if (!all(is.na(x[[i]]$data))) {
       yy <- rplos::plos_fulltext(x[[i]]$data$id)
       out[[attr(x[[i]], "taxon")]] <- yy
@@ -40,7 +51,7 @@ sp_plos_fetch.plos_meta <- function(x, ...) {
 }
 
 #' @export
-sp_plos_fetch.plos_meta_single <- function(x, ...) {
+sp_plos_fetch.plos_meta_single <- function(x, progess = TRUE, ...) {
   if (!requireNamespace("rplos")) {
     stop("please install rplos", call. = FALSE)
   }

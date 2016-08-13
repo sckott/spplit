@@ -2,7 +2,9 @@
 #'
 #' @export
 #' @param x (character/list) A vector or list of character strings to search on
+#' @param progress (logical) print a progress bar. default: \code{TRUE}
 #' @param ... curl options passed on to \code{\link[httr]{GET}}
+#'
 #' @section Defaults:
 #' A set of defaults are used, based on what we think are very reasonable
 #' assumptions about what most people want:
@@ -12,10 +14,12 @@
 #'  \item Fields: we fetch the fields \code{id, title, authors}, but you can specify
 #'  which you'd like back by xxx
 #' }
+#'
 #' @section Internals:
 #' Internally, this function loops over your inputs vector list passed in to the
 #' parameter \code{x}. With each loop, we use \code{\link[rplos]{searchplos}}
 #' with above defaults.
+#'
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom, limit = 300)
@@ -32,38 +36,49 @@
 #' names(df)
 #' df$title
 #' }
-sp_plos_meta <- function(x, ...) {
+sp_plos_meta <- function(x, progress = TRUE, ...) {
   UseMethod("sp_plos_meta")
 }
 
 #' @export
-sp_plos_meta.default <- function(x, ...) {
+sp_plos_meta.default <- function(x, progress = TRUE, ...) {
   stop("no sp_plos_meta method for ", class(x), call. = FALSE)
 }
 
 #' @export
-sp_plos_meta.list <- function(x, ...) {
+sp_plos_meta.list <- function(x, progress = TRUE, ...) {
   sp_plos_meta(unlist(x))
 }
 
 #' @export
-sp_plos_meta.occdatind <- function(x, ...) {
+sp_plos_meta.occdatind <- function(x, progress = TRUE, ...) {
   sp_plos_meta(sp_list(x), ...)
 }
 
 #' @export
-sp_plos_meta.character <- function(x, ...) {
+sp_plos_meta.sptaxonomy <- function(x, progress = TRUE, ...) {
   if (!requireNamespace("rplos")) {
     stop("please install rplos", call. = FALSE)
   }
+
   out <- list()
+
+  if (progress) {
+    # initialize progress bar
+    pb <- txtProgressBar(min = 0, max = length(x), initial = 0, style = 3)
+    on.exit(close(pb))
+  }
+
   for (i in seq_along(x)) {
-    yy <- rplos::searchplos(
+    # iterate progress bar
+    if (progress) setTxtProgressBar(pb, i)
+
+    yy <- suppressMessages(rplos::searchplos(
       q = x[i],
       fl = c('id', 'title', 'authors'),
       fq = list('doc_type:full', 'article_type:"Research Article"'),
       ...
-    )
+    ))
     out[[x[i]]] <- structure(yy, class = 'plos_meta_single', taxon = x[i])
   }
   structure(spcl(out), class = "plos_meta")

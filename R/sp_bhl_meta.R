@@ -6,6 +6,8 @@
 #' to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
 #' an R option (as \code{bhl_key}) or environment variable (as \code{BHL_KEY}). See
 #' \strong{BHL Authentication} section in \code{\link[spplit]{spplit-package}} for more
+#' @param progress (logical) print a progress bar. default: \code{TRUE}
+#' @return a list
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
@@ -23,29 +25,38 @@
 #' outx <- structure(authors[1:15], class="spauthors") %>% sp_bhl_meta()
 #' outx
 #' }
-sp_bhl_meta <- function(x, key = NULL) {
+sp_bhl_meta <- function(x, key = NULL, progress = TRUE) {
   UseMethod("sp_bhl_meta")
 }
 
 #' @export
-sp_bhl_meta.default <- function(x, key = NULL) {
+sp_bhl_meta.default <- function(x, key = NULL, progress = TRUE) {
   stop("no sp_bhl_meta method for ", class(x), call. = FALSE)
 }
 
 #' @export
-sp_bhl_meta.list <- function(x, key = NULL) {
+sp_bhl_meta.list <- function(x, key = NULL, progress = TRUE) {
   sp_bhl_meta(structure(unlist(x), class = "sptaxonomy"), key = key)
 }
 
 #' @export
-sp_bhl_meta.occdatind <- function(x, key = NULL) {
+sp_bhl_meta.occdatind <- function(x, key = NULL, progress = TRUE) {
   sp_bhl_meta(sp_list(x), key = key)
 }
 
 #' @export
-sp_bhl_meta.sptaxonomy <- function(x, key = NULL) {
+sp_bhl_meta.sptaxonomy <- function(x, key = NULL, progress = TRUE) {
   out <- vector(mode = "list", length = length(x))
+
+  if (progress) {
+    # initialize progress bar
+    pb <- txtProgressBar(min = 0, max = length(x), initial = 0, style = 3)
+    on.exit(close(pb))
+  }
   for (i in seq_along(x)) {
+    # iterate progress bar
+    if (progress) setTxtProgressBar(pb, i)
+
     # search to get namebankid
     z <- tryCatch(bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
     if (inherits(z, "error")) {
@@ -54,28 +65,33 @@ sp_bhl_meta.sptaxonomy <- function(x, key = NULL) {
       }
     }
     if (z$data[1, 'NameBankID'] == "" || inherits(z, "error")) {
-      out[[i]] <- NULL
+      out[[x[i]]] <- list()
     } else {
       # get BHL pages with that namebankid
-      yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key)
-      # get page details for each result
-      out[[x[i]]] <-
-        structure(
-          lapply(yy$data$Titles.Items, function(z) {
-            pgs <- do.call("rbind.data.frame", z$Pages)
-            z$Pages <- NULL
-            merge(
-              z,
-              pgs[, !names(pgs) %in%  c('Volume', 'Year')],
-              by = "ItemID")
-          }), class = 'bhl_meta_single')
+      yy <- tryCatch(bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key),
+                     error = function(e) e)
+      if (inherits(yy, "error")) {
+        out[[x[i]]] <- structure(list(), class = 'bhl_meta_single')
+      } else {
+        # success - get page details for each result
+        out[[x[i]]] <-
+          structure(
+            lapply(yy$data$Titles.Items, function(z) {
+              pgs <- do.call("rbind.data.frame", z$Pages)
+              z$Pages <- NULL
+              merge(
+                z,
+                pgs[, !names(pgs) %in%  c('Volume', 'Year')],
+                by = "ItemID")
+            }), class = 'bhl_meta_single')
+      }
     }
   }
   structure(spcl(out), class = "bhl_meta")
 }
 
 #' @export
-sp_bhl_meta.spauthors <- function(x, key = NULL) {
+sp_bhl_meta.spauthors <- function(x, key = NULL, progress = TRUE) {
   out <- vector(mode = "list", length = length(x))
   for (i in seq_along(x)) {
     cat(paste0("working on ", x[i]), sep = "\n")

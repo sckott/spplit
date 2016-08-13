@@ -4,7 +4,7 @@
 \alias{sp_bhl_meta}
 \title{Get BHL metadata based on a species list}
 \usage{
-sp_bhl_meta(x, key = NULL)
+sp_bhl_meta(x, key = NULL, progress = TRUE)
 }
 \arguments{
 \item{x}{input}
@@ -13,6 +13,11 @@ sp_bhl_meta(x, key = NULL)
 to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
 an R option (as \code{bhl_key}) or environment variable (as \code{BHL_KEY}). See
 \strong{BHL Authentication} section in \code{\link[spplit]{spplit-package}} for more}
+
+\item{progress}{(logical) print a progress bar. default: \code{TRUE}}
+}
+\value{
+a list
 }
 \description{
 Get BHL metadata based on a species list

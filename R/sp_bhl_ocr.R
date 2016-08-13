@@ -6,14 +6,15 @@
 #' to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
 #' an R option or env variable. See \strong{BHL Authentication} section in
 #' \code{\link[spplit]{spplit-package}}
+#' @param progress (logical) print a progress bar. default: \code{TRUE}
 #' @return An object of class \code{bhl_ocr}, or a list of such objects
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' (x <- res %>% sp_list() %>% sp_bhl_meta())
+#' (x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta())
 #'
 #' # pass in a single taxon
-#' sp_bhl_ocr(x$`allium amplectens`)
+#' res <- sp_bhl_ocr(x$`allium falcifolium`)
 #' sp_bhl_ocr(x$`castilleja rubicundula`)
 #'
 #' # or many taxa
@@ -22,33 +23,33 @@
 #' # or all of them at once
 #' sp_bhl_ocr(x)
 #' }
-sp_bhl_ocr <- function(x, key = NULL) {
+sp_bhl_ocr <- function(x, key = NULL, progress = TRUE) {
   UseMethod("sp_bhl_ocr")
 }
 
 #' @export
-sp_bhl_ocr.default <- function(x, key = NULL) {
-  stop("No sp_bhl_ocr() method for objects of class ", class(x), call. = FALSE)
+sp_bhl_ocr.default <- function(x, key = NULL, progress = TRUE) {
+  stop(sprintf("No 'sp_bhl_ocr()' method for objects of class '%s'", class(x)), call. = FALSE)
 }
 
 #' @export
-sp_bhl_ocr.bhl_meta <- function(x, key = NULL) {
-  lapply(x, sp_bhl_ocr, key = key)
+sp_bhl_ocr.bhl_meta <- function(x, key = NULL, progress = TRUE) {
+  lapply_prog(x, sp_bhl_ocr, key = key, progress = progress)
 }
 
 #' @export
-sp_bhl_ocr.bhl_meta_single <- function(x, key = NULL) {
-  toclz(lapply(x, function(w) {
-    stats::setNames(lapply(w$PageID, bhl_getpageocrtext, key = key), w$PageID)
-  }), "bhl_ocr")
+sp_bhl_ocr.bhl_meta_single <- function(x, key = NULL, progress = TRUE) {
+  toclz(lapply_prog(x, function(w) {
+    stats::setNames(lapply(w$PageID, bhl_getpageocrtext_safe, key = key), w$PageID)
+  }, progress = progress), "bhl_ocr")
 }
 
 #' @export
-sp_bhl_ocr.list <- function(x, key = NULL) {
-  lapply(x, function(w) {
+sp_bhl_ocr.list <- function(x, key = NULL, progress = TRUE) {
+  lapply_prog(x, function(w) {
     if (!class(w) %in% c("bhl_meta_single", "bhl_meta")) stop("All inputs must be of class 'bhl_meta_single'", call. = FALSE)
     sp_bhl_ocr(w, key = key)
-  })
+  }, progress = progress)
 }
 
 #' @export
