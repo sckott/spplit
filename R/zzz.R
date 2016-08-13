@@ -60,4 +60,5 @@ trydefault_ <- function(expr, default, quiet = FALSE) {
   result
 }
 
-bhl_getpageocrtext_safe <- fail_with(NA_character_, bhl_getpageocrtext, quiet = TRUE)
+bhl_getpageocrtext_safe <- fail_with(NA_character_, rbhl::bhl_getpageocrtext, quiet = TRUE)
+plos_fulltext_safe <- fail_with(NA_character_, rplos::plos_fulltext, quiet = TRUE)

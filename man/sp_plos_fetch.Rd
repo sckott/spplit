@@ -4,14 +4,14 @@
 \alias{sp_plos_fetch}
 \title{Get PLOS full text}
 \usage{
-sp_plos_fetch(x, progess = TRUE, ...)
+sp_plos_fetch(x, progress = TRUE, ...)
 }
 \arguments{
 \item{x}{An object of class \code{plos_meta} or \code{plos_meta_single}}
 
-\item{...}{curl options passed on to \code{\link[httr]{GET}}}
-
 \item{progress}{(logical) print a progress bar. default: \code{TRUE}}
+
+\item{...}{curl options passed on to \code{\link[httr]{GET}}}
 }
 \description{
 Get PLOS full text
@@ -24,7 +24,7 @@ Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 50)
 z <- res \%>\% sp_list() \%>\% sp_plos_meta()
-sp_plos_fetch(z[[1]])
+sp_plos_fetch(z[[3]])
 sp_plos_fetch(z[1:3])
 
 txt <- sp_plos_fetch(z[[3]])
