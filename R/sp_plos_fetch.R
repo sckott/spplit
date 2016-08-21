@@ -76,7 +76,7 @@ print.plos_fetch <- function(x, ...) {
       sprintf(
         "    %s / %s ",
         names(x)[i],
-        length(na.omit(x[[i]]))
+        length(stats::na.omit(x[[i]]))
       )
     )
   }
