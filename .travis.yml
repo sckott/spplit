@@ -8,6 +8,7 @@ addons:
       - libv8-dev
 
 r_packages:
+  - R6
   - rplos
 
 notifications:
