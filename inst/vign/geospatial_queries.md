@@ -76,7 +76,7 @@ polygon(df, fmt=2)
 
 ## SpatialPolygons/SpatialPolygonsDataFrame
 
-`SpatialPolygons` and `SpatialPolygonsDataFrame` are two classes of object defined in the package `sp` (<https://cran.rstudio.com/web/packages/sp>).
+`SpatialPolygons` and `SpatialPolygonsDataFrame` are two classes of object defined in the package `sp` (<https://cran.r-project.org/package=sp>).
 There are other object types defined in `sp`, but only these two are supported here.
 We take those inputs internally and convert to a WKT for GBIF or a bounding box for
 iDigBio.
@@ -103,7 +103,7 @@ Then use the `SpatialPolygons` class object for a geometry based search:
 library("spplit")
 sp_occ_gbif(geometry = poly, limit = 10)
 #> Geometry [<geo1> (10)] 
-#> # A tibble: 10 x 70
+#> # A tibble: 10 × 70
 #>                       name longitude latitude  prov         issues
 #>                      <chr>     <dbl>    <dbl> <chr>          <chr>
 #> 1    Meconella californica -122.8204 38.16849  gbif cdround,gass84

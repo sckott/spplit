@@ -61,11 +61,10 @@ You can pass a WKT string for a `POLYGON` to the `geometry` parameter in `sp_occ
 `sp_occ_idigbio()`. 
 
 An easy to use website for getting WKT after drawing a shape on a map is
-[http://arthur-e.github.io/Wicket/sandbox-gmaps3.html](http://arthur-e.github.io/Wicket/sandbox-gmaps3.html).
+<http://arthur-e.github.io/Wicket/sandbox-gmaps3.html>.
 
-You can get WKT from within R using the `wellknown` package.
-([https://cran.rstudio.com/web/packages/wellknown/](https://cran.rstudio.com/web/packages/wellknown/)).
-With `wellknown` you can get WKT from R objects, and convert GeoJSON to WKT as well. For example:
+You can get WKT from within R using the `wellknown` package <https://cran.r-project.org/package=wellknown>. With `wellknown` you can get 
+WKT from R objects, and convert GeoJSON to WKT as well. For example:
 
 
 ```r
@@ -77,8 +76,7 @@ polygon(df, fmt=2)
 
 ## SpatialPolygons/SpatialPolygonsDataFrame
 
-`SpatialPolygons` and `SpatialPolygonsDataFrame` are two classes of object defined in the
-package `sp` ([https://cran.rstudio.com/web/packages/sp](https://cran.rstudio.com/web/packages/sp)).
+`SpatialPolygons` and `SpatialPolygonsDataFrame` are two classes of object defined in the package `sp` (<https://cran.r-project.org/package=sp>).
 There are other object types defined in `sp`, but only these two are supported here.
 We take those inputs internally and convert to a WKT for GBIF or a bounding box for
 iDigBio.
@@ -105,39 +103,39 @@ Then use the `SpatialPolygons` class object for a geometry based search:
 library("spplit")
 sp_occ_gbif(geometry = poly, limit = 10)
 #> Geometry [<geo1> (10)] 
-#> Source: local data frame [10 x 73]
-#> 
-#>                         name longitude latitude  prov         issues
-#>                        <chr>     <dbl>    <dbl> <chr>          <chr>
-#> 1     Fritillaria pluriflora -122.4809 38.80458  gbif cdround,gass84
-#> 2       Vaccinium cespitosum -122.4362 37.69014  gbif               
-#> 3     Castilleja rubicundula -122.4261 38.86579  gbif cdround,gass84
-#> 4         Allium falcifolium -122.3765 38.80701  gbif cdround,gass84
-#> 5         Angelica tomentosa -122.6142 38.04393  gbif cdround,gass84
-#> 6          Allium amplectens -122.4262 38.86566  gbif cdround,gass84
-#> 7            Sidalcea keckii -122.4261 38.86566  gbif cdround,gass84
-#> 8      Orobanche fasciculata -120.9542 38.95750  gbif cdround,gass84
-#> 9  Hesperolinon californicum -122.7088 38.18759  gbif cdround,gass84
-#> 10    Collinsia heterophylla -122.3375 38.76694  gbif cdround,gass84
-#> Variables not shown: key <int>, datasetKey <chr>, publishingOrgKey <chr>,
-#>   publishingCountry <chr>, protocol <chr>, lastCrawled <chr>, lastParsed
-#>   <chr>, extensions <chr>, basisOfRecord <chr>, taxonKey <int>, kingdomKey
-#>   <int>, phylumKey <int>, classKey <int>, orderKey <int>, familyKey <int>,
-#>   genusKey <int>, speciesKey <int>, scientificName <chr>, kingdom <chr>,
-#>   phylum <chr>, order <chr>, family <chr>, genus <chr>, species <chr>,
-#>   genericName <chr>, specificEpithet <chr>, taxonRank <chr>, elevation
-#>   <dbl>, continent <chr>, stateProvince <chr>, year <int>, month <int>,
-#>   day <int>, eventDate <date>, lastInterpreted <chr>, identifiers <chr>,
-#>   facts <chr>, relations <chr>, geodeticDatum <chr>, class <chr>,
-#>   countryCode <chr>, country <chr>, recordNumber <chr>, identifier <chr>,
-#>   habitat <chr>, verbatimEventDate <chr>, nomenclaturalCode <chr>,
-#>   higherGeography <chr>, institutionID <chr>, county <chr>, locality
-#>   <chr>, language <chr>, gbifID <chr>, collectionCode <chr>, occurrenceID
-#>   <chr>, type <chr>, recordedBy <chr>, catalogNumber <chr>,
-#>   otherCatalogNumbers <chr>, institutionCode <chr>, startDayOfYear <chr>,
-#>   verbatimElevation <chr>, identifiedBy <chr>, higherClassification <chr>,
-#>   occurrenceRemarks <chr>, infraspecificEpithet <chr>, verbatimTaxonRank
-#>   <chr>, elevationAccuracy <dbl>.
+#> # A tibble: 10 × 70
+#>                       name longitude latitude  prov         issues
+#>                      <chr>     <dbl>    <dbl> <chr>          <chr>
+#> 1    Meconella californica -122.8204 38.16849  gbif cdround,gass84
+#> 2   Brachythecium albicans -122.6965 38.92440  gbif  cdrep,cdround
+#> 3         Juncus capitatus -122.8963 39.10842  gbif  cdrep,cdround
+#> 4    Metaneckera menziesii -122.3766 41.20893  gbif          cdrep
+#> 5         Grimmia torquata -122.3766 41.20893  gbif          cdrep
+#> 6     Vaccinium cespitosum -122.4362 37.69014  gbif               
+#> 7   Fritillaria pluriflora -122.4809 38.80458  gbif cdround,gass84
+#> 8    Orobanche fasciculata -120.9542 38.95750  gbif cdround,gass84
+#> 9  Toxicoscordion fontanum -122.5999 38.40661  gbif cdround,gass84
+#> 10    Angelica californica -122.6142 38.04393  gbif cdround,gass84
+#> # ... with 65 more variables: key <int>, datasetKey <chr>,
+#> #   publishingOrgKey <chr>, publishingCountry <chr>, protocol <chr>,
+#> #   lastCrawled <chr>, lastParsed <chr>, extensions <chr>,
+#> #   basisOfRecord <chr>, taxonKey <int>, kingdomKey <int>,
+#> #   phylumKey <int>, classKey <int>, orderKey <int>, familyKey <int>,
+#> #   genusKey <int>, speciesKey <int>, scientificName <chr>, kingdom <chr>,
+#> #   phylum <chr>, order <chr>, family <chr>, genus <chr>, species <chr>,
+#> #   genericName <chr>, specificEpithet <chr>, taxonRank <chr>,
+#> #   elevation <dbl>, continent <chr>, stateProvince <chr>, year <int>,
+#> #   month <int>, day <int>, eventDate <date>, lastInterpreted <chr>,
+#> #   identifiers <chr>, facts <chr>, relations <chr>, geodeticDatum <chr>,
+#> #   class <chr>, countryCode <chr>, country <chr>, recordNumber <chr>,
+#> #   identifier <chr>, habitat <chr>, verbatimEventDate <chr>,
+#> #   nomenclaturalCode <chr>, higherGeography <chr>, institutionID <chr>,
+#> #   locality <chr>, county <chr>, collectionCode <chr>, gbifID <chr>,
+#> #   language <chr>, occurrenceID <chr>, type <chr>, catalogNumber <chr>,
+#> #   recordedBy <chr>, otherCatalogNumbers <chr>, institutionCode <chr>,
+#> #   startDayOfYear <chr>, verbatimElevation <chr>,
+#> #   higherClassification <chr>, identifiedBy <chr>,
+#> #   occurrenceRemarks <chr>
 ```
 
 Same goes for `SpatialPolygonsDataFrame`
