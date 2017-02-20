@@ -9,4 +9,3 @@ run_spplit()
 \description{
 Run a Shiny app to use spplit in a graphical UI
 }
-

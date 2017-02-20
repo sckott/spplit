@@ -43,6 +43,7 @@ Cal Academy of Sciences collections within GBIF
 
 OR a dataset key, see \code{\link{gbif_datasets}}
 }
+
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
@@ -68,4 +69,3 @@ res$gbif$data
 sp_occ_gbif(cas_coll = "all")
 }
 }
-

@@ -14,4 +14,3 @@ collection codes for CAS in the GBIF database. These codes can be
 used to search GBIF.
 }
 \keyword{data}
-

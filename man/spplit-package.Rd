@@ -2,8 +2,8 @@
 % Please edit documentation in R/spplit-package.R
 \docType{package}
 \name{spplit-package}
-\alias{spplit}
 \alias{spplit-package}
+\alias{spplit}
 \title{Find related literature data for species occurrences.}
 \description{
 Find related literature data for species occurrences.
@@ -49,6 +49,7 @@ To use the key, do one of:
  \item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
 }
 }
+
 \examples{
 \dontrun{
 library("spplit")
@@ -71,4 +72,3 @@ sp_bhl_save(ocred)
 }
 }
 \keyword{package}
-

@@ -32,4 +32,3 @@ viewer(out$`allium amplectens`)
 viewer(out)
 }
 }
-

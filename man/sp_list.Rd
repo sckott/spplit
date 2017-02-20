@@ -31,4 +31,3 @@ res <- sp_occ_gbif(geometry = geom)
 res \%>\% sp_list()
 }
 }
-

@@ -34,6 +34,7 @@ Internally, this function loops over your inputs vector list passed in to the
 parameter \code{x}. With each loop, we use \code{\link[rplos]{searchplos}}
 with above defaults.
 }
+
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
@@ -52,4 +53,3 @@ names(df)
 df$title
 }
 }
-

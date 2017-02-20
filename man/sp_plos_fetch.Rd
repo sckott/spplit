@@ -32,4 +32,3 @@ txt$`angelica californica`
 txt$`angelica californica`$`10.1371/journal.pone.0092265`
 }
 }
-

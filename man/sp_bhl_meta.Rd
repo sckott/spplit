@@ -41,4 +41,3 @@ outx <- structure(authors[1:15], class="spauthors") \%>\% sp_bhl_meta()
 outx
 }
 }
-

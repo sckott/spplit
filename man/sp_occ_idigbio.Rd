@@ -43,6 +43,7 @@ Cal Academy of Sciences collections within iDigBio
 
 OR a recordset, see \code{\link{idigbio_recordsets}}
 }
+
 \examples{
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
@@ -72,4 +73,3 @@ sp_occ_idigbio(geometry = geom, cas_coll = "all")
 sp_occ_idigbio(geometry = geom, cas_coll = c("entomology", "herpetology"))
 }
 }
-

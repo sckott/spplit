@@ -14,4 +14,3 @@ collection codes for CAS in the iDigBio database. These codes can be
 used to search iDigBio.
 }
 \keyword{data}
-

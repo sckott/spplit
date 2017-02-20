@@ -39,4 +39,3 @@ sp_bhl_ocr(x[1:2])
 sp_bhl_ocr(x)
 }
 }
-

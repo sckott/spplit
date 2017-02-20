@@ -21,4 +21,3 @@ res <- sp_search(geometry = geom)
 }
 }
 \keyword{internal}
-
