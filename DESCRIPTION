@@ -6,7 +6,7 @@ Description: Combine literature and species occurrence data. Literature
     Facility (GBIF; <http://www.gbif.org/>) and the Integrated Digitized
     Biocollections (iDigBio; <https://www.idigbio.org/>). More data
     sources to come.
-Version: 0.0.5.9300
+Version: 0.0.5.9350
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
 URL: https://github.com/ropenscilabs/spplit
@@ -26,4 +26,5 @@ Suggests:
     rgbif (>= 0.9.3),
     shiny,
     rplos
+Remotes: ropensci/spocc
 RoxygenNote: 6.0.1
