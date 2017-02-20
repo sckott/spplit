@@ -26,5 +26,5 @@ Suggests:
     rgbif (>= 0.9.3),
     shiny,
     rplos
-Remotes: ropensci/spocc
+Remotes: ropensci/rgbif, ropensci/spocc
 RoxygenNote: 6.0.1
