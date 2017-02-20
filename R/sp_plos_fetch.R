@@ -54,9 +54,6 @@ sp_plos_fetch.plos_meta <- function(x, progress = TRUE, ...) {
 
 #' @export
 sp_plos_fetch.plos_meta_single <- function(x, progress = TRUE, ...) {
-  if (!requireNamespace("rplos")) {
-    stop("please install rplos", call. = FALSE)
-  }
   if (all(is.na(x$data))) {
     stop("no data found in input", call. = FALSE)
   } else {

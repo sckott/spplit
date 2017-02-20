@@ -57,10 +57,6 @@ sp_plos_meta.occdatind <- function(x, progress = TRUE, ...) {
 
 #' @export
 sp_plos_meta.sptaxonomy <- function(x, progress = TRUE, ...) {
-  if (!requireNamespace("rplos")) {
-    stop("please install rplos", call. = FALSE)
-  }
-
   out <- list()
 
   if (progress) {

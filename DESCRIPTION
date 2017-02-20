@@ -19,12 +19,12 @@ Imports:
     whisker,
     magrittr,
     data.table,
-    tibble
+    tibble,
+    rplos
 Suggests:
     roxygen2 (>= 5.0.1),
     knitr,
     rgbif (>= 0.9.3),
-    shiny,
-    rplos
+    shiny
 Remotes: ropensci/rgbif, ropensci/spocc
 RoxygenNote: 6.0.1
