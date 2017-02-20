@@ -1,14 +1,8 @@
 language: r
-sudo: required
+sudo: false
 cache: packages
 
-addons:
-  apt:
-    packages:
-      - libv8-dev
-
-r_packages:
-  - R6
+r_binary_packages:
   - rplos
 
 notifications:
