@@ -8,11 +8,13 @@ Description: Combine literature and species occurrence data. Literature
     sources to come.
 Version: 0.0.5.9350
 License: MIT + file LICENSE
-Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), email = "myrmecocystus@gmail.com")
+Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
+    email = "myrmecocystus@gmail.com")
 URL: https://github.com/ropenscilabs/spplit
 BugReports: https://github.com/ropenscilabs/spplit/issues
 LazyData: true
 VignetteBuilder: knitr
+Encoding: UTF-8
 Imports:
     spocc (>= 0.5.0),
     rbhl,
@@ -26,5 +28,4 @@ Suggests:
     knitr,
     rgbif (>= 0.9.3),
     shiny
-Remotes: ropensci/rgbif, ropensci/spocc
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
