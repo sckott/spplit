@@ -3,14 +3,15 @@ Title: Combine Literature and Species Occurrence Data
 Description: Combine literature and species occurrence data. Literature
     data sources include the Biodiversity Heritage Library, and species
     occurrence data sources include the Global Biodiversity Information
-    Facility (GBIF; <http://www.gbif.org/>) and the Integrated Digitized
+    Facility (GBIF; <https://www.gbif.org/>) and the Integrated Digitized
     Biocollections (iDigBio; <https://www.idigbio.org/>). More data
     sources to come.
-Version: 0.0.5.9350
+Version: 0.0.6.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
     email = "myrmecocystus@gmail.com")
-URL: https://github.com/ropenscilabs/spplit
+URL: https://github.com/ropenscilabs/spplit (devel)
+    https://docs.ropensci.org/spplit (docs)
 BugReports: https://github.com/ropenscilabs/spplit/issues
 LazyData: true
 VignetteBuilder: knitr
