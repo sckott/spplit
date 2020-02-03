@@ -3,8 +3,7 @@
 ^README.Rmd$
 ^\.travis.yml$
 cache/
-^CONDUCT\.md$
 usecases.md
 Makefile
-
+CODE_OF_CONDUCT.md
 ^codemeta\.json$
