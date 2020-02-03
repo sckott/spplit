@@ -62,3 +62,8 @@ trydefault_ <- function(expr, default, quiet = FALSE) {
 
 bhl_getpageocrtext_safe <- fail_with(NA_character_, rbhl::bhl_getpageocrtext, quiet = TRUE)
 plos_fulltext_safe <- fail_with(NA_character_, rplos::plos_fulltext, quiet = TRUE)
+
+setdfrbind <- function(x) {
+  (data.table::setDF(
+    data.table::rbindlist(x, use.names = TRUE, fill = TRUE)))
+}

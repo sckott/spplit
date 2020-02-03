@@ -4,8 +4,14 @@
 \alias{sp_occ_gbif}
 \title{Search for occurrences in GBIF}
 \usage{
-sp_occ_gbif(query = NULL, geometry = NULL, limit = 10,
-  cas_coll = "botany", args = NULL, ...)
+sp_occ_gbif(
+  query = NULL,
+  geometry = NULL,
+  limit = 10,
+  cas_coll = "botany",
+  args = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) Scientific names, optional}

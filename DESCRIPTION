@@ -16,6 +16,7 @@ BugReports: https://github.com/ropenscilabs/spplit/issues
 LazyData: true
 VignetteBuilder: knitr
 Encoding: UTF-8
+Language: en-US
 Imports:
     spocc (>= 0.5.0),
     rbhl,
@@ -25,8 +26,7 @@ Imports:
     tibble,
     rplos
 Suggests:
-    roxygen2 (>= 5.0.1),
     knitr,
     rgbif (>= 0.9.3),
     shiny
-RoxygenNote: 6.1.0
+RoxygenNote: 7.0.2

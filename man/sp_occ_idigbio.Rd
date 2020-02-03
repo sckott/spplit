@@ -4,8 +4,14 @@
 \alias{sp_occ_idigbio}
 \title{Search for occurrences in iDigBio}
 \usage{
-sp_occ_idigbio(query = NULL, geometry = NULL, limit = 10,
-  cas_coll = "botany", args = NULL, ...)
+sp_occ_idigbio(
+  query = NULL,
+  geometry = NULL,
+  limit = 10,
+  cas_coll = "botany",
+  args = NULL,
+  ...
+)
 }
 \arguments{
 \item{query}{(character) Scientific names, optional}

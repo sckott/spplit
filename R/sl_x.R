@@ -11,6 +11,7 @@ sp_search <- function(geometry = NULL, limit = 10) {
    res <- occ(geometry = geometry, from = "idigbio", limit = limit,
               idigbioopts = list(rq = list(recordset = "26f7cbde-fbcb-4500-80a9-a99daa0ead9d")))
    # head(res$idigbio$data[[1]])
+   df <- res$idigbio$data[[1]]
    df$spname <- paste(res$idigbio$data[[1]]$genus, res$idigbio$data[[1]]$specificepithet)
    # df <- tbl_df(res$idigbio$data[[1]]) %>%
    #   rowwise() %>%
@@ -24,20 +25,21 @@ sp_search <- function(geometry = NULL, limit = 10) {
    out <- list()
    for (i in seq_along(nms)) {
      # search to get namebankid
-     x <- bhl_namesearch(name = nms[[i]])
+     x <- bhl_namesearch(name = nms[i])
      # get BHL pages with that namebankid
-     yy <- bhl_namegetdetail(namebankid = x$data[1, 'NameBankID'])
+     yy <- bhl_namemetadata(name = x$NameConfirmed[1])
+     # yy <- bhl_namemetadata(namebankid = x$data[1, 'NameBankID'])
      # get page details for each result
-     alldat <- lapply(yy$data$Titles.Items, function(z) {
-       pgs <- do.call("rbind.data.frame", z$Pages)
-       z$Pages <- NULL
+     alldat <- lapply(yy$Result[[1]]$Titles, function(z) {
+       pgs <- do.call("rbind.data.frame", z$Items[[1]]$Pages)
+       # z$Pages <- NULL
        list(data = z, pages = pgs)
      })
      # get ocr text for each element
      ## take subset for testing
      out[[nms[i]]] <- lapply(alldat, function(w) {
        ids <- w$pages$PageID
-       stats::setNames(lapply(ids, bhl_getpageocrtext), ids)
+       stats::setNames(lapply(ids, bhl_getpagemetadata), ids)
      })
    }
    out

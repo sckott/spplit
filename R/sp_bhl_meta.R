@@ -64,11 +64,11 @@ sp_bhl_meta.sptaxonomy <- function(x, key = NULL, progress = TRUE) {
         stop("need an API key for BHL, or key incorrect, go to\nhttp://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
       }
     }
-    if (z$data[1, 'NameBankID'] == "" || inherits(z, "error")) {
+    if (z$NameConfirmed[1] == "" || inherits(z, "error")) {
       out[[x[i]]] <- list()
     } else {
       # get BHL pages with that namebankid
-      yy <- tryCatch(bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key),
+      yy <- tryCatch(bhl_namemetadata(name = z$NameConfirmed[1], key = key),
                      error = function(e) e)
       if (inherits(yy, "error")) {
         out[[x[i]]] <- structure(list(), class = 'bhl_meta_single')
@@ -76,9 +76,12 @@ sp_bhl_meta.sptaxonomy <- function(x, key = NULL, progress = TRUE) {
         # success - get page details for each result
         out[[x[i]]] <-
           structure(
-            lapply(yy$data$Titles.Items, function(z) {
-              pgs <- do.call("rbind.data.frame", z$Pages)
-              z$Pages <- NULL
+            lapply(yy$Result[[1]]$Titles, function(z) {
+              pgs <- setdfrbind(lapply(z$Items, function(w) do.call("rbind.data.frame", w$Pages)))
+              z$Items <- lapply(z$Items, function(v) {
+                v$Pages <- NULL
+                v
+              })
               merge(
                 z,
                 pgs[, !names(pgs) %in%  c('Volume', 'Year')],
@@ -138,7 +141,7 @@ sp_bhl_meta.spauthors <- function(x, key = NULL, progress = TRUE) {
 #       out[[i]] <- NULL
 #     } else {
 #       # get BHL pages with that namebankid
-#       yy <- bhl_namegetdetail(namebankid = z$data[1, 'NameBankID'], key = key)
+#       yy <- bhl_namemetadata(namebankid = z$data[1, 'NameBankID'], key = key)
 #       # get page details for each result
 #       out[[x[i]]] <-
 #         structure(
