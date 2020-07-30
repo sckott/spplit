@@ -5,9 +5,6 @@
 \alias{spplit-package}
 \alias{spplit}
 \title{Find related literature data for species occurrences.}
-\description{
-Find related literature data for species occurrences.
-}
 \section{Usage}{
 
 A typical workflow looks like:

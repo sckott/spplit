@@ -26,11 +26,11 @@ Possible workflow:
 
 ## Install
 
-install dev versions of `rgbif` and `spocc` first, then install `spplit`
+install `rgbif` and `spocc`, then install `spplit`
 
 ```{r eval=FALSE}
-devtools::install_github(c("ropensci/rgbif", "ropensci/spocc"))
-devtools::install_github("ropenscilabs/spplit")
+install.packages(c("rgbif", "spocc"))
+remotes::install_github("ropenscilabs/spplit")
 ```
 
 ```{r}
@@ -103,13 +103,11 @@ out <- x[1:3] %>% sp_bhl_ocr
 viewer(out)
 ```
 
-![image](inst/img/viewer_eg1.png)
+![image](man/figures/viewer_eg1.png)
 
 ## Meta
 
 * A collaboration with [California Academy of Sciences](http://www.calacademy.org/)
 * Please [report any issues or bugs](https://github.com/ropenscilabs/spplit/issues)
 * License: MIT
-* Please note that this project is released with a [Contributor Code of Conduct][coc]. By participating in this project you agree to abide by its terms.
-
-[coc]: https://github.com/ropenscilabs/spplit/blob/master/CODE_OF_CONDUCT.md
+* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.

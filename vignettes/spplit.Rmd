@@ -263,7 +263,7 @@ for each BHL item, where each item can have many pages.
 viewer(ocrdat)
 ```
 
-![img](img/viewer_eg.png)
+![img](../man/figures/viewer_eg1.png)
 
 Note that right now the text is all concatentated together - I am working on making it
 prettier. Let me know if you think this viewer is useful.
