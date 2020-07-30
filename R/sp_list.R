@@ -1,8 +1,8 @@
 #' Get a species list (unique set of taxon names)
 #'
 #' @export
-#' @param x Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}
-#' @details only accepts objects of class \code{occdatind} right now
+#' @param x Output from a call to [sp_occ_idigbio()] or [sp_occ_gbif()]
+#' @details only accepts objects of class `occdatind` right now
 #' @return gives a character vector of unique taxon list
 #' @examples \dontrun{
 #' # idigbio

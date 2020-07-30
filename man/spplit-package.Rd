@@ -4,29 +4,31 @@
 \name{spplit-package}
 \alias{spplit-package}
 \alias{spplit}
-\title{Find related literature data for species occurrences.}
+\title{spplit}
+\description{
+Find related literature data for species occurrences.
+}
 \section{Usage}{
 
 A typical workflow looks like:
 \itemize{
- \item Search for occurrences from GBIF or iDigBio - see \code{\link{sp_occ_gbif}}
- and \code{\link{sp_occ_idigbio}}
- \item Get a species list - see \code{\link{sp_list}}
- \item Get BHL metadata - see \code{\link{sp_bhl_meta}}
- \item Get BHL OCR'ed text - see \code{\link{sp_bhl_ocr}}
- \item Save text to disk for later use - OR - analyze data - see
- \code{\link{sp_bhl_save}}
- }
+\item Search for occurrences from GBIF or iDigBio - see \code{\link[=sp_occ_gbif]{sp_occ_gbif()}}
+and \code{\link[=sp_occ_idigbio]{sp_occ_idigbio()}}
+\item Get a species list - see \code{\link[=sp_list]{sp_list()}}
+\item Get BHL metadata - see \code{\link[=sp_bhl_meta]{sp_bhl_meta()}}
+\item Get BHL OCR'ed text - see \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
+\item Save text to disk for later use - OR - analyze data - see \code{\link[=sp_bhl_save]{sp_bhl_save()}}
+}
 }
 
 \section{Other tools}{
 
 \itemize{
- \item \code{\link{viewer}} - accepts output from \code{\link{sp_bhl_ocr}}, opening
- up a human friendly viewer of the text in your default browser
- \item \code{\link{as_df}} - accepts output from \code{\link{sp_bhl_meta}},
- either all items as an \code{bhl_meta} object or individual items as
- \code{bhl_meta_single} objects
+\item \code{\link[=viewer]{viewer()}} - accepts output from \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}, opening
+up a human friendly viewer of the text in your default browser
+\item \code{\link[=as_df]{as_df()}} - accepts output from \code{\link[=sp_bhl_meta]{sp_bhl_meta()}},
+either all items as an \code{bhl_meta} object or individual items as
+\code{bhl_meta_single} objects
 }
 }
 
@@ -38,12 +40,11 @@ they'll ask for your name and email address.
 
 To use the key, do one of:
 \itemize{
- \item pass it in the \code{key} parameter in \code{\link{sp_bhl_meta}}
- and \code{\link{sp_bhl_ocr}}
- \item store as an environment variable (as \code{BHL_KEY}) either in your `.Renviron`
- file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
- \code{.bash_profile}, or \code{.zshrc})
- \item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
+\item pass it in the \code{key} parameter in \code{\link[=sp_bhl_meta]{sp_bhl_meta()}} and \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
+\item store as an environment variable (as \code{BHL_KEY}) either in your \code{.Renviron}
+file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
+\code{.bash_profile}, or \code{.zshrc})
+\item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
 }
 }
 

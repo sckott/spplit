@@ -11,7 +11,7 @@ sp_plos_meta(x, progress = TRUE, ...)
 
 \item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 
-\item{...}{curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \description{
 Get PLOS metadata based on a species list
@@ -21,17 +21,17 @@ Get PLOS metadata based on a species list
 A set of defaults are used, based on what we think are very reasonable
 assumptions about what most people want:
 \itemize{
- \item Full research articles - we assume most people want full articles, not subsets,
- comments, etc. - toggle this by xxx
- \item Fields: we fetch the fields \code{id, title, authors}, but you can specify
- which you'd like back by xxx
+\item Full research articles - we assume most people want full articles, not subsets,
+comments, etc. - toggle this by xxx
+\item Fields: we fetch the fields \verb{id, title, authors}, but you can specify
+which you'd like back by xxx
 }
 }
 
 \section{Internals}{
 
 Internally, this function loops over your inputs vector list passed in to the
-parameter \code{x}. With each loop, we use \code{\link[rplos]{searchplos}}
+parameter \code{x}. With each loop, we use \code{\link[rplos:searchplos]{rplos::searchplos()}}
 with above defaults.
 }
 

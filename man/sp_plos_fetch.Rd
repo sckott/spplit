@@ -11,13 +11,13 @@ sp_plos_fetch(x, progress = TRUE, ...)
 
 \item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 
-\item{...}{curl options passed on to \code{\link[httr]{GET}}}
+\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
 }
 \description{
 Get PLOS full text
 }
 \details{
-Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
+Uses \code{\link[rplos:plos_fulltext]{rplos::plos_fulltext()}} to fetch full text XML
 }
 \examples{
 \dontrun{

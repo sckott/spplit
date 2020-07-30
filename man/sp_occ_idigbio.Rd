@@ -26,7 +26,7 @@ sp_occ_idigbio(
 \url{https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields} and
 \url{https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format}}
 
-\item{...}{Further options passed to \code{\link[spocc]{occ}}}
+\item{...}{Further options passed to \code{\link[spocc:occ]{spocc::occ()}}}
 }
 \description{
 Search for occurrences in iDigBio
@@ -38,16 +38,16 @@ Cal Academy of Sciences collections within iDigBio
 \section{cas_coll options}{
 
 \itemize{
- \item entomology
- \item herpetology
- \item ichthyology
- \item invertebrate zoology & geology
- \item ornithology
- \item mammalogy
- \item botany
+\item entomology
+\item herpetology
+\item ichthyology
+\item invertebrate zoology & geology
+\item ornithology
+\item mammalogy
+\item botany
 }
 
-OR a recordset, see \code{\link{idigbio_recordsets}}
+OR a recordset, see \link{idigbio_recordsets}
 }
 
 \examples{

@@ -1,5 +1,5 @@
-#' Find related literature data for species occurrences.
-#'
+#' @title spplit
+#' @description Find related literature data for species occurrences.
 #' @importFrom spocc occ
 #' @importFrom rbhl bhl_namesearch bhl_namemetadata bhl_getpageocrtext bhl_partsearch bhl_getpagemetadata
 #' @importFrom whisker whisker.render
@@ -13,39 +13,34 @@
 #'
 #' @section Usage:
 #' A typical workflow looks like:
-#' \itemize{
-#'  \item Search for occurrences from GBIF or iDigBio - see \code{\link{sp_occ_gbif}}
-#'  and \code{\link{sp_occ_idigbio}}
-#'  \item Get a species list - see \code{\link{sp_list}}
-#'  \item Get BHL metadata - see \code{\link{sp_bhl_meta}}
-#'  \item Get BHL OCR'ed text - see \code{\link{sp_bhl_ocr}}
-#'  \item Save text to disk for later use - OR - analyze data - see
-#'  \code{\link{sp_bhl_save}}
-#'  }
+#' 
+#' - Search for occurrences from GBIF or iDigBio - see [sp_occ_gbif()]
+#' and [sp_occ_idigbio()]
+#' - Get a species list - see [sp_list()]
+#' - Get BHL metadata - see [sp_bhl_meta()]
+#' - Get BHL OCR'ed text - see [sp_bhl_ocr()]
+#' - Save text to disk for later use - OR - analyze data - see [sp_bhl_save()]
 #'
 #' @section Other tools:
-#' \itemize{
-#'  \item \code{\link{viewer}} - accepts output from \code{\link{sp_bhl_ocr}}, opening
+#' 
+#' - [viewer()] - accepts output from [sp_bhl_ocr()], opening
 #'  up a human friendly viewer of the text in your default browser
-#'  \item \code{\link{as_df}} - accepts output from \code{\link{sp_bhl_meta}},
-#'  either all items as an \code{bhl_meta} object or individual items as
-#'  \code{bhl_meta_single} objects
-#' }
+#' - [as_df()] - accepts output from [sp_bhl_meta()],
+#'  either all items as an `bhl_meta` object or individual items as
+#'  `bhl_meta_single` objects
 #'
 #' @section BHL Authentication:
 #' For access to Biodiveristy Heritage Library data, you'll need an API key from them.
-#' To get one fill out the brief form at \url{http://www.biodiversitylibrary.org/getapikey.aspx} -
+#' To get one fill out the brief form at <http://www.biodiversitylibrary.org/getapikey.aspx> -
 #' they'll ask for your name and email address.
 #'
 #' To use the key, do one of:
-#' \itemize{
-#'  \item pass it in the \code{key} parameter in \code{\link{sp_bhl_meta}}
-#'  and \code{\link{sp_bhl_ocr}}
-#'  \item store as an environment variable (as \code{BHL_KEY}) either in your `.Renviron`
-#'  file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
-#'  \code{.bash_profile}, or \code{.zshrc})
-#'  \item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
-#' }
+#' 
+#' - pass it in the `key` parameter in [sp_bhl_meta()] and [sp_bhl_ocr()]
+#' - store as an environment variable (as `BHL_KEY`) either in your `.Renviron`
+#' file, or wherever you store your environment variables (e.g., `.bashrc`, or
+#' `.bash_profile`, or `.zshrc`)
+#' - store as an R option (as `bhl_key`) in your `.Rprofile` file
 #'
 #' @examples \dontrun{
 #' library("spplit")

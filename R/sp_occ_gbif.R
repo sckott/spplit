@@ -5,25 +5,24 @@
 #' @param geometry WKT or bounding box, optional
 #' @param limit (integer) Number results to return
 #' @param cas_coll (character) CAS collection name OR a collection code. See Details.
-#' @param args additional args to GBIF, see \code{\link[rgbif]{occ_search}} for
-#' the options. Any parameters you can pass to \code{occ_search} you can pass to
+#' @param args additional args to GBIF, see [rgbif::occ_search()] for
+#' the options. Any parameters you can pass to `occ_search` you can pass to
 #' this parameter.
-#' @param ... Further options passed to \code{\link[spocc]{occ}}
+#' @param ... Further options passed to [spocc::occ()]
 #' @details This has hard-coded internal settings to get data from the
 #' Cal Academy of Sciences collections within GBIF
 #'
 #' @section cas_coll options:
-#' \itemize{
-#'  \item entomology
-#'  \item herpetology
-#'  \item ichthyology
-#'  \item invertebrate zoology & geology
-#'  \item ornithology
-#'  \item mammalogy
-#'  \item botany
-#' }
 #'
-#' OR a dataset key, see \code{\link{gbif_datasets}}
+#' - entomology
+#' - herpetology
+#' - ichthyology
+#' - invertebrate zoology & geology
+#' - ornithology
+#' - mammalogy
+#' - botany
+#'
+#' OR a dataset key, see [gbif_datasets]
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' geom <- 'POLYGON((30.1 10.1, 10 20, 20 60, 60 60, 30.1 10.1))'

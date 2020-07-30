@@ -1,10 +1,10 @@
 #' Convert to a data.frame
 #'
 #' @export
-#' @param x an object of class \code{bhl_meta} or \code{bhl_meta_single}.
-#' \code{\link{sp_bhl_meta}} outputs an object of class \code{bhl_meta}, composed
-#' of objects of class \code{bhl_meta_single}.
-#' @return If \code{bhl_meta} a single data.frame. If \code{bhl_meta_single},
+#' @param x an object of class `bhl_meta` or `bhl_meta_single`.
+#' [sp_bhl_meta()] outputs an object of class `bhl_meta`, composed
+#' of objects of class `bhl_meta_single`.
+#' @return If `bhl_meta` a single data.frame. If `bhl_meta_single`,
 #' a list of data.frame's of length equal to that of the input list.
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'

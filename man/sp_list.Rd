@@ -7,7 +7,7 @@
 sp_list(x)
 }
 \arguments{
-\item{x}{Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}}
+\item{x}{Output from a call to \code{\link[=sp_occ_idigbio]{sp_occ_idigbio()}} or \code{\link[=sp_occ_gbif]{sp_occ_gbif()}}}
 }
 \value{
 gives a character vector of unique taxon list

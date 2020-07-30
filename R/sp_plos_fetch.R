@@ -1,10 +1,10 @@
 #' Get PLOS full text
 #'
 #' @export
-#' @param x An object of class \code{plos_meta} or \code{plos_meta_single}
-#' @param progress (logical) print a progress bar. default: \code{TRUE}
-#' @param ... curl options passed on to \code{\link[httr]{GET}}
-#' @details Uses \code{\link[rplos]{plos_fulltext}} to fetch full text XML
+#' @param x An object of class `plos_meta` or `plos_meta_single`
+#' @param progress (logical) print a progress bar. default: `TRUE`
+#' @param ... curl options passed on to [httr::GET()]
+#' @details Uses [rplos::plos_fulltext()] to fetch full text XML
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom, limit = 50)

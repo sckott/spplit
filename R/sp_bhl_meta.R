@@ -2,11 +2,12 @@
 #'
 #' @export
 #' @param x input
-#' @param key api key, required. Go to \url{http://www.biodiversitylibrary.org/getapikey.aspx}
-#' to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
-#' an R option (as \code{bhl_key}) or environment variable (as \code{BHL_KEY}). See
-#' \strong{BHL Authentication} section in \code{\link[spplit]{spplit-package}} for more
-#' @param progress (logical) print a progress bar. default: \code{TRUE}
+#' @param key api key, required. Go to
+#' <http://www.biodiversitylibrary.org/getapikey.aspx>
+#' to get a key. you can pass in as a parameter here, or leave `NULL` and
+#' store as an R option (as `bhl_key`) or environment variable (as
+#' `BHL_KEY`). See **BHL Authentication** section in [spplit] for more
+#' @param progress (logical) print a progress bar. default: `TRUE`
 #' @return a list
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'

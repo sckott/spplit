@@ -6,24 +6,23 @@
 #' @param limit (integer) Number results to return
 #' @param cas_coll (character) CAS collection name OR a collection code. See Details.
 #' @param args additional args to iDigBio, see
-#' \url{https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields} and
-#' \url{https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format}
-#' @param ... Further options passed to \code{\link[spocc]{occ}}
+#' <https://github.com/iDigBio/idigbio-search-api/wiki/Index-Fields> and
+#' <https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format>
+#' @param ... Further options passed to [spocc::occ()]
 #' @details This has hard-coded internal settings to get data from the
 #' Cal Academy of Sciences collections within iDigBio
 #'
 #' @section cas_coll options:
-#' \itemize{
-#'  \item entomology
-#'  \item herpetology
-#'  \item ichthyology
-#'  \item invertebrate zoology & geology
-#'  \item ornithology
-#'  \item mammalogy
-#'  \item botany
-#' }
+#' 
+#' - entomology
+#' - herpetology
+#' - ichthyology
+#' - invertebrate zoology & geology
+#' - ornithology
+#' - mammalogy
+#' - botany
 #'
-#' OR a recordset, see \code{\link{idigbio_recordsets}}
+#' OR a recordset, see [idigbio_recordsets]
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_idigbio(geometry = geom)

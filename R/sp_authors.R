@@ -1,11 +1,11 @@
 #' Get an author list (unique set of authors)
 #'
 #' @export
-#' @param x Output from a call to \code{\link{sp_occ_idigbio}} or \code{\link{sp_occ_gbif}}
+#' @param x Output from a call to [sp_occ_idigbio()] or [sp_occ_gbif()]
 #' @param which (character) one of "recorded" or "identified", for "recordedBy"
-#' or "identifiedBy". Default: "recorded". See \url{http://rs.tdwg.org/dwc/terms/}
+#' or "identifiedBy". Default: "recorded". See <http://rs.tdwg.org/dwc/terms/>
 #' for more information
-#' @details only accepts objects of class \code{occdatind} right now
+#' @details only accepts objects of class `occdatind` right now
 #' @return gives a character vector of unique taxon list
 #' @examples \dontrun{
 #' # idigbio

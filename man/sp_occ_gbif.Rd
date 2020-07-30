@@ -22,11 +22,11 @@ sp_occ_gbif(
 
 \item{cas_coll}{(character) CAS collection name OR a collection code. See Details.}
 
-\item{args}{additional args to GBIF, see \code{\link[rgbif]{occ_search}} for
+\item{args}{additional args to GBIF, see \code{\link[rgbif:occ_search]{rgbif::occ_search()}} for
 the options. Any parameters you can pass to \code{occ_search} you can pass to
 this parameter.}
 
-\item{...}{Further options passed to \code{\link[spocc]{occ}}}
+\item{...}{Further options passed to \code{\link[spocc:occ]{spocc::occ()}}}
 }
 \description{
 Search for occurrences in GBIF
@@ -38,16 +38,16 @@ Cal Academy of Sciences collections within GBIF
 \section{cas_coll options}{
 
 \itemize{
- \item entomology
- \item herpetology
- \item ichthyology
- \item invertebrate zoology & geology
- \item ornithology
- \item mammalogy
- \item botany
+\item entomology
+\item herpetology
+\item ichthyology
+\item invertebrate zoology & geology
+\item ornithology
+\item mammalogy
+\item botany
 }
 
-OR a dataset key, see \code{\link{gbif_datasets}}
+OR a dataset key, see \link{gbif_datasets}
 }
 
 \examples{

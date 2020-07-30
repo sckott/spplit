@@ -1,11 +1,11 @@
 #' Browse highlighted fragments in your default browser
 #'
 #' @export
-#' @param input An object of class \code{bhl_ocr}, from a call to \code{sp_bhl_ocr},
+#' @param input An object of class `bhl_ocr`, from a call to `sp_bhl_ocr`,
 #' or a list of such objects
-#' @param output Path and file name for output file. If \code{NULL}, a temp file is used.
+#' @param output Path and file name for output file. If `NULL`, a temp file is used.
 #' @param browse Browse file in your default browse immediately after file creation.
-#'    If \code{FALSE}, the file is written, but not opened.
+#' If `FALSE`, the file is written, but not opened.
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)

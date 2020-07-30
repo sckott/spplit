@@ -8,7 +8,7 @@ as_df(x)
 }
 \arguments{
 \item{x}{an object of class \code{bhl_meta} or \code{bhl_meta_single}.
-\code{\link{sp_bhl_meta}} outputs an object of class \code{bhl_meta}, composed
+\code{\link[=sp_bhl_meta]{sp_bhl_meta()}} outputs an object of class \code{bhl_meta}, composed
 of objects of class \code{bhl_meta_single}.}
 }
 \value{

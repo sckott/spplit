@@ -1,13 +1,12 @@
 #' Get BHL OCR text
 #'
 #' @export
-#' @param x An object of class \code{bhl_meta} or \code{bhl_meta_single}
-#' @param key api key, required. Go to \url{http://www.biodiversitylibrary.org/getapikey.aspx}
-#' to get a key. you can pass in as a parameter here, or leave \code{NULL} and store as
-#' an R option or env variable. See \strong{BHL Authentication} section in
-#' \code{\link[spplit]{spplit-package}}
-#' @param progress (logical) print a progress bar. default: \code{TRUE}
-#' @return An object of class \code{bhl_ocr}, or a list of such objects
+#' @param x An object of class `bhl_meta` or `bhl_meta_single`
+#' @param key api key, required. Go to <http://www.biodiversitylibrary.org/getapikey.aspx>
+#' to get a key. you can pass in as a parameter here, or leave `NULL` and store as
+#' an R option or env variable. See **BHL Authentication** section in [spplit]
+#' @param progress (logical) print a progress bar. default: `TRUE`
+#' @return An object of class `bhl_ocr`, or a list of such objects
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
