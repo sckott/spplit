@@ -40,7 +40,7 @@ library("spplit")
 ## Example - connect iDigBio species occurrence data to BHL
 
 For access to Biodiveristy Heritage Library data, you'll need an API key from them.
-To get one fill out the brief form at [http://www.biodiversitylibrary.org/getapikey.aspx](http://www.biodiversitylibrary.org/getapikey.aspx) -
+To get one fill out the brief form at <https://www.biodiversitylibrary.org/getapikey.aspx> -
 they'll ask for your name and email address.
 
 ```{r cache=TRUE}
