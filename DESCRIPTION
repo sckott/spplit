@@ -1,11 +1,11 @@
 Package: spplit
-Title: Combine Literature and Species Occurrence Data
+Title: Combine Species Occurrence Data and Literature
 Description: Combine literature and species occurrence data. Literature
-    data sources include the Biodiversity Heritage Library, and species
+    data sources include the Biodiversity Heritage Library
+    (<https://www.biodiversitylibrary.org/>), and species
     occurrence data sources include the Global Biodiversity Information
     Facility (GBIF; <https://www.gbif.org/>) and the Integrated Digitized
-    Biocollections (iDigBio; <https://www.idigbio.org/>). More data
-    sources to come.
+    Biocollections (iDigBio; <https://www.idigbio.org/>).
 Version: 0.0.6.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
