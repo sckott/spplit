@@ -7,3 +7,4 @@ usecases.md
 Makefile
 CODE_OF_CONDUCT.md
 ^codemeta\.json$
+.github
