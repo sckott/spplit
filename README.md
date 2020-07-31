@@ -1,7 +1,7 @@
 spplit
 ======
 
-
+[![R-check](https://github.com/ropenscilabs/spplit/workflows/R-check/badge.svg)](https://github.com/ropenscilabs/spplit/actions/)
 
 `spplit` - connect species occurrence data to literature
 

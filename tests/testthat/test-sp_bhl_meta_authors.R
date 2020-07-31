@@ -3,7 +3,7 @@ test_that("sp_bhl_meta authors", {
   vcr::use_cassette("sp_bhl_meta_authors", {
     res <- sp_occ_gbif(geometry = geom, limit = 50)
     x <- sp_bhl_meta(sp_authors(res), progress = FALSE)
-  })
+  }, preserve_exact_body_bytes = TRUE)
 
   expect_is(x, "bhl_meta")
   expect_length(x, 3)

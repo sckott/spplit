@@ -3,7 +3,7 @@ test_that("sp_bhl_meta names", {
   vcr::use_cassette("sp_bhl_meta_names", {
     res <- sp_occ_gbif(geometry = geom)
     x <- sp_bhl_meta(sp_list(res)[1:2], progress = FALSE)
-  })
+  }, preserve_exact_body_bytes = TRUE)
 
   expect_is(x, "bhl_meta")
   expect_length(x, 2)
