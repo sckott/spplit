@@ -41,5 +41,7 @@ res <- sp_occ_gbif(geometry = geom, limit = 50)
 authors <- res \%>\% sp_authors()
 outx <- structure(authors[1:15], class="spauthors") \%>\% sp_bhl_meta()
 outx
+outx$`cummings, alice`
+outx$`wagner, d. h.`
 }
 }
