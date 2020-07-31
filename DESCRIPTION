@@ -6,7 +6,7 @@ Description: Combine literature and species occurrence data. Literature
     occurrence data sources include the Global Biodiversity Information
     Facility (GBIF; <https://www.gbif.org/>) and the Integrated Digitized
     Biocollections (iDigBio; <https://www.idigbio.org/>).
-Version: 0.0.6.92
+Version: 0.0.7.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
     email = "myrmecocystus@gmail.com")
@@ -29,5 +29,7 @@ Imports:
 Suggests:
     knitr,
     rgbif (>= 0.9.3),
-    shiny
+    shiny,
+    testthat,
+    vcr
 RoxygenNote: 7.1.1

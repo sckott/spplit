@@ -1,0 +1,1435 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.gbif.org/v1/occurrence/search?limit=50&offset=0&datasetKey=f934f8e2-32ca-46a7-b2f8-b032a4740454&geometry=POLYGON%28%28-124.07%2041.48%2C-119.99%2041.48%2C-119.99%2035.57%2C-124.07%2035.57%2C-124.07%2041.48%29%29
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+      User-Agent: r-curl/4.3 crul/0.9.4.91 rOpenSci(rgbif/3.2.0)
+      X-USER-AGENT: r-curl/4.3 crul/0.9.4.91 rOpenSci(rgbif/3.2.0)
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      vary: Origin, Access-Control-Request-Method, Access-Control-Request-Headers
+      x-content-type-options: nosniff
+      x-xss-protection: 1; mode=block
+      pragma: no-cache
+      expires: '0'
+      x-frame-options: DENY
+      content-type: application/json
+      date: Fri, 31 Jul 2020 23:04:13 GMT
+      cache-control: public, max-age=600
+      x-varnish: 285672947 251569851
+      age: '198'
+      via: 1.1 varnish (Varnish/5.2)
+      accept-ranges: bytes
+      content-length: '125017'
+      connection: keep-alive
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"offset":0,"limit":50,"endOfRecords":false,"count":27015,"results":[{"key":2569346572,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.198+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":8100406,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":7708,"genusKey":2718273,"speciesKey":2718307,"acceptedTaxonKey":8100406,"scientificName":"Bolboschoenus
+        maritimus subsp. paludosus (A.Nelson) T.Koyama","acceptedScientificName":"Bolboschoenus
+        maritimus subsp. paludosus (A.Nelson) T.Koyama","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Cyperaceae","genus":"Bolboschoenus","species":"Bolboschoenus
+        maritimus","genericName":"Bolboschoenus","specificEpithet":"maritimus","infraspecificEpithet":"paludosus","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.217952,"decimalLatitude":37.410984,"elevation":74.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2020,"month":1,"eventDate":"2020-01-01T00:00:00","issues":[],"modified":"2020-02-06T09:47:40.000+0000","lastInterpreted":"2020-07-29T17:25:28.198+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2646","identifier":"urn:catalog:CAS:BOT-BC:646495","habitat":"Wet
+        marsh, with Cyperus eragrostis, Phalaris aquatica, Cortaderia selloana, Phragmites
+        australis","higherGeography":"North America; United States; California; San
+        Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"1/7/2020","locality":"Jasper
+        Ridge Biological Preserve; NE border of Preserve at former Boething Tree Nursery
+        site","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2569346572","occurrenceID":"urn:catalog:CAS:BOT-BC:646495","type":"PhysicalObject","catalogNumber":"646495","recordedBy":"Rawlings,
+        John; Cummings, Alice","otherCatalogNumbers":"CAS 1294386","institutionCode":"CAS","occurrenceRemarks":"100s
+        of plants in dense patches; inflorescences partially intact with ripe 2-sided
+        fruit; perianth bristles loosely attached","verbatimElevation":"74 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Cyperaceae"},{"key":2569346597,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.194+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":8351723,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2705783,"speciesKey":5290149,"acceptedTaxonKey":7226752,"scientificName":"Phragmites
+        australis subsp. berlandieri (E.Fourn.) Saltonst. & Hauber","acceptedScientificName":"Phragmites
+        australis subsp. australis","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Phragmites","species":"Phragmites
+        australis","genericName":"Phragmites","specificEpithet":"australis","infraspecificEpithet":"berlandieri","taxonRank":"SUBSPECIES","taxonomicStatus":"SYNONYM","decimalLongitude":-122.217952,"decimalLatitude":37.410984,"elevation":74.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2020,"month":1,"eventDate":"2020-01-01T00:00:00","issues":[],"modified":"2020-02-06T09:51:52.000+0000","lastInterpreted":"2020-07-29T17:25:29.194+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2646","identifier":"urn:catalog:CAS:BOT-BC:646496","habitat":"Wet
+        marsh, with Bolboschoenus maritimus, Cyperus eragrostis, Phalaris aquatica,
+        Cortaderia selloana","higherGeography":"North America; United States; California;
+        San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"1/7/2020","locality":"Jasper
+        Ridge Biological Preserve; NE border of Preserve at former Boething Tree Nursery
+        site","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2569346597","occurrenceID":"urn:catalog:CAS:BOT-BC:646496","type":"PhysicalObject","catalogNumber":"646496","recordedBy":"Rawlings,
+        John; Cummings, Alice","otherCatalogNumbers":"CAS 1294378","institutionCode":"CAS","occurrenceRemarks":"At
+        least 2 small patches; culms 2.5 m tall; ligules of hairs ~.7 mm; culms and
+        inforescences dry with no new vegetative growth; many hairy spikelets available;
+        stout rhizomes 1+ cm diameter.","verbatimElevation":"74 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425045848,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.129+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7696337,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":636,"familyKey":2423,"genusKey":8009787,"speciesKey":7696337,"acceptedTaxonKey":7696337,"scientificName":"Nuphar
+        polysepalum Engelm.","acceptedScientificName":"Nuphar polysepalum Engelm.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Nymphaeales","family":"Nymphaeaceae","genus":"Nuphar","species":"Nuphar
+        polysepalum","genericName":"Nuphar","specificEpithet":"polysepalum","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.17261,"decimalLatitude":37.3223,"elevation":636.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":1,"eventDate":"2019-01-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE","TAXON_MATCH_FUZZY"],"modified":"2019-10-01T10:42:15.000+0000","lastInterpreted":"2020-07-29T17:25:28.129+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2489","identifier":"urn:catalog:CAS:BOT-BC:634579","habitat":"Sag
+        pond surrounded by oak-bay woodland, with Cyperus eragrostis, Helenium puberulum,
+        Oenanthe sarmentosa, Juncus, Rubus ursinus, Salix lasiolepis","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"01/10/2019","locality":"Monte
+        Bello Open Space Preserve; in extensive pond along Canyon Trail/road","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045848","occurrenceID":"urn:catalog:CAS:BOT-BC:634579","type":"PhysicalObject","catalogNumber":"634579","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294470","institutionCode":"CAS","occurrenceRemarks":"Vegetative;
+        100+ plants","verbatimElevation":"636 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Nymphaeales; Nymphaeaceae"},{"key":2425045196,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.882+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2928033,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":7226464,"familyKey":2387,"genusKey":2928024,"speciesKey":2928033,"acceptedTaxonKey":2928033,"scientificName":"Nemophila
+        pedunculata Dougl. ex Benth.","acceptedScientificName":"Nemophila pedunculata
+        Dougl. ex Benth.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Boraginales","family":"Hydrophyllaceae","genus":"Nemophila","species":"Nemophila
+        pedunculata","genericName":"Nemophila","specificEpithet":"pedunculata","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.17721,"decimalLatitude":37.31153,"elevation":641.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:41:30.000+0000","lastInterpreted":"2020-07-29T17:25:28.882+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2502","identifier":"urn:catalog:CAS:BOT-BC:634578","habitat":"Wet
+        ditch alongside the trail. Also growing in wet areas here and there upslope,
+        but nothing like the trailside patch. Growing with Montia fontana.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/30/2019","locality":"Skyline
+        Ridge Open Space Preserve (SR), MROSD; Ipiwa Trail about 100 meters from the
+        trailhead","county":"Santa Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045196","occurrenceID":"urn:catalog:CAS:BOT-BC:634578","type":"PhysicalObject","catalogNumber":"634578","recordedBy":"Rawlings,
+        John; Yang, Stella; Hickman, Ken","otherCatalogNumbers":"CAS 1294425","institutionCode":"CAS","occurrenceRemarks":"Hundreds
+        of plants in a dense 30-ft long patch; hundreds of white-flowering annuals.","verbatimElevation":"641
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Solanales;
+        Hydrophyllaceae"},{"key":2425045272,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.203+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":8086517,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1169,"familyKey":7683,"genusKey":4930642,"speciesKey":8086517,"acceptedTaxonKey":8086517,"scientificName":"Muilla
+        maritima S.Watson","acceptedScientificName":"Muilla maritima S.Watson","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asparagales","family":"Asparagaceae","genus":"Muilla","species":"Muilla
+        maritima","genericName":"Muilla","specificEpithet":"maritima","taxonRank":"SPECIES","taxonomicStatus":"DOUBTFUL","decimalLongitude":-122.25444,"decimalLatitude":37.44124,"elevation":152.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:38:30.000+0000","lastInterpreted":"2020-07-29T17:25:28.203+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2504","identifier":"urn:catalog:CAS:BOT-BC:634577","habitat":"Thin-soil
+        swales and rocky outcrops of serpentine prairie.","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/31/2019","locality":"Woodside
+        serpentine between Jane Dr. and HWY280 right of way (Kite Hill).","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045272","occurrenceID":"urn:catalog:CAS:BOT-BC:634577","type":"PhysicalObject","catalogNumber":"634577","recordedBy":"Rawlings,
+        John; Timby, Sara; Hickman, Ken","otherCatalogNumbers":"CAS 1294469","institutionCode":"CAS","occurrenceRemarks":"Blooming;
+        locally abundant; number of plants 200+.","verbatimElevation":"152 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Liliales; Liliaceae"},{"key":2425045803,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.094+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5341519,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":1353,"familyKey":6648,"genusKey":2927566,"speciesKey":5341519,"acceptedTaxonKey":5341519,"scientificName":"Gilia
+        clivorum (Jeps.) V.E.Grant","acceptedScientificName":"Gilia clivorum (Jeps.)
+        V.E.Grant","kingdom":"Plantae","phylum":"Tracheophyta","order":"Ericales","family":"Polemoniaceae","genus":"Gilia","species":"Gilia
+        clivorum","genericName":"Gilia","specificEpithet":"clivorum","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.25444,"decimalLatitude":37.44124,"elevation":152.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:31:46.000+0000","lastInterpreted":"2020-07-29T17:25:32.094+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2505","identifier":"urn:catalog:CAS:BOT-BC:634565","habitat":"Thin-soil
+        swales and rocky outcrops of serpentine prairie.","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/31/2019","locality":"Woodside
+        serpentine between Jane Dr. and HWY280 right of way (Kite Hill).","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045803","occurrenceID":"urn:catalog:CAS:BOT-BC:634565","type":"PhysicalObject","catalogNumber":"634565","recordedBy":"Rawlings,
+        John; Timby, Sara; Hickman, Ken","otherCatalogNumbers":"CAS 1294507","institutionCode":"CAS","occurrenceRemarks":"Widespread;
+        many annuals in bloom (500+), corollas white to violet, purple spots in throat.","verbatimElevation":"152
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Solanales;
+        Polemoniaceae"},{"key":2425045854,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.118+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2704918,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2704913,"speciesKey":2704957,"acceptedTaxonKey":2704918,"scientificName":"Festuca
+        idahoensis subsp. roemeri (Pavlick) S.G.Aiken","acceptedScientificName":"Festuca
+        idahoensis subsp. roemeri (Pavlick) S.G.Aiken","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Festuca","species":"Festuca
+        idahoensis","genericName":"Festuca","specificEpithet":"idahoensis","infraspecificEpithet":"roemeri","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.39436,"decimalLatitude":37.67117,"elevation":15.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:31:03.000+0000","lastInterpreted":"2020-07-29T17:25:29.118+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"s.n.","identifier":"urn:catalog:CAS:BOT-BC:634561","habitat":"Thin
+        soil of abandoned road through patchy scrub/annual grassland, with Avena,
+        Schedonorus arundinaceus, Stipa pulchra.","higherGeography":"North America;
+        United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/29/2019","locality":"San
+        Bruno Mountain State and County Park; east slope, Shearwater","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045854","occurrenceID":"urn:catalog:CAS:BOT-BC:634561","type":"PhysicalObject","catalogNumber":"634561","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294509","institutionCode":"CAS","occurrenceRemarks":"A
+        few plants observed; most perennial grasses still vegetative. Fine-leaved
+        bunchgrass just coming into bloom. Blades conduplicate to 2.5 mm wide, 7-9
+        ribbed, pubescent on inner surface; anthers to 3 mm. Festuca roemeri var.
+        klamathensis B.L. Wilson; Festuca roemeri (Pavlick) E.B. Alexeev, in Catalogue
+        of New World Grasses.","verbatimElevation":"15 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425045857,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.023+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":9004024,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":422,"familyKey":4898338,"genusKey":3084779,"speciesKey":9004024,"acceptedTaxonKey":9004024,"scientificName":"Montia
+        fontana L.","acceptedScientificName":"Montia fontana L.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Caryophyllales","family":"Montiaceae","genus":"Montia","species":"Montia
+        fontana","genericName":"Montia","specificEpithet":"fontana","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.17721,"decimalLatitude":37.31153,"elevation":641.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:37:55.000+0000","lastInterpreted":"2020-07-29T17:25:29.023+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2503","identifier":"urn:catalog:CAS:BOT-BC:634576","habitat":"Vernally
+        wet ditch uphill side of trail, with abundant Nemophila pedunculata.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/30/2019","locality":"Location
+        Skyline Ridge OSP (SR), MROSD; Ipiwa Trail about 100 meters from the trailhead","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045857","occurrenceID":"urn:catalog:CAS:BOT-BC:634576","type":"PhysicalObject","catalogNumber":"634576","recordedBy":"Rawlings,
+        John; Yang, Stella; Hickman, Ken","otherCatalogNumbers":"CAS 1294424","institutionCode":"CAS","occurrenceRemarks":"Hundreds  of
+        small annuals in dense patches; white corollas.","verbatimElevation":"641
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Caryophyllales;
+        Portulacaceae"},{"key":2425045884,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.049+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7222810,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3133674,"speciesKey":5400896,"acceptedTaxonKey":7222810,"scientificName":"Helianthella
+        californica subsp. californica","acceptedScientificName":"Helianthella californica
+        subsp. californica","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Helianthella","species":"Helianthella
+        californica","genericName":"Helianthella","specificEpithet":"californica","infraspecificEpithet":"californica","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.47824,"decimalLatitude":38.34888,"elevation":311.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:34:56.000+0000","lastInterpreted":"2020-07-29T17:25:31.049+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"s.n.","identifier":"urn:catalog:CAS:BOT-BC:634568","habitat":"Recently
+        burned chaparral (manzanita) along side of county road.","higherGeography":"North
+        America; United States; California; Sonoma County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/24/2019","locality":"Cavedale
+        Road east of HWY12","county":"Sonoma County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045884","occurrenceID":"urn:catalog:CAS:BOT-BC:634568","type":"PhysicalObject","catalogNumber":"634568","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294420","institutionCode":"CAS","occurrenceRemarks":"25+
+        flowering perennials; many fl heads on longish, reddish peduncles. Disk fl
+        fruit well-developed.","verbatimElevation":"311 m","verbatimTaxonRank":"variety","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2542866845,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.284+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5275102,"kingdomKey":6,"phylumKey":7707728,"classKey":7228684,"orderKey":392,"familyKey":2373,"genusKey":2651126,"speciesKey":5275102,"acceptedTaxonKey":5275102,"scientificName":"Dryopteris
+        expansa (C.Presl) Fraser-Jenk. & Jermy","acceptedScientificName":"Dryopteris
+        expansa (C.Presl) Fraser-Jenk. & Jermy","kingdom":"Plantae","phylum":"Tracheophyta","order":"Polypodiales","family":"Dryopteridaceae","genus":"Dryopteris","species":"Dryopteris
+        expansa","genericName":"Dryopteris","specificEpithet":"expansa","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.180367,"decimalLatitude":37.354902,"elevation":248.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["COORDINATE_ROUNDED"],"modified":"2019-12-30T12:18:01.000+0000","lastInterpreted":"2020-07-29T17:25:29.284+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Polypodiopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2501","identifier":"urn:catalog:CAS:BOT-BC:646193","habitat":"Steep
+        mesic east-facing slope above creek; overstory of buckeye and bigleaf maple.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/29/2019","locality":"Palo
+        Alto Foothills Park; North Fern Loop Trail.","county":"Santa Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2542866845","occurrenceID":"urn:catalog:CAS:BOT-BC:646193","type":"PhysicalObject","catalogNumber":"646193","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294379","institutionCode":"CAS","occurrenceRemarks":"Single
+        plant; sporangia not available. This plant may represent variability within
+        the locally common Dryopteris arguta. Basiscopic pinnules > but less than
+        2 × acroscopic on same pinna; segments deeply pinnately lobed, teeth with
+        bristle-like tips.  Like plants growing at Jasper Ridge Biological Preserve","verbatimElevation":"248
+        m","higherClassification":"Plantae; Pteridophyta; Filicopsida; Polypodiales;
+        Dryopteridaceae"},{"key":2569346554,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.959+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":4888511,"kingdomKey":6,"phylumKey":35,"classKey":327,"orderKey":1333,"familyKey":8736,"genusKey":2676502,"acceptedTaxonKey":2676502,"scientificName":"Gemmabryum
+        J.R.Spence & H.P.Ramsay","acceptedScientificName":"Bryum Hedw.","kingdom":"Plantae","phylum":"Bryophyta","order":"Bryales","family":"Bryaceae","genus":"Bryum","genericName":"Gemmabryum","taxonRank":"GENUS","taxonomicStatus":"SYNONYM","dateIdentified":"2019-11-01T00:00:00","decimalLongitude":-121.545556,"decimalLatitude":38.955,"elevation":12.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["COORDINATE_ROUNDED"],"modified":"2020-01-29T10:10:43.000+0000","lastInterpreted":"2020-07-29T17:25:28.959+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Bryopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"12866","identifier":"urn:catalog:CAS:BOT-BC:647899","habitat":"Somewhat
+        gravelly road shoulder across flat ground through young walnut orchards.","higherGeography":"North
+        America; United States; California; Sutter County","nomenclaturalCode":"ICBN","verbatimEventDate":"2
+        March 2019","locality":"Sacramento Valley. Along Berry Court off of Berry
+        Road just west of Hwy 99; between Hwy 99 and Bear River.","county":"Sutter
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2569346554","occurrenceID":"urn:catalog:CAS:BOT-BC:647899","type":"PhysicalObject","catalogNumber":"647899","recordedBy":"Janeway,
+        L. P.; Castro, B.","otherCatalogNumbers":"CAS 1302340","institutionCode":"CAS","occurrenceRemarks":"[bulbils
+        present; capsules long cylindric]. Small scattered small pockets of this bryophyte
+        within the much larger masses of bryophyte 12864.","verbatimElevation":"12
+        m","higherClassification":"Plantae; Bryophyta; Bryaceae","identifiedBy":"David
+        Toren"},{"key":2569346944,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.072+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2676667,"kingdomKey":6,"phylumKey":35,"classKey":327,"orderKey":1333,"familyKey":8736,"genusKey":2676502,"speciesKey":2676667,"acceptedTaxonKey":2676667,"scientificName":"Bryum
+        argenteum Hedwig, 1801","acceptedScientificName":"Bryum argenteum Hedwig,
+        1801","kingdom":"Plantae","phylum":"Bryophyta","order":"Bryales","family":"Bryaceae","genus":"Bryum","species":"Bryum
+        argenteum","genericName":"Bryum","specificEpithet":"argenteum","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","dateIdentified":"2019-11-01T00:00:00","decimalLongitude":-121.545556,"decimalLatitude":38.955,"elevation":12.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["COORDINATE_ROUNDED"],"modified":"2020-01-22T11:11:58.000+0000","lastInterpreted":"2020-07-29T17:25:32.072+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Bryopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"12864","identifier":"urn:catalog:CAS:BOT-BC:647885","habitat":"Somewhat
+        gravelly road shoulder across flat ground through young walnut orchards.","higherGeography":"North
+        America; United States; California; Sutter County","nomenclaturalCode":"ICBN","verbatimEventDate":"2
+        March 2019","locality":"Sacramento Valley. Along Berry Court off of Berry
+        Road just west of Hwy 99; between Hwy 99 and Bear River.","county":"Sutter
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2569346944","occurrenceID":"urn:catalog:CAS:BOT-BC:647885","type":"PhysicalObject","catalogNumber":"647885","recordedBy":"Janeway,
+        L. P.; Castro, B.","otherCatalogNumbers":"CAS 1302348","institutionCode":"CAS","occurrenceRemarks":"This
+        the dominant bryophyte here, making showy masses along the bare dirt road
+        shoulders.","verbatimElevation":"12 m","higherClassification":"Plantae; Bryophyta;
+        Bryaceae","identifiedBy":"David Toren"},{"key":2575865357,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.157+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2672653,"kingdomKey":6,"phylumKey":35,"classKey":327,"orderKey":1341,"familyKey":4668,"genusKey":2672620,"speciesKey":2672653,"acceptedTaxonKey":2672653,"scientificName":"Orthotrichum
+        hallii Sullivant & Lesquereux, 1874","acceptedScientificName":"Orthotrichum
+        hallii Sullivant & Lesquereux, 1874","kingdom":"Plantae","phylum":"Bryophyta","order":"Orthotrichales","family":"Orthotrichaceae","genus":"Orthotrichum","species":"Orthotrichum
+        hallii","genericName":"Orthotrichum","specificEpithet":"hallii","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","dateIdentified":"2020-01-01T00:00:00","decimalLongitude":-122.25646,"decimalLatitude":40.92837999906606,"elevation":606.55,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":3,"eventDate":"2019-03-01T00:00:00","issues":["COORDINATE_REPROJECTED"],"modified":"2020-03-06T14:28:47.000+0000","lastInterpreted":"2020-07-29T17:25:31.157+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Bryopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"B42A","identifier":"urn:catalog:CAS:BOT-BC:655097","habitat":"Sides
+        of limestone outcrop in pine-oak woodland. With Pinus sabiniana, Quercus chrysolepis,
+        and B. Lo collection # B42B and B42C","higherGeography":"North America; United
+        States; California; Shasta County","nomenclaturalCode":"ICBN","verbatimEventDate":"3/24/2019","locality":"Shasta-Trinity
+        National Forest, Ridge above Pine Point and on the north side of Pine Creek","county":"Shasta
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2575865357","occurrenceID":"urn:catalog:CAS:BOT-BC:655097","type":"PhysicalObject","catalogNumber":"655097","recordedBy":"Lo,
+        Belinda; Randolph-Lowe, Alex","otherCatalogNumbers":"CAS 1305115","institutionCode":"CAS","verbatimElevation":"1990
+        ft","higherClassification":"Plantae; Bryophyta; Orthotrichaceae","identifiedBy":"David
+        Toren"},{"key":2311264268,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:30.949+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5392981,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3110054,"speciesKey":5392981,"acceptedTaxonKey":5392981,"scientificName":"Layia
+        gaillardioides (Hook. & Arn.) DC.","acceptedScientificName":"Layia gaillardioides
+        (Hook. & Arn.) DC.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Layia","species":"Layia
+        gaillardioides","genericName":"Layia","specificEpithet":"gaillardioides","taxonRank":"SPECIES","taxonomicStatus":"DOUBTFUL","decimalLongitude":-121.883156,"decimalLatitude":37.190996,"elevation":393.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":[],"modified":"2019-08-01T14:55:20.000+0000","lastInterpreted":"2020-07-29T17:25:30.949+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2524B","identifier":"urn:catalog:CAS:BOT-BC:626467","habitat":"Serpentine
+        prairie, with Allium serra, Melica torreyana.","higherGeography":"North America;
+        United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"04/17/2019","locality":"Sierra
+        Azul Open Space (MROSD) - Newhagen Meadow, Rancho de Guadalupe","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2311264268","occurrenceID":"urn:catalog:CAS:BOT-BC:626467","type":"PhysicalObject","catalogNumber":"626467","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1294517","institutionCode":"CAS","occurrenceRemarks":"1000+;
+        flowering annual; yellow rays; glandular; stems purple-streaked; disk pappus
+        0; fruit immature","verbatimElevation":"393 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2425044936,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.262+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2722997,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":7708,"genusKey":2721893,"speciesKey":2722997,"acceptedTaxonKey":2722997,"scientificName":"Carex
+        schottii Dewey","acceptedScientificName":"Carex schottii Dewey","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Cyperaceae","genus":"Carex","species":"Carex
+        schottii","genericName":"Carex","specificEpithet":"schottii","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.88092,"decimalLatitude":37.187109,"elevation":382.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:58:52.000+0000","lastInterpreted":"2020-07-29T17:25:28.262+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2522","identifier":"urn:catalog:CAS:BOT-BC:633369","habitat":"Upper
+        end of fountain thistle seep at transition from serpentine prairie to chaparral,
+        with Carex serratodens, Cirsium fontinale var. campylon, Elymus trachycaulus,
+        Hoita strobilina, Hordeum brachyantherum, Melica torreyana, Stipa pulchra,
+        Vulpia microstachys.","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Sierra
+        Azul Open Space - Rancho de Guadalupe (MROSD); Newhagen Meadow","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425044936","occurrenceID":"urn:catalog:CAS:BOT-BC:633369","type":"PhysicalObject","catalogNumber":"633369","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1294522","institutionCode":"CAS","occurrenceRemarks":"Tall
+        (culms 4-5 ft, longer than leaves), cespitose plants, forming large clumps.
+        Basal leaf sheaths red-brown; sheaths of proximal leaves bladeless, strongly
+        carinate, fronts prominently ladder-fibrillose (filamentose). Perigynia ascending,
+        pale brown sometimes with red-brown spots, veined on each face, flattened,
+        loosely enclosing lenticular achenes, ellipsoid, apex obtuse beak ~0.2 mm.","verbatimElevation":"382
+        m","higherClassification":"Plantae; Magnoliophyta; Liliopsida; Poales; Cyperaceae"},{"key":2425045012,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.207+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3052436,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":7225535,"familyKey":3112,"genusKey":3052435,"speciesKey":3052436,"acceptedTaxonKey":3052436,"scientificName":"Arabidopsis
+        thaliana (L.) Heynh.","acceptedScientificName":"Arabidopsis thaliana (L.)
+        Heynh.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Brassicales","family":"Brassicaceae","genus":"Arabidopsis","species":"Arabidopsis
+        thaliana","genericName":"Arabidopsis","specificEpithet":"thaliana","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.15458,"decimalLatitude":37.34903,"elevation":350.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:55:59.000+0000","lastInterpreted":"2020-07-29T17:25:31.207+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2511","identifier":"urn:catalog:CAS:BOT-BC:633363","habitat":"edge
+        of trail through chaparral","higherGeography":"North America; United States;
+        California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/14/2019","locality":"Hidden
+        Villa; Hostel Trail near high point before descending to Toyon Trail intersection.","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045012","occurrenceID":"urn:catalog:CAS:BOT-BC:633363","type":"PhysicalObject","catalogNumber":"633363","recordedBy":"Rawlings,
+        John; Timby, Sara","otherCatalogNumbers":"CAS 1294525","institutionCode":"CAS","occurrenceRemarks":"50+
+        small annuals; most seeds dispersed, a few intact siliques; a single plant
+        with flowers (white corolla)","verbatimElevation":"350 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Capparales; Brassicaceae"},{"key":2425045053,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.082+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3171151,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":408,"familyKey":2420,"genusKey":3172000,"speciesKey":3739196,"acceptedTaxonKey":3739196,"scientificName":"Antirrhinum
+        kelloggii E.L.Greene","acceptedScientificName":"Antirrhinum strictum A.Gray","kingdom":"Plantae","phylum":"Tracheophyta","order":"Lamiales","family":"Plantaginaceae","genus":"Antirrhinum","species":"Antirrhinum
+        strictum","genericName":"Antirrhinum","specificEpithet":"kelloggii","taxonRank":"SPECIES","taxonomicStatus":"SYNONYM","decimalLongitude":-122.05565,"decimalLatitude":37.29244,"elevation":210.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:55:38.000+0000","lastInterpreted":"2020-07-29T17:25:31.082+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2514","identifier":"urn:catalog:CAS:BOT-BC:633362","habitat":"Steep
+        south-facing slope above trail in patch of Artemisia californica, with Eriodictyon
+        californicum, Lupinus hirsutissimus, Melica californica, Melica imperfecta,
+        Stipa lepida.","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/15/2019","locality":"Fremont
+        Older Open Space Preserve (FO), MROSD; Ranch Road Trail","county":"Santa Clara
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045053","occurrenceID":"urn:catalog:CAS:BOT-BC:633362","type":"PhysicalObject","catalogNumber":"633362","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294503","institutionCode":"CAS","occurrenceRemarks":"In
+        flower and fruit; number of plants 20-25.","verbatimElevation":"210 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Scrophulariales; Scrophulariaceae"},{"key":2425045061,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.021+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7225715,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":1176,"familyKey":2389,"genusKey":2928418,"speciesKey":2928442,"acceptedTaxonKey":7225715,"scientificName":"Calystegia
+        collina subsp. collina","acceptedScientificName":"Calystegia collina subsp.
+        collina","kingdom":"Plantae","phylum":"Tracheophyta","order":"Solanales","family":"Convolvulaceae","genus":"Calystegia","species":"Calystegia
+        collina","genericName":"Calystegia","specificEpithet":"collina","infraspecificEpithet":"collina","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.880884,"decimalLatitude":37.187538,"elevation":402.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["COORDINATE_ROUNDED","PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:56:17.000+0000","lastInterpreted":"2020-07-29T17:25:31.021+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2525","identifier":"urn:catalog:CAS:BOT-BC:633364","habitat":"Serpentine
+        prairie, south-facing","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Newhagen
+        Meadow, Sierra Azul Open Space - Rancho de Guadalupe (MROSD)","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045061","occurrenceID":"urn:catalog:CAS:BOT-BC:633364","type":"PhysicalObject","catalogNumber":"633364","recordedBy":"Rawlings,
+        John; Naumovich, Lech; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS
+        1294502","institutionCode":"CAS","occurrenceRemarks":"50+ scattered white
+        flowering plants with hairy leaves; widespread on south-facing slope in serpentine
+        prairie.","verbatimElevation":"402 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Solanales; Convolvulaceae"},{"key":2425045146,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.218+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2926165,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":7226464,"familyKey":2498,"genusKey":2926133,"speciesKey":2926165,"acceptedTaxonKey":2926165,"scientificName":"Cryptantha
+        microstachys Greene","acceptedScientificName":"Cryptantha microstachys Greene","kingdom":"Plantae","phylum":"Tracheophyta","order":"Boraginales","family":"Boraginaceae","genus":"Cryptantha","species":"Cryptantha
+        microstachys","genericName":"Cryptantha","specificEpithet":"microstachys","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.05565,"decimalLatitude":37.29244,"elevation":210.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:03:04.000+0000","lastInterpreted":"2020-07-29T17:25:31.218+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2516","identifier":"urn:catalog:CAS:BOT-BC:634551","habitat":"Steep
+        south-facing slope above trail in patch of Artemisia californica, with Antirrhinum
+        kelloggii, Eriodictyon californicum, Melica californica, Lupinus Lupinus hirsutissimus,
+        Melica imperfecta, Stipa lepida.","higherGeography":"North America; United
+        States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/15/2019","locality":"Fremont
+        Older Open Space Preserve (FO), MROSD; Ranch Road Trail","county":"Santa Clara
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045146","occurrenceID":"urn:catalog:CAS:BOT-BC:634551","type":"PhysicalObject","catalogNumber":"634551","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294496","institutionCode":"CAS","occurrenceRemarks":"Scattered
+        plants and small patch; number of plants 25+.","verbatimElevation":"210 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Lamiales; Boraginaceae"},{"key":2425045176,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.043+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2856672,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1169,"familyKey":7682,"genusKey":9624496,"speciesKey":2856672,"acceptedTaxonKey":2856672,"scientificName":"Allium
+        serra McNeal & Ownbey","acceptedScientificName":"Allium serra McNeal & Ownbey","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asparagales","family":"Amaryllidaceae","genus":"Allium","species":"Allium
+        serra","genericName":"Allium","specificEpithet":"serra","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.883408,"decimalLatitude":37.191056,"elevation":393.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["COORDINATE_ROUNDED","PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:54:43.000+0000","lastInterpreted":"2020-07-29T17:25:31.043+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2517","identifier":"urn:catalog:CAS:BOT-BC:633361","habitat":"Serpentine
+        prairie, north-facing, with Layia gaillardioides, Melica torreyana.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Newhagen
+        Meadow, Sierra Azul Open Space - Rancho de Guadalupe (MROSD)","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045176","occurrenceID":"urn:catalog:CAS:BOT-BC:633361","type":"PhysicalObject","catalogNumber":"633361","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1294526","institutionCode":"CAS","occurrenceRemarks":"100+;
+        flowering.","verbatimElevation":"393 m","higherClassification":"Plantae; Magnoliophyta;
+        Liliopsida; Liliales; Liliaceae"},{"key":2425045224,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.195+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":6439645,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":408,"familyKey":6651,"genusKey":3170565,"speciesKey":3170642,"acceptedTaxonKey":6439645,"scientificName":"Castilleja
+        subinclusa subsp. franciscana (Pennell) T.I.Chuang & Heckard","acceptedScientificName":"Castilleja
+        subinclusa subsp. franciscana (Pennell) T.I.Chuang & Heckard","kingdom":"Plantae","phylum":"Tracheophyta","order":"Lamiales","family":"Orobanchaceae","genus":"Castilleja","species":"Castilleja
+        subinclusa","genericName":"Castilleja","specificEpithet":"subinclusa","infraspecificEpithet":"franciscana","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.46803,"decimalLatitude":37.57945,"elevation":142.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:00:23.000+0000","lastInterpreted":"2020-07-29T17:25:28.195+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2530","identifier":"urn:catalog:CAS:BOT-BC:633370","habitat":"Edge
+        of coastal scrub, carbonate substrate.","higherGeography":"North America;
+        United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/25/2019","locality":"San
+        Pedro Valley County Park (SPV); Valley View Trail","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045224","occurrenceID":"urn:catalog:CAS:BOT-BC:633370","type":"PhysicalObject","catalogNumber":"633370","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294499","institutionCode":"CAS","occurrenceRemarks":"Flowering;
+        frequent along trail and in scrub. Number of plants 100+.","verbatimElevation":"142
+        m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae; Magnoliophyta;
+        Magnoliopsida; Scrophulariales; Scrophulariaceae"},{"key":2425045516,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.065+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3088916,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3088915,"speciesKey":3088920,"acceptedTaxonKey":3088920,"scientificName":"Logfia
+        filaginoides (Hook. & Arn.) Morefield","acceptedScientificName":"Logfia californica
+        (Nutt.) Holub","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Logfia","species":"Logfia
+        californica","genericName":"Logfia","specificEpithet":"filaginoides","taxonRank":"SPECIES","taxonomicStatus":"SYNONYM","decimalLongitude":-122.05565,"decimalLatitude":37.29244,"elevation":210.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:36:09.000+0000","lastInterpreted":"2020-07-29T17:25:29.065+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2515","identifier":"urn:catalog:CAS:BOT-BC:634572","habitat":"Steep
+        south-facing slope above trail in patch of Artemisia californica, with Antirrhinum
+        kelloggii, Eriodictyon californicum, Melica californica, Lupinus Lupinus hirsutissimus,
+        Melica imperfecta, Stipa lepida.","higherGeography":"North America; United
+        States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/15/2019","locality":"Fremont
+        Older Open Space Preserve (FO), MROSD; Ranch Road Trail","county":"Santa Clara
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045516","occurrenceID":"urn:catalog:CAS:BOT-BC:634572","type":"PhysicalObject","catalogNumber":"634572","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294422","institutionCode":"CAS","occurrenceRemarks":"Scattered
+        small patches; number of Plants 25+.","verbatimElevation":"210 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2425045521,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.015+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":4925431,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2704173,"speciesKey":2704276,"acceptedTaxonKey":4925431,"scientificName":"Poa
+        secunda subsp. secunda","acceptedScientificName":"Poa secunda subsp. secunda","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Poa","species":"Poa
+        secunda","genericName":"Poa","specificEpithet":"secunda","infraspecificEpithet":"secunda","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.39436,"decimalLatitude":37.67117,"elevation":396.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":[],"modified":"2019-10-01T11:32:48.000+0000","lastInterpreted":"2020-07-29T17:25:32.015+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2","identifier":"urn:catalog:CAS:BOT-BC:634581","habitat":"Semi-buried
+        in moist meadow vegetation along road","higherGeography":"North America; United
+        States; California; Monterey County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Fort
+        Hunter Liggett; Nacimiento-Fergusson Road, about 700 m SW of San Miguelito
+        Rd","county":"Monterey County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045521","occurrenceID":"urn:catalog:CAS:BOT-BC:634581","type":"PhysicalObject","catalogNumber":"634581","recordedBy":"Uhler,
+        Ellen","otherCatalogNumbers":"CAS 1294471","institutionCode":"CAS","occurrenceRemarks":"Delicate,
+        distinctive perennial bunchgrass, open-panicled in both flower and fruit;
+        formerly included in P. tenerrima Scribn. (The Jepson Manual 1993: 1289).
+        Inflorescence branches smooth, short-hairy; ligules more or less acute, smooth
+        ~2 mm.","verbatimElevation":"396 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425045625,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.020+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7223686,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":1353,"familyKey":6648,"genusKey":2927566,"speciesKey":5341540,"acceptedTaxonKey":7223686,"scientificName":"Gilia
+        achilleifolia subsp. achilleifolia","acceptedScientificName":"Gilia achilleifolia
+        subsp. achilleifolia","kingdom":"Plantae","phylum":"Tracheophyta","order":"Ericales","family":"Polemoniaceae","genus":"Gilia","species":"Gilia
+        achilleifolia","genericName":"Gilia","specificEpithet":"achilleifolia","infraspecificEpithet":"achilleifolia","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.881042,"decimalLatitude":37.187412,"elevation":397.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:32:06.000+0000","lastInterpreted":"2020-07-29T17:25:32.020+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2523","identifier":"urn:catalog:CAS:BOT-BC:634564","habitat":"Narrow
+        rocky shallow gully on south-facing slope in serpentine prairie","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Newhagen
+        Meadow, Sierra Azul Open Space - Rancho de Guadalupe (MROSD)","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045625","occurrenceID":"urn:catalog:CAS:BOT-BC:634564","type":"PhysicalObject","catalogNumber":"634564","recordedBy":"Rawlings,
+        John; Naumovich, Lech; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS
+        1294486","institutionCode":"CAS","occurrenceRemarks":"20+ annual plants; blue
+        flowering","verbatimElevation":"397 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Solanales; Polemoniaceae"},{"key":2425045714,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.014+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3115755,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":8766295,"speciesKey":3115755,"acceptedTaxonKey":3115755,"scientificName":"Filago
+        pyramidata L.","acceptedScientificName":"Filago pyramidata L.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Filago","species":"Filago
+        pyramidata","genericName":"Filago","specificEpithet":"pyramidata","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.42488,"decimalLatitude":37.67776,"elevation":318.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE","TAXON_MATCH_HIGHERRANK"],"modified":"2019-10-01T11:26:31.000+0000","lastInterpreted":"2020-07-29T17:25:32.014+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"s.n.","identifier":"urn:catalog:CAS:BOT-BC:634563","habitat":"Rocky
+        openings in maritime chaparral on graywacke; associates include Baccharis
+        pilularis, Ceanothus thrysiflorus, Heterotheca sessiliflora ssp. bolanderi,
+        Erysimum franciscanum, Grindelia hirsutula, Dudleya farinosa, Vicia americana,
+        Hypochaeris radicata","higherGeography":"North America; United States; California;
+        San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/22/2019","locality":"San
+        Bruno Mountain State and County Park; SW of Ridge Trail","county":"San Mateo
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045714","occurrenceID":"urn:catalog:CAS:BOT-BC:634563","type":"PhysicalObject","catalogNumber":"634563","recordedBy":"Hickman,
+        Ken","otherCatalogNumbers":"CAS 1294508","institutionCode":"CAS","occurrenceRemarks":"100+
+        plants in scattered clusters","verbatimElevation":"318 m","verbatimTaxonRank":"variety","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2425045737,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.288+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2964292,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":1370,"familyKey":5386,"genusKey":2963774,"speciesKey":2964292,"acceptedTaxonKey":2964292,"scientificName":"Lupinus
+        hirsutissimus Benth.","acceptedScientificName":"Lupinus hirsutissimus Benth.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Fabales","family":"Fabaceae","genus":"Lupinus","species":"Lupinus
+        hirsutissimus","genericName":"Lupinus","specificEpithet":"hirsutissimus","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.05565,"decimalLatitude":37.29244,"elevation":210.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:36:37.000+0000","lastInterpreted":"2020-07-29T17:25:28.288+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2513","identifier":"urn:catalog:CAS:BOT-BC:634573","habitat":"Steep
+        south-facing slope above trail in patch of Artemisia californica, with Antirrhinum
+        kelloggii, Eriodictyon californicum, Melica californica, Melica imperfecta,
+        Stipa lepida.","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/15/2019","locality":"Fremont
+        Older Open Space Preserve (FO), MROSD; Ranch Road Trail","county":"Santa Clara
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045737","occurrenceID":"urn:catalog:CAS:BOT-BC:634573","type":"PhysicalObject","catalogNumber":"634573","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294467","institutionCode":"CAS","occurrenceRemarks":"In
+        flower and fruit; number of plants 25+. Lupine in bloom observed from trail.
+        Near northern limit of taxon","verbatimElevation":"210 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Fabales; Fabaceae"},{"key":2425045749,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.224+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2703120,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2703093,"speciesKey":2703120,"acceptedTaxonKey":2703120,"scientificName":"Melica
+        geyeri Munro ex Bol.","acceptedScientificName":"Melica geyeri Munro ex Bol.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Melica","species":"Melica
+        geyeri","genericName":"Melica","specificEpithet":"geyeri","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.14897,"decimalLatitude":37.34188,"elevation":320.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:37:01.000+0000","lastInterpreted":"2020-07-29T17:25:29.224+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"s.n.","identifier":"urn:catalog:CAS:BOT-BC:634574","habitat":"Oak
+        woodland","higherGeography":"North America; United States; California; Santa
+        Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/14/2019","locality":"Hidden
+        Villa; Ewing Hill Trail at sharp switchback near beginning of climb to Ewing
+        Hill","county":"Santa Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045749","occurrenceID":"urn:catalog:CAS:BOT-BC:634574","type":"PhysicalObject","catalogNumber":"634574","recordedBy":"Rawlings,
+        John; Timby, Sara","otherCatalogNumbers":"CAS 1294423","institutionCode":"CAS","occurrenceRemarks":"75-100
+        tallish perennial bunchgrass in at least three separate patches. Open infl
+        at anthesis; sessile corms; lemma acute 8-11 mm, glabrous; sterile cluster
+        resembling floret.","verbatimElevation":"320 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425045791,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.302+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5392981,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3110054,"speciesKey":5392981,"acceptedTaxonKey":5392981,"scientificName":"Layia
+        gaillardioides (Hook. & Arn.) DC.","acceptedScientificName":"Layia gaillardioides
+        (Hook. & Arn.) DC.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Layia","species":"Layia
+        gaillardioides","genericName":"Layia","specificEpithet":"gaillardioides","taxonRank":"SPECIES","taxonomicStatus":"DOUBTFUL","decimalLongitude":-121.883156,"decimalLatitude":37.190996,"elevation":393.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:35:46.000+0000","lastInterpreted":"2020-07-29T17:25:28.302+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2524","identifier":"urn:catalog:CAS:BOT-BC:634571","habitat":"Serpentine
+        prairie, with Allium serra, Melica torreyana.","higherGeography":"North America;
+        United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Newhagen
+        Meadow, Sierra Azul Open Space - Rancho de Guadalupe (MROSD)","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045791","occurrenceID":"urn:catalog:CAS:BOT-BC:634571","type":"PhysicalObject","catalogNumber":"634571","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1294466","institutionCode":"CAS","occurrenceRemarks":"1000+;
+        flowering annual; yellow rays; glandular; stems purple-streaked; disk pappus
+        0; fruit immature","verbatimElevation":"393 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2425045871,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:30.988+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5384747,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":422,"familyKey":2518,"genusKey":3085897,"speciesKey":5384747,"acceptedTaxonKey":5384747,"scientificName":"Silene
+        antirrhina L.","acceptedScientificName":"Silene antirrhina L.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Caryophyllales","family":"Caryophyllaceae","genus":"Silene","species":"Silene
+        antirrhina","genericName":"Silene","specificEpithet":"antirrhina","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.05478,"decimalLatitude":37.29674,"elevation":230.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:44:49.000+0000","lastInterpreted":"2020-07-29T17:25:30.988+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2512","identifier":"urn:catalog:CAS:BOT-BC:634585","habitat":"Steep
+        south-facing slope, sandstone substrate; in weedy understory of patchy chaparral
+        dominated by California sagebrush.","higherGeography":"North America; United
+        States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/15/2019","locality":"Fremont
+        Older Open Space Preserve (FO), MROSD; downslope from the Rainbow Knoll Trail","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045871","occurrenceID":"urn:catalog:CAS:BOT-BC:634585","type":"PhysicalObject","catalogNumber":"634585","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294473","institutionCode":"CAS","occurrenceRemarks":"Flowering
+        annual; 25+ plants.","verbatimElevation":"230 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Caryophyllales; Caryophyllaceae"},{"key":2425045875,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.088+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7222810,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3133674,"speciesKey":5400896,"acceptedTaxonKey":7222810,"scientificName":"Helianthella
+        californica subsp. californica","acceptedScientificName":"Helianthella californica
+        subsp. californica","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Helianthella","species":"Helianthella
+        californica","genericName":"Helianthella","specificEpithet":"californica","infraspecificEpithet":"californica","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.21539,"decimalLatitude":37.40111,"elevation":182.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:34:33.000+0000","lastInterpreted":"2020-07-29T17:25:31.088+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2529","identifier":"urn:catalog:CAS:BOT-BC:634569","habitat":"Understory
+        of mixed oak woodland (coast live, interior live, blue oak). with Senecio
+        aronicoides.","higherGeography":"North America; United States; California;
+        San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/23/2019","locality":"Jasper
+        Ridge Biological Preserve, Stanford University; between Trail 15 and Rd F","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045875","occurrenceID":"urn:catalog:CAS:BOT-BC:634569","type":"PhysicalObject","catalogNumber":"634569","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294465","institutionCode":"CAS","occurrenceRemarks":"About
+        50 flowering plants; many fl heads nodding on longish, reddish peduncles.
+        Disk fl fruit well-developed.","verbatimElevation":"182 m","verbatimTaxonRank":"variety","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2425045887,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.020+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2704728,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2704668,"speciesKey":2704728,"acceptedTaxonKey":2704728,"scientificName":"Puccinellia
+        simplex Scribn.","acceptedScientificName":"Puccinellia simplex Scribn.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Puccinellia","species":"Puccinellia
+        simplex","genericName":"Puccinellia","specificEpithet":"simplex","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.65205,"decimalLatitude":37.84473,"elevation":22.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:43:19.000+0000","lastInterpreted":"2020-07-29T17:25:32.020+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2526","identifier":"urn:catalog:CAS:BOT-BC:634582","habitat":"Alkali
+        flats, with Allenrolfea occidentalis, Atriplex coronata, Atriplex sp. (annual),
+        Brodiaea terrestris, Centromadia pungens, Cressa truxillensis, Distichlis
+        spicata, Frankenia salina, Hordeum depressum, Navarretia cotulifolia, Navarretia
+        leucocephala, Parapholis incurva, Plantago elongata, Pogogyne zizyphoroides,
+        Trifolium depauperatum.","higherGeography":"North America; United States;
+        California; Contra Costa County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/21/2019","locality":"Coelho
+        property, west of Vasco Road, west of Bryon","county":"Contra Costa County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045887","occurrenceID":"urn:catalog:CAS:BOT-BC:634582","type":"PhysicalObject","catalogNumber":"634582","recordedBy":"Rawlings,
+        John; Bartosh, Heath","otherCatalogNumbers":"CAS 1294427","institutionCode":"CAS","occurrenceRemarks":"Abundant,
+        hundreds of small annuals.","verbatimElevation":"22 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2542875349,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.072+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3132594,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":414,"familyKey":3065,"genusKey":3132592,"speciesKey":3132594,"acceptedTaxonKey":3132594,"scientificName":"Ancistrocarphus
+        filagineus A.Gray","acceptedScientificName":"Ancistrocarphus filagineus A.Gray","kingdom":"Plantae","phylum":"Tracheophyta","order":"Asterales","family":"Asteraceae","genus":"Ancistrocarphus","species":"Ancistrocarphus
+        filagineus","genericName":"Ancistrocarphus","specificEpithet":"filagineus","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.88284,"decimalLatitude":37.18867,"elevation":429.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":[],"modified":"2020-01-02T16:32:47.000+0000","lastInterpreted":"2020-07-29T17:25:29.072+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2518","identifier":"urn:catalog:CAS:BOT-BC:646221","habitat":"Former
+        road through serpentine prairie, with Agoseris heterophylla, Eschscholzia
+        californica, Festuca bromoides, Festuca microstachys, Gilia tricolor, Lasthenia,
+        Lolium multiflorum.","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Newhagen
+        Meadow, Sierra Azul Open Space - Rancho de Guadalupe (MROSD).","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2542875349","occurrenceID":"urn:catalog:CAS:BOT-BC:646221","type":"PhysicalObject","catalogNumber":"646221","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1265458","institutionCode":"CAS","occurrenceRemarks":"Flowering;
+        100+ tiny plants.","verbatimElevation":"429 m","higherClassification":"Plantae;
+        Magnoliophyta; Magnoliopsida; Asterales; Asteraceae"},{"key":2549465689,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.285+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5289762,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2703299,"speciesKey":5289762,"acceptedTaxonKey":5289762,"scientificName":"Lamarckia
+        aurea Moench","acceptedScientificName":"Lamarckia aurea Moench","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Lamarckia","species":"Lamarckia
+        aurea","genericName":"Lamarckia","specificEpithet":"aurea","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.88064,"decimalLatitude":37.186826,"elevation":375.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":[],"modified":"2020-01-08T11:39:01.000+0000","lastInterpreted":"2020-07-29T17:25:29.285+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2520","identifier":"urn:catalog:CAS:BOT-BC:646418","habitat":"Scattered
+        plants on small serpentine bald on south-facing slope in serpentine prairie.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"4/17/2019","locality":"Sierra
+        Azul Open Space - Rancho de Guadalupe (MROSD); Newhagen Meadow.","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2549465689","occurrenceID":"urn:catalog:CAS:BOT-BC:646418","type":"PhysicalObject","catalogNumber":"646418","recordedBy":"Rawlings,
+        John; Hickman, Ken; Mills, Amanda","otherCatalogNumbers":"CAS 1294388","institutionCode":"CAS","occurrenceRemarks":"50+
+        flowering annuals; isolated patch.","verbatimElevation":"375 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2569346818,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.131+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2676743,"kingdomKey":6,"phylumKey":35,"classKey":327,"orderKey":1333,"familyKey":8736,"genusKey":2676502,"speciesKey":2676743,"acceptedTaxonKey":2676743,"scientificName":"Bryum
+        chryseum Mitten, 1869","acceptedScientificName":"Bryum chryseum Mitten, 1869","kingdom":"Plantae","phylum":"Bryophyta","order":"Bryales","family":"Bryaceae","genus":"Bryum","species":"Bryum
+        chryseum","genericName":"Bryum","specificEpithet":"chryseum","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","dateIdentified":"2019-11-01T00:00:00","decimalLongitude":-121.622222,"decimalLatitude":39.509722,"elevation":58.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["COORDINATE_ROUNDED"],"modified":"2020-01-22T11:32:51.000+0000","lastInterpreted":"2020-07-29T17:25:31.131+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Bryopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"12870a","identifier":"urn:catalog:CAS:BOT-BC:647889","habitat":"Wet
+        mud just above current water level of vernal pool surrounded by lush annual
+        grasslands. Lots of bare ground here where the liverwort is abundant.","higherGeography":"North
+        America; United States; California; Butte County","nomenclaturalCode":"ICBN","verbatimEventDate":"11
+        April 2019","locality":"Sacramento Valley. Edge of a nernal pool along north
+        side of Grand Avenue about 225 m east of the road into South Thermalito Forebay
+        Picnic Area.","county":"Butte County","collectionCode":"BOT-BC","language":"en","gbifID":"2569346818","occurrenceID":"urn:catalog:CAS:BOT-BC:647889","type":"PhysicalObject","catalogNumber":"647889","recordedBy":"Janeway,
+        L. P.","otherCatalogNumbers":"CAS 1302313","institutionCode":"CAS","occurrenceRemarks":"With
+        Layia fremontii, Cicendia quadrangularis, Paronychia ahartii.","verbatimElevation":"58
+        m","higherClassification":"Plantae; Bryophyta; Bryaceae","identifiedBy":"David
+        Toren"},{"key":2575864998,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.359+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2672669,"kingdomKey":6,"phylumKey":35,"classKey":327,"orderKey":1341,"familyKey":4668,"genusKey":2672620,"speciesKey":2672669,"acceptedTaxonKey":2672669,"scientificName":"Orthotrichum
+        rupestre Schleicher ex Schwaegrichen, 1816","acceptedScientificName":"Orthotrichum
+        rupestre Schleicher ex Schwaegrichen, 1816","kingdom":"Plantae","phylum":"Bryophyta","order":"Orthotrichales","family":"Orthotrichaceae","genus":"Orthotrichum","species":"Orthotrichum
+        rupestre","genericName":"Orthotrichum","specificEpithet":"rupestre","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-120.721944,"decimalLatitude":41.362222,"elevation":1341.12,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":4,"eventDate":"2019-04-01T00:00:00","issues":["COORDINATE_ROUNDED","GEODETIC_DATUM_ASSUMED_WGS84"],"modified":"2020-03-06T16:25:14.000+0000","lastInterpreted":"2020-07-29T17:25:28.359+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Bryopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"m3113","identifier":"urn:catalog:CAS:BOT-BC:655130","habitat":"Old
+        road cut, N facing, seepy in spring cut close to stream. Rock, basalt","higherGeography":"North
+        America; United States; California; Modoc County","nomenclaturalCode":"ICBN","verbatimEventDate":"8
+        April 2019","locality":"Along County Road 72 about 13 miles/ 8 km SW of Alturas,
+        close to bridge over Canyon Creek","county":"Modoc County","collectionCode":"BOT-BC","language":"en","gbifID":"2575864998","occurrenceID":"urn:catalog:CAS:BOT-BC:655130","type":"PhysicalObject","catalogNumber":"655130","recordedBy":"Wagner,
+        D. H.","otherCatalogNumbers":"CAS 1303869","institutionCode":"CAS","occurrenceRemarks":"Frequent.
+        Capsules. Field photos taken","verbatimElevation":"4400 ft","higherClassification":"Plantae;
+        Bryophyta; Orthotrichaceae"},{"key":2311263722,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.053+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3189023,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":690,"familyKey":2430,"genusKey":3188931,"speciesKey":3189023,"acceptedTaxonKey":3189023,"scientificName":"Camissonia
+        strigulosa (Fisch. & E.Mey.) P.H.Raven","acceptedScientificName":"Camissonia
+        strigulosa (Fisch. & E.Mey.) P.H.Raven","kingdom":"Plantae","phylum":"Tracheophyta","order":"Myrtales","family":"Onagraceae","genus":"Camissonia","species":"Camissonia
+        strigulosa","genericName":"Camissonia","specificEpithet":"strigulosa","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.45722,"decimalLatitude":37.69678,"elevation":137.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-08-01T15:05:36.000+0000","lastInterpreted":"2020-07-29T17:25:31.053+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2563B","identifier":"urn:catalog:CAS:BOT-BC:626469","habitat":"Substrate
+        alluvial sand deposits, with Acaena californica, Bromus diandrus, Chorizanthe
+        cuspidata (in bloom), Eschscholzia californica, Lessingia germanorum (seedlings),
+        Lupinus chamissonis, Phacelia californica, Rumex acetosella","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mountain State and County Park; lower Colma Canyon","county":"San Mateo
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2311263722","occurrenceID":"urn:catalog:CAS:BOT-BC:626469","type":"PhysicalObject","catalogNumber":"626469","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294516","institutionCode":"CAS","occurrenceRemarks":"200+
+        annuals; yellow corolla; mostly with ripening fruit. Photo: Calflora ID po131573.","verbatimElevation":"137
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Myrtales;
+        Onagraceae"},{"key":2311264593,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.234+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2728710,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":7708,"genusKey":2721893,"speciesKey":2728710,"acceptedTaxonKey":2728710,"scientificName":"Carex
+        subbracteata Mack.","acceptedScientificName":"Carex subbracteata Mack.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Cyperaceae","genus":"Carex","species":"Carex
+        subbracteata","genericName":"Carex","specificEpithet":"subbracteata","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-121.8846,"decimalLatitude":37.18925,"elevation":426.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-08-01T10:34:14.000+0000","lastInterpreted":"2020-07-29T17:25:28.234+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2584","identifier":"urn:catalog:CAS:BOT-BC:626457","habitat":"Along
+        road in oak woodland","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"05/30/2019","locality":"Sierra
+        Azul Open Space - Rancho de Guadalupe (MROSD); Reynolds Road in Newhagen Meadow
+        Area","county":"Santa Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2311264593","occurrenceID":"urn:catalog:CAS:BOT-BC:626457","type":"PhysicalObject","catalogNumber":"626457","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294494","institutionCode":"CAS","occurrenceRemarks":"Small
+        patch with mature perigynia. Most peri with distinct ventral veins that do
+        not exceed the top of the achene; some peri are veinless or obscurely veined;
+        some peri have 2 or 3 veins that exceed the top of the achene","verbatimElevation":"426
+        m","higherClassification":"Plantae; Magnoliophyta; Liliopsida; Poales; Cyperaceae"},{"key":2311264598,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.231+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2706502,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2706434,"speciesKey":2706502,"acceptedTaxonKey":2706502,"scientificName":"Agrostis
+        hallii Vasey","acceptedScientificName":"Agrostis hallii Vasey","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Agrostis","species":"Agrostis
+        hallii","genericName":"Agrostis","specificEpithet":"hallii","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.22496,"decimalLatitude":37.40906,"elevation":182.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-08-01T15:17:44.000+0000","lastInterpreted":"2020-07-29T17:25:28.231+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"s.n.","identifier":"urn:catalog:CAS:BOT-BC:626473","habitat":"East
+        side of trail through blue oak savanna, with June grass, Big rattlesnake grass","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"05/17/2019","locality":"Jasper
+        Ridge Biological Preserve, Stanford University; Trail 3","county":"San Mateo
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2311264598","occurrenceID":"urn:catalog:CAS:BOT-BC:626473","type":"PhysicalObject","catalogNumber":"626473","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294440","institutionCode":"CAS","occurrenceRemarks":"Rhizomatous
+        perennial in patch about 10 ft in diameter. Much of the Preserve material
+        doesn''t fit well the A. pallens/A. hallii circumscription in TJM2. This is
+        good A. hallii though the callus hairs do not exceed 1/2 length lemma. In
+        general the Munz treatment better accommodates Bay Area plants","verbatimElevation":"182
+        m","higherClassification":"Plantae; Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2311264924,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.011+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":6312956,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2704913,"speciesKey":2704957,"acceptedTaxonKey":2704918,"scientificName":"Festuca
+        idahoensis var. roemeri Pavlick","acceptedScientificName":"Festuca idahoensis
+        subsp. roemeri (Pavlick) S.G.Aiken","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Festuca","species":"Festuca
+        idahoensis","genericName":"Festuca","specificEpithet":"idahoensis","infraspecificEpithet":"roemeri","taxonRank":"VARIETY","taxonomicStatus":"SYNONYM","decimalLongitude":-122.39436,"decimalLatitude":37.67117,"elevation":59.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-08-01T15:05:08.000+0000","lastInterpreted":"2020-07-29T17:25:31.011+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2560B","identifier":"urn:catalog:CAS:BOT-BC:626468","habitat":"Growing
+        in a sea of Eurasian annual and perennial grasses and forbs, and with Danthonia
+        californica and Stipa pulchra.","higherGeography":"North America; United States;
+        California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mountain State and County Park; lower eastern slope, Shearwater","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2311264924","occurrenceID":"urn:catalog:CAS:BOT-BC:626468","type":"PhysicalObject","catalogNumber":"626468","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294495","institutionCode":"CAS","occurrenceRemarks":"Locally
+        common perennial bunchgrass (never abundant or dominant or forming dense stands);
+        mature infl. generally dark in contrast with other grasses. Syn. Festuca idahoensis
+        Elmer.; Festuca roemeri var. klamathensis B.L. Wilson.","verbatimElevation":"59
+        m","verbatimTaxonRank":"variety","higherClassification":"Plantae; Magnoliophyta;
+        Liliopsida; Poales; Poaceae"},{"key":2423593459,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.291+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3739559,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":408,"familyKey":6651,"genusKey":3173322,"speciesKey":3173323,"acceptedTaxonKey":3173323,"scientificName":"Kopsiopsis
+        strobilacea (A.Gray) G.Beck","acceptedScientificName":"Boschniakia strobilacea
+        A.Gray","kingdom":"Plantae","phylum":"Tracheophyta","order":"Lamiales","family":"Orobanchaceae","genus":"Boschniakia","species":"Boschniakia
+        strobilacea","genericName":"Kopsiopsis","specificEpithet":"strobilacea","taxonRank":"SPECIES","taxonomicStatus":"SYNONYM","decimalLongitude":-122.29582,"decimalLatitude":37.43157,"elevation":415.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-09-27T11:48:45.000+0000","lastInterpreted":"2020-07-29T17:25:28.291+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2582","identifier":"urn:catalog:CAS:BOT-BC:633329","habitat":"Mixed
+        evergreen forest; understory duff, with madrone, coast redwood, doug fir,
+        tanoak. Host appears to be madrone.","higherGeography":"North America; United
+        States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/24/2019","locality":"Huddart
+        Co. Park south of Kings Mountain Road; 70 ft up=slope","county":"San Mateo
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2423593459","occurrenceID":"urn:catalog:CAS:BOT-BC:633329","type":"PhysicalObject","catalogNumber":"633329","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294474","institutionCode":"CAS","occurrenceRemarks":"100+
+        plants (singles and clusters); purple and yellow color forms in bud, flowers,
+        and fruit; many cones from previous season also available. Largish bumble
+        bee, black with yellow stripes, visiting purple-flowering plants.","verbatimElevation":"415
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Scrophulariales;
+        Orobanchaceae"},{"key":2423593862,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:31.020+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":6430818,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":5290243,"speciesKey":4104489,"acceptedTaxonKey":4104489,"scientificName":"Elymus
+        trachycaulus var. trachycaulus","acceptedScientificName":"Elymus violaceus
+        (Hornem.) J.Feilberg","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Elymus","species":"Elymus
+        violaceus","genericName":"Elymus","specificEpithet":"trachycaulus","infraspecificEpithet":"trachycaulus","taxonRank":"VARIETY","taxonomicStatus":"SYNONYM","decimalLongitude":-122.22833,"decimalLatitude":37.40472,"elevation":158.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":[],"modified":"2019-09-27T11:44:18.000+0000","lastInterpreted":"2020-07-29T17:25:31.020+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2579C","identifier":"urn:catalog:CAS:BOT-BC:633328","habitat":"Creekbank
+        where reveg had taken place in past year, with Elymus glaucus, Hordeum brachyantherum","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/26/2019","locality":"Jasper
+        Ridge Biological Preserve, Stanford University; western bank of San Francisquito
+        Creek down-stream at low-flow crossing","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2423593862","occurrenceID":"urn:catalog:CAS:BOT-BC:633328","type":"PhysicalObject","catalogNumber":"633328","recordedBy":"Rawlings,
+        John","otherCatalogNumbers":"CAS 1294430","institutionCode":"CAS","occurrenceRemarks":"25+
+        tall, bunchgrasses; flowering","verbatimElevation":"158 m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425044963,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:29.223+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":7451465,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2706325,"speciesKey":8055378,"acceptedTaxonKey":8055378,"scientificName":"Elymus
+        gouldii J.P.Sm. & Columbus","acceptedScientificName":"Leymus multiflorus (Gould)
+        Barkworth & R.J.Atkins","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Leymus","species":"Leymus
+        multiflorus","genericName":"Elymus","specificEpithet":"gouldii","taxonRank":"SPECIES","taxonomicStatus":"SYNONYM","decimalLongitude":-122.39568,"decimalLatitude":37.66975,"elevation":25.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:06:44.000+0000","lastInterpreted":"2020-07-29T17:25:29.223+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2562","identifier":"urn:catalog:CAS:BOT-BC:634556","habitat":"Growing
+        up through coyote brush in an extensive tussocky sloping marshy area, with
+        Carex barbarae, Carex harfordii, Cyperus eragrostis, Epilobium ciliatum ssp.
+        watsonii, Juncus effusus, Juncus xiphioides. Elymus triticoides locally common.","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mountain State and County Park; eastern slope, Shearwater.","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425044963","occurrenceID":"urn:catalog:CAS:BOT-BC:634556","type":"PhysicalObject","catalogNumber":"634556","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294438","institutionCode":"CAS","occurrenceRemarks":"Scattered
+        patches 20-25 rhizomatous perennials; some culms to 6 ft tall, typically 5
+        mm in diameter; lf blades 1 cm wide; infl branched near base. A few plants
+        exerting their 20+ cm long spike-like inflorescence.","verbatimElevation":"25
+        m","higherClassification":"Plantae; Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425044964,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:30.979+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5289582,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2702432,"speciesKey":5289582,"acceptedTaxonKey":5289582,"scientificName":"Aira
+        praecox L.","acceptedScientificName":"Aira praecox L.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Aira","species":"Aira
+        praecox","genericName":"Aira","specificEpithet":"praecox","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.48725,"decimalLatitude":37.57281,"elevation":279.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:54:20.000+0000","lastInterpreted":"2020-07-29T17:25:30.979+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2577","identifier":"urn:catalog:CAS:BOT-BC:633360","habitat":"Opening
+        in coastal scrub, with Arctostaphylos montaraensis.","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/23/2019","locality":"San
+        Pedro Valley Park (SPV); Montara Mountain Trail","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425044964","occurrenceID":"urn:catalog:CAS:BOT-BC:633360","type":"PhysicalObject","catalogNumber":"633360","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294505","institutionCode":"CAS","occurrenceRemarks":"Flowering
+        annual grass; infrequent; also growing upslope along trail and in nearby shale-scree
+        balds in scrub openings.","verbatimElevation":"279 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425044971,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.121+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5545011,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":690,"familyKey":2430,"genusKey":3189179,"speciesKey":5420937,"acceptedTaxonKey":5545011,"scientificName":"Clarkia
+        concinna subsp. automixa R.N.Bowman","acceptedScientificName":"Clarkia concinna
+        subsp. automixa R.N.Bowman","kingdom":"Plantae","phylum":"Tracheophyta","order":"Myrtales","family":"Onagraceae","genus":"Clarkia","species":"Clarkia
+        concinna","genericName":"Clarkia","specificEpithet":"concinna","infraspecificEpithet":"automixa","taxonRank":"SUBSPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.11624,"decimalLatitude":37.33553,"elevation":286.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:00:50.000+0000","lastInterpreted":"2020-07-29T17:25:28.121+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2571","identifier":"urn:catalog:CAS:BOT-BC:633372","habitat":"Oak
+        woodland; shaded steep bank upslope from trail., with Bromus carinatus, Elymus
+        glaucus glaucus, Melica imperfecta, Melica torreyana.","higherGeography":"North
+        America; United States; California; Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/13/2019","locality":"Rancho
+        San Antonio Open Space Preserve (RSA), MROSD; Upper Rogue Valley Trail","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425044971","occurrenceID":"urn:catalog:CAS:BOT-BC:633372","type":"PhysicalObject","catalogNumber":"633372","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294498","institutionCode":"CAS","occurrenceRemarks":"Flowering;
+        a few widely separated patches; 50+ individuals.","verbatimElevation":"286
+        m","verbatimTaxonRank":"subspecies","higherClassification":"Plantae; Magnoliophyta;
+        Magnoliopsida; Myrtales; Onagraceae"},{"key":2425044982,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.287+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5275102,"kingdomKey":6,"phylumKey":7707728,"classKey":7228684,"orderKey":392,"familyKey":2373,"genusKey":2651126,"speciesKey":5275102,"acceptedTaxonKey":5275102,"scientificName":"Dryopteris
+        expansa (C.Presl) Fraser-Jenk. & Jermy","acceptedScientificName":"Dryopteris
+        expansa (C.Presl) Fraser-Jenk. & Jermy","kingdom":"Plantae","phylum":"Tracheophyta","order":"Polypodiales","family":"Dryopteridaceae","genus":"Dryopteris","species":"Dryopteris
+        expansa","genericName":"Dryopteris","specificEpithet":"expansa","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.36078,"decimalLatitude":37.43661,"elevation":162.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:06:11.000+0000","lastInterpreted":"2020-07-29T17:25:28.287+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Polypodiopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2543B","identifier":"urn:catalog:CAS:BOT-BC:634555","habitat":"Riparian
+        corridor through redwood forest, upslope side of trail, with Rubus parviflorus,
+        Stachys bullata, Polystichum munitum, Adiantum aleuticum, Athyrium filix-femina,
+        Sambucus racemosa, Tiarella trifoliata unifoliata, Prosartes smithii, Oxalis
+        oregana, Myosotis sp., Carex sp.","higherGeography":"North America; United
+        States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/2/2019","locality":"Purisima
+        Creek Preserve, MROSD; Purisima Creek Trail about .5 mile from Higgins Rd
+        trailhead.","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425044982","occurrenceID":"urn:catalog:CAS:BOT-BC:634555","type":"PhysicalObject","catalogNumber":"634555","recordedBy":"Rawlings,
+        John; Silvas-Young, Vicki; Yang, Stella","otherCatalogNumbers":"CAS 1294482","institutionCode":"CAS","occurrenceRemarks":"About
+        20 plants; indusia intact.","verbatimElevation":"162 m","higherClassification":"Plantae;
+        Pteridophyta; Filicopsida; Polypodiales; Dryopteridaceae"},{"key":2425045005,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.269+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3189023,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":690,"familyKey":2430,"genusKey":3188931,"speciesKey":3189023,"acceptedTaxonKey":3189023,"scientificName":"Camissonia
+        strigulosa (Fisch. & E.Mey.) P.H.Raven","acceptedScientificName":"Camissonia
+        strigulosa (Fisch. & E.Mey.) P.H.Raven","kingdom":"Plantae","phylum":"Tracheophyta","order":"Myrtales","family":"Onagraceae","genus":"Camissonia","species":"Camissonia
+        strigulosa","genericName":"Camissonia","specificEpithet":"strigulosa","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.45722,"decimalLatitude":37.69678,"elevation":137.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:57:54.000+0000","lastInterpreted":"2020-07-29T17:25:28.269+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2563","identifier":"urn:catalog:CAS:BOT-BC:633367","habitat":"Substrate
+        alluvial sand deposits, with Acaena californica, Bromus diandrus, Chorizanthe
+        cuspidata (in bloom), Eschscholzia californica, Lessingia germanorum (seedlings),
+        Lupinus chamissonis, Phacelia californica, Rumex acetosella","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mountain State and County Park;  lower Colma Canyon","county":"San Mateo
+        County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045005","occurrenceID":"urn:catalog:CAS:BOT-BC:633367","type":"PhysicalObject","catalogNumber":"633367","recordedBy":"Rawlings,
+        John; Hickman, Ken; Allshouse, Doug","otherCatalogNumbers":"CAS 1294501","institutionCode":"CAS","occurrenceRemarks":"200+
+        annuals; yellow corolla; mostly with ripening fruit. Photo: Calflora ID po131573.","verbatimElevation":"137
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Myrtales;
+        Onagraceae"},{"key":2425045016,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.109+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":4136604,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2706170,"speciesKey":4136604,"acceptedTaxonKey":4136604,"scientificName":"Rytidosperma
+        caespitosum (Gaudich.) Connor & Edgar","acceptedScientificName":"Rytidosperma
+        caespitosum (Gaudich.) Connor & Edgar","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Rytidosperma","species":"Rytidosperma
+        caespitosum","genericName":"Rytidosperma","specificEpithet":"caespitosum","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.39231,"decimalLatitude":37.67261,"elevation":59.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T11:23:24.000+0000","lastInterpreted":"2020-07-29T17:25:32.109+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2559","identifier":"urn:catalog:CAS:BOT-BC:634584","habitat":"Abandoned
+        road bed through notably weedy annual grassland.","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mountain State and County Park; eastern slope, Shearwater.","county":"San
+        Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045016","occurrenceID":"urn:catalog:CAS:BOT-BC:634584","type":"PhysicalObject","catalogNumber":"634584","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294428","institutionCode":"CAS","occurrenceRemarks":"Locally
+        common; upright smallish bunchgrass with blue-green foliage; most plants flowering.
+        Upper and lower lemma hairs in continuous rows. Only R. penicillatum listed
+        in San Bruno Mountain flora (1990)","verbatimElevation":"59 m","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"},{"key":2425045017,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.293+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":3666684,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":690,"familyKey":2430,"genusKey":7161653,"speciesKey":3666684,"acceptedTaxonKey":3666684,"scientificName":"Camissoniopsis
+        bistorta (Nutt. ex Torr. & A.Gray) W.L.Wagner & Hoch","acceptedScientificName":"Camissoniopsis
+        bistorta (Nutt. ex Torr. & A.Gray) W.L.Wagner & Hoch","kingdom":"Plantae","phylum":"Tracheophyta","order":"Myrtales","family":"Onagraceae","genus":"Camissoniopsis","species":"Camissoniopsis
+        bistorta","genericName":"Camissoniopsis","specificEpithet":"bistorta","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.45574,"decimalLatitude":37.696,"elevation":111.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:58:15.000+0000","lastInterpreted":"2020-07-29T17:25:28.293+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2564","identifier":"urn:catalog:CAS:BOT-BC:633365","habitat":"Substrate
+        alluvial sand deposits, with Camissonia strigulosa, Ericameria ericoides,
+        Eriogonum nudum, Rumex acetosella.","higherGeography":"North America; United
+        States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/9/2019","locality":"San
+        Bruno Mt., lower Colma Canyon","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045017","occurrenceID":"urn:catalog:CAS:BOT-BC:633365","type":"PhysicalObject","catalogNumber":"633365","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294524","institutionCode":"CAS","occurrenceRemarks":"200+
+        plants. A southern California species. Locally common annual, scattered large-flowered
+        (to 15 mm diameter) sun cup, in flower and fruit. Determined by Neal Kramer.
+        There is a19th C record of this plant for Santa Cruz Co.: \"Camissonia bistorta
+        - Reported by C.L. Anderson [in his 1892 checklist] ''sandhills near the sea'';
+        presumably extirpated. If ID is correct, a Southern CA disjunct.\" (Morgan
+        et al, 2005, Annotated Checklist of the Vascular Plants of Santa Cruz County).","verbatimElevation":"111
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Myrtales;
+        Onagraceae"},{"key":2425045032,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:28.876+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":5420946,"kingdomKey":6,"phylumKey":7707728,"classKey":220,"orderKey":690,"familyKey":2430,"genusKey":3189179,"speciesKey":5420946,"acceptedTaxonKey":5420946,"scientificName":"Clarkia
+        affinis F.H.Lewis & M.E.Lewis","acceptedScientificName":"Clarkia affinis F.H.Lewis
+        & M.E.Lewis","kingdom":"Plantae","phylum":"Tracheophyta","order":"Myrtales","family":"Onagraceae","genus":"Clarkia","species":"Clarkia
+        affinis","genericName":"Clarkia","specificEpithet":"affinis","taxonRank":"SPECIES","taxonomicStatus":"ACCEPTED","decimalLongitude":-122.11624,"decimalLatitude":37.33553,"elevation":287.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T10:01:27.000+0000","lastInterpreted":"2020-07-29T17:25:28.876+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Magnoliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2572","identifier":"urn:catalog:CAS:BOT-BC:633371","habitat":"Shaded,
+        steep trail bank, with Bromus carinatus, Elymus glaucus glaucus, Melica imperfecta,
+        Melica torreyana.","higherGeography":"North America; United States; California;
+        Santa Clara County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/13/2019","locality":"Rancho
+        San Antonio Open Space Preserve (RSA), MROSD; Upper Rogue Valley Trail","county":"Santa
+        Clara County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045032","occurrenceID":"urn:catalog:CAS:BOT-BC:633371","type":"PhysicalObject","catalogNumber":"633371","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294521","institutionCode":"CAS","occurrenceRemarks":"Dense
+        patch of 50+ annuals; petals dark pinkish, purple-flecked.","verbatimElevation":"287
+        m","higherClassification":"Plantae; Magnoliophyta; Magnoliopsida; Myrtales;
+        Onagraceae"},{"key":2425045036,"datasetKey":"f934f8e2-32ca-46a7-b2f8-b032a4740454","publishingOrgKey":"66522820-055c-11d8-b84e-b8a03c50a862","installationKey":"a43950ae-eb88-4ef4-bfff-43bcf12885ad","publishingCountry":"US","protocol":"DWC_ARCHIVE","lastCrawled":"2020-07-29T17:19:45.627+0000","lastParsed":"2020-07-29T17:25:32.087+0000","crawlId":327,"extensions":{},"basisOfRecord":"PRESERVED_SPECIMEN","taxonKey":2706535,"kingdomKey":6,"phylumKey":7707728,"classKey":196,"orderKey":1369,"familyKey":3073,"genusKey":2706434,"speciesKey":2706526,"acceptedTaxonKey":2706526,"scientificName":"Agrostis
+        exarata var. pacifica Vasey","acceptedScientificName":"Agrostis exarata Trin.","kingdom":"Plantae","phylum":"Tracheophyta","order":"Poales","family":"Poaceae","genus":"Agrostis","species":"Agrostis
+        exarata","genericName":"Agrostis","specificEpithet":"exarata","infraspecificEpithet":"pacifica","taxonRank":"VARIETY","taxonomicStatus":"SYNONYM","decimalLongitude":-122.48287,"decimalLatitude":37.57463,"elevation":236.0,"continent":"NORTH_AMERICA","stateProvince":"California","year":2019,"month":5,"eventDate":"2019-05-01T00:00:00","issues":["PRESUMED_NEGATED_LONGITUDE"],"modified":"2019-10-01T09:53:49.000+0000","lastInterpreted":"2020-07-29T17:25:32.087+0000","license":"http://creativecommons.org/publicdomain/zero/1.0/legalcode","identifiers":[],"media":[],"facts":[],"relations":[],"geodeticDatum":"WGS84","class":"Liliopsida","countryCode":"US","recordedByIDs":[],"identifiedByIDs":[],"country":"United
+        States of America","recordNumber":"2576","identifier":"urn:catalog:CAS:BOT-BC:633359","habitat":"Coastal
+        scrub, with Bromus carinatus, Elymus glaucus, Holcus lanatus","higherGeography":"North
+        America; United States; California; San Mateo County","nomenclaturalCode":"ICBN","verbatimEventDate":"5/23/2019","locality":"San
+        Pedro Valley Park (SPV); Montara Mountain Trail","county":"San Mateo County","collectionCode":"BOT-BC","language":"en","gbifID":"2425045036","occurrenceID":"urn:catalog:CAS:BOT-BC:633359","type":"PhysicalObject","catalogNumber":"633359","recordedBy":"Rawlings,
+        John; Hickman, Ken","otherCatalogNumbers":"CAS 1294490","institutionCode":"CAS","occurrenceRemarks":"Infrequent
+        bunchgrass; flowering","verbatimElevation":"236 m","verbatimTaxonRank":"variety","higherClassification":"Plantae;
+        Magnoliophyta; Liliopsida; Poales; Poaceae"}],"facets":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=allshouse%2C%20doug&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:34 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=bartosh%2C%20heath&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:34 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=castro%2C%20b.&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:34 GMT
+      content-length: '15747'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1413-77391999000100008","Authors":[{"Name":"Castro,Clovis
+        B."},{"Name":"Pires,Débora O."}],"PartUrl":"https://www.biodiversitylibrary.org/part/107990","PartID":"107990","Genre":"Article","Title":"A
+        bleaching event on a Brazilian coral reef","ContainerTitle":"Revista Brasileira
+        de Oceanografia"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"57","Authors":[{"Name":"Cutrera,
+        R A"},{"Name":"Carreno, N B"},{"Name":"Castro-Vazquez, A"}],"PartUrl":"https://www.biodiversitylibrary.org/part/192035","PartID":"192035","Genre":"Article","Title":"Correlative
+        genital tract morphology and plasma progesterone levels during the ovarian
+        cycle in Corn mice ( Calomys musculin us)","ContainerTitle":"Zeitschrift für
+        Säugetierkunde : im Auftrage der Deutschen Gesellschaft für Säugetierkunde
+        e.V.","Date":"1992","PageRange":"14--22"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842005000200003","Authors":[{"Name":"Barreto-Medeiros,J.
+        M."},{"Name":"Feitoza,E. G."},{"Name":"Magalhães,K."},{"Name":"da Silva,R.
+        R."},{"Name":"Manhães-de-Castro,F. M."},{"Name":"Manhães-de-Castro,R."},{"Name":"De-Castro,C.
+        M. M. B."}],"PartUrl":"https://www.biodiversitylibrary.org/part/120862","PartID":"120862","Genre":"Article","Title":"The
+        expression of an intraspecific aggressive reaction in the face of a stressor
+        agent alters the immune response in rats","ContainerTitle":"Instituto Internacional
+        de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.cl/scielo.php?script=sci_arttext\u0026pid=S0718-19572005000200006","Authors":[{"Name":"Cousseau,María
+        B"},{"Name":"González Castro,Mariano"},{"Name":"Figueroa,Daniel E"},{"Name":"Gosztonyi,Atila
+        E"}],"PartUrl":"https://www.biodiversitylibrary.org/part/117080","PartID":"117080","Genre":"Article","Title":"Does
+        Mugil liza Valenciennes 1836 (Teleostei: Mugiliformes) occur in Argentinean
+        waters?","ContainerTitle":"Revista de biología marina y oceanografía"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1679-62252009000100013","Authors":[{"Name":"Almeida,Jeane
+        A."},{"Name":"Barreto,Rodrigo E."},{"Name":"Novelli,Ethel L. B."},{"Name":"Castro,Fabio
+        J."},{"Name":"Moron,Sandro E."}],"PartUrl":"https://www.biodiversitylibrary.org/part/109527","PartID":"109527","Genre":"Article","Title":"Oxidative
+        stress biomarkers and aggressive behavior in fish exposed to aquatic cadmium
+        contamination","ContainerTitle":"Neotropical Ichthyology"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"64","Authors":[{"Name":"Castro,
+        Clóvis B E"},{"Name":"De Amorim, Luciana C"},{"Name":"Calderon, Emiliano N"},{"Name":"Segal,
+        Bárbara"}],"PartUrl":"https://www.biodiversitylibrary.org/part/279192","PartID":"279192","Genre":"Article","Title":"Cobertura
+        e recrutamento de corais recifais (Cnidaria: Scleractinia e Milleporidae)
+        nos Recifes Itacolomis, Brasil","ContainerTitle":"Archivos do Museu Nacional
+        do Rio de Janeiro.","Issue":"1","Date":"2006","PageRange":"29--40"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0101-81752000000300002","Authors":[{"Name":"Marques,Débora
+        K.S."},{"Name":"Rosa,Ierecê de Lucena"},{"Name":"Gurgel,Hélio de Castro B."}],"PartUrl":"https://www.biodiversitylibrary.org/part/105124","PartID":"105124","Genre":"Article","Title":"Descrição
+        histológica de gônadas de traíra Hoplias malabaricus (Bloch) (Osteichthyes,
+        Erythrinidae) da barragem do rio Gramame, Alhandra, Paraíba, Brasil","ContainerTitle":"Revista
+        Brasileira de Zoologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0044-59671996000300127","Authors":[{"Name":"Marinho,Helyde
+        A."},{"Name":"Xavier, José Jackson B. N."},{"Name":"Miranda, Roberto M."},{"Name":"Castro,Janete
+        S."}],"PartUrl":"https://www.biodiversitylibrary.org/part/164437","PartID":"164437","Genre":"Article","Title":"ESTUDOS
+        SOBRE CAROTENÓIDES COM ATIVIDADE DE PROVITAMINA \"A\" EM CULTIVARES DE MANDIOCA
+        (Manihot esculentaCRANTZ) EM ECOSSISTEMA DE TERRA FIRME DE MANAUS, AMAZONAS,
+        BRASIL.","ContainerTitle":"Instituto Nacional de Pesquisas da Amazônia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842013000200299","Authors":[{"Name":"Chiba
+        de Castro,WA"},{"Name":"Cunha-Santino, M. B. (Marcela Bianchessi)"},{"Name":"Bianchini,Irineu."}],"PartUrl":"https://www.biodiversitylibrary.org/part/166780","PartID":"166780","Genre":"Article","Title":"Anaerobic
+        decomposition of a native and an exotic submersed macrophyte in two tropical
+        reservoirs","ContainerTitle":"Instituto Internacional de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.cl/scielo.php?script=sci_arttext\u0026pid=S0716-078X2005000300009","Authors":[{"Name":"REBOLLEDO,LORENA"},{"Name":"LANGE,CARINA
+        B."},{"Name":"Figueroa,Dante"},{"Name":"Pantoja,Silvio"},{"Name":"Muñoz,Práxedes"},{"Name":"CASTRO,RODRIGO"}],"PartUrl":"https://www.biodiversitylibrary.org/part/116599","PartID":"116599","Genre":"Article","Title":"20th
+        century fluctuations in the abundance of siliceous microorganisms preserved
+        in the sediments of the Puyuhuapi Channel (44° S), Chile","ContainerTitle":"Revista
+        chilena de historia natural"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842002000400007","Authors":[{"Name":"MACHADO,L.
+        P. de B."},{"Name":"CASTRO,J. P.de"},{"Name":"MADI-RAVAZZI,L."}],"PartUrl":"https://www.biodiversitylibrary.org/part/120602","PartID":"120602","Genre":"Article","Title":"Evaluation
+        of the courtship and of the hybrid male sterility among Drosophila buzzatii
+        cluster species (Diptera, Drosophilidae)","ContainerTitle":"Instituto Internacional
+        de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0044-59671983000100051","Authors":[{"Name":"Landim,Paulo
+        M. B."},{"Name":"Bósio,Nivaldo J."},{"Name":"Wu, Fu T."},{"Name":"Castro,Paulo
+        R. M."}],"PartUrl":"https://www.biodiversitylibrary.org/part/202185","PartID":"202185","Genre":"Article","Title":"MINERAIS
+        PESADOS PROVENIENTES DO LEITO DO RIO AMAZONAS","ContainerTitle":"Instituto
+        Nacional de Pesquisas da Amazônia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.org.ar/scielo.php?script=sci_arttext\u0026pid=S0373-56802011000100002","Authors":[{"Name":"Milléo,Julianne"},{"Name":"Farago,Thatyla
+        L. B."},{"Name":"Souza,Jana M. T. de"},{"Name":"Barbola,Ivana de F."},{"Name":"Castro,Jonathan
+        P."}],"PartUrl":"https://www.biodiversitylibrary.org/part/114338","PartID":"114338","Genre":"Article","Title":"Entomofauna
+        asociada a flores de berenjena y su papel en la producción de los frutos","ContainerTitle":"Revista
+        de la Sociedad Entomológica Argentina"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0044-59671990000100119","Authors":[{"Name":"Nagahama,
+        Dionísia."},{"Name":"Marinho,Helyde A."},{"Name":"Rocha,Yolanda"},{"Name":"Ferraroni,Maria
+        José R."},{"Name":"Silva,Nelson B."},{"Name":"Castro,Janete S."},{"Name":"Onety,José
+        Augusto"}],"PartUrl":"https://www.biodiversitylibrary.org/part/164236","PartID":"164236","Genre":"Article","Title":"Avaliação
+        nutricional e alimentar de pré-escolares de uma creche de Manaus e a influência
+        da entidade no estado nutricional de sua população","ContainerTitle":"Instituto
+        Nacional de Pesquisas da Amazônia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842016005115105","Authors":[{"Name":"Corrêa,F.
+        F."},{"Name":"Pereira,M. P."},{"Name":"Madail,R. H."},{"Name":"Santos,B. R."},{"Name":"Barbosa,S."},{"Name":"Castro,E.
+        M."},{"Name":"Pereira,F. J."}],"PartUrl":"https://www.biodiversitylibrary.org/part/184495","PartID":"184495","Genre":"Article","Title":"Anatomical
+        traits related to stress in high density populations of Typha angustifolia
+        L. (Typhaceae)","ContainerTitle":"Instituto Internacional de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1984-46702010000600010","Authors":[{"Name":"Mariante,Fátima
+        L. F."},{"Name":"Lemos,Gabriela B."},{"Name":"Eutrópio,Frederico J."},{"Name":"Castro,Rodrigo
+        R. L."},{"Name":"Gomes,Levy C."}],"PartUrl":"https://www.biodiversitylibrary.org/part/110149","PartID":"110149","Genre":"Article","Title":"Reproductive
+        biology in the starfish Echinaster (Othilia) guyanensis (Echinodermata: Asteroidea)
+        in southeastern Brazil","ContainerTitle":"Zoologia (Curitiba)"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0073-47212013000200006","Authors":[{"Name":"Castro
+        Jr.,Francisco P. de"},{"Name":"Martins,Walter F. S."},{"Name":"Lucena Filho,Mauricio
+        L. de"},{"Name":"Almeida,Raul P. de"},{"Name":"Beserra,Eduardo B."}],"PartUrl":"https://www.biodiversitylibrary.org/part/103039","PartID":"103039","Genre":"Article","Title":"Ciclos
+        de vida comparados de Aedes aegypti (Diptera, Culicidae) do semiárido da Paraíba","ContainerTitle":"Iheringia.
+        Série Zoologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0102-33062016000100017","Authors":[{"Name":"Castro,Silvana
+        A. B."},{"Name":"Sá,Camila E. M."},{"Name":"Mourão,Fabiana A."},{"Name":"Duarte,Heitor
+        M."},{"Name":"Fernandes,G. Wilson"},{"Name":"Lemos-Filho,José P."}],"PartUrl":"https://www.biodiversitylibrary.org/part/168288","PartID":"168288","Genre":"Article","Title":"Ecophysiological
+        performance of a threatened shrub under restored and natural conditions in
+        a harsh tropical mountaintop environment","ContainerTitle":"Sociedade Botânica
+        do Brasil"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0044-59672007000100006","Authors":[{"Name":"Sampaio,Paulo
+        de Tarso B."},{"Name":"Santos,Márcia Castro dos"},{"Name":"Vieira, Gil"},{"Name":"Spironello,Wilson"},{"Name":"Useche,Fabio
+        Lozano"},{"Name":"Bruno,Flávio Mauro Souza"}],"PartUrl":"https://www.biodiversitylibrary.org/part/165015","PartID":"165015","Genre":"Article","Title":"Avaliação
+        rebrota da copa das árvores de pau-rosa (Aniba rosaeodora Ducke) em sistema
+        de podas sucessivas","ContainerTitle":"Instituto Nacional de Pesquisas da
+        Amazônia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842016000200360","Authors":[{"Name":"Nishiyama,P.
+        B."},{"Name":"Vieira, Margarida Maria de Rossi"},{"Name":"Porto,F. E."},{"Name":"Borin,L.
+        A."},{"Name":"Portela-Castro,A. L. B."},{"Name":"Santos,I. C. M."}],"PartUrl":"https://www.biodiversitylibrary.org/part/176789","PartID":"176789","Genre":"Article","Title":"Karyotypic
+        diversity among three species of the genus Astyanax (Characiformes: Characidae)","ContainerTitle":"Instituto
+        Internacional de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842016005103106","Authors":[{"Name":"Nishiyama,P.
+        B."},{"Name":"Vieira, Margarida Maria de Rossi"},{"Name":"Porto,F. E."},{"Name":"Borin,L.
+        A."},{"Name":"Portela-Castro,A. L. B."},{"Name":"Santos,I. C. M."}],"PartUrl":"https://www.biodiversitylibrary.org/part/171656","PartID":"171656","Genre":"Article","Title":"Karyotypic
+        diversity among three species of the genusAstyanax (Characiformes: Characidae)","ContainerTitle":"Instituto
+        Internacional de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842016005121105","Authors":[{"Name":"Silva,L.
+        D."},{"Name":"Amaral,V. C. S."},{"Name":"Vinaud, M. C."},{"Name":"Castro,A.
+        M."},{"Name":"Rezende,H. H. A."},{"Name":"Santos,D. B."},{"Name":"Mello-Silva,C.
+        C."},{"Name":"Bezerra,J. C. B."}],"PartUrl":"https://www.biodiversitylibrary.org/part/198339","PartID":"198339","Genre":"Article","Title":"Changes
+        in energetic metabolism of Biomphalaria glabrata (Mollusca, Planorbidae) in
+        response to exogenous calcium","ContainerTitle":"Instituto Internacional de
+        Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S0085-56262009000400018","Authors":[{"Name":"Martins,Camila
+        B. C."},{"Name":"Almeida,Lúcia M."},{"Name":"Zonta de Carvalho, Regina Celia"},{"Name":"Castro,Camila
+        F."},{"Name":"Pereira,Rosylaine A."}],"PartUrl":"https://www.biodiversitylibrary.org/part/103699","PartID":"103699","Genre":"Article","Title":"Harmonia
+        axyridis: a threat to Brazilian Coccinellidae?","ContainerTitle":"Revista
+        Brasileira de Entomologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1519-69842011000500014","Authors":[{"Name":"CALLISTO,M."},{"Name":"Ribeiro,AS."},{"Name":"Santana,VB."},{"Name":"França,JS."},{"Name":"Ligeiro,R."},{"Name":"Ferreira,WR."},{"Name":"Silva,D."},{"Name":"Castro,D."},{"Name":"Tupinambás,TH."},{"Name":"Santana,D."},{"Name":"Souza,B."},{"Name":"Gonçalves,F."},{"Name":"Rodrigues,L."},{"Name":"Andrade,CB."},{"Name":"Sales,SCM."},{"Name":"Souza,R."}],"PartUrl":"https://www.biodiversitylibrary.org/part/166583","PartID":"166583","Genre":"Article","Title":"Rapid
+        ecological assessment of benthic indicators of water quality: a successful
+        capacity-building experience for Brazilian postgraduate students in ecology","ContainerTitle":"Instituto
+        Internacional de Ecologia"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.br/scielo.php?script=sci_arttext\u0026pid=S1679-62252007000300020","Authors":[{"Name":"Rosa,Ierecê
+        Lucena"},{"Name":"Oliveira,Tacyana P. R."},{"Name":"Castro,André L. C."},{"Name":"Moraes,Luiz
+        E. de Souza"},{"Name":"Xavier, Josias Henrique de Amorim"},{"Name":"Nottingham,Mara
+        C."},{"Name":"Dias,Thelma L. P."},{"Name":"Bruto-Costa,Leonardo V."},{"Name":"Araújo,Maria
+        E."},{"Name":"Birolo,Alesandra B."},{"Name":"Mai,Ana C. G."},{"Name":"Monteiro-Neto,Cassiano"}],"PartUrl":"https://www.biodiversitylibrary.org/part/109431","PartID":"109431","Genre":"Article","Title":"Population
+        characteristics, space use and habitat associations of the seahorse Hippocampus
+        reidi (Teleostei: Syngnathidae)","ContainerTitle":"Neotropical Ichthyology"},{"BHLType":"Part","FoundIn":"Metadata","ExternalUrl":"http://www.scielo.org.co/scielo.php?script=sci_arttext\u0026pid=S0122-97612014000200003","Authors":[{"Name":"Martínez
+        Viloria,Héctor Manuel"},{"Name":"Franke Ante, Rebeca"},{"Name":"Saldaña Pérez,Patricia"},{"Name":"Cano
+        Correa,Marcela"},{"Name":"Angarita Jiménez,Luz Elvira"},{"Name":"García Llano,César"},{"Name":"Martínez
+        Whisgman,Luis"},{"Name":"Castro B.,Alcides"},{"Name":"Posada,Santiago"},{"Name":"Gómez,Camilo"},{"Name":"Bruges,Esnelda"},{"Name":"Narváez
+        Barandica,Juan Carlos"},{"Name":"Viloria Maestre, Efraín"},{"Name":"López
+        Anaya,Carmen"}],"PartUrl":"https://www.biodiversitylibrary.org/part/146155","PartID":"146155","Genre":"Article","Title":"CARACTERIZACIÓN
+        DEL USO Y APROVECHAMIENTO DE RECURSOS HIDROBIOLÓGICOS EN ÁREAS PROTEGIDAS
+        DE PARQUES NACIONALES NATURALES EN EL CARIBE DE COLOMBIA*","ContainerTitle":"INSTITUTO
+        DE INVESTIGACIONES MARINAS Y COSTERAS \"JOSE BENITO VIVES DE ANDRÉIS\" (INVEMAR)"}]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=cummings%2C%20alice&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:35 GMT
+      content-length: '3848'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[{"BHLType":"Item","FoundIn":"Metadata","ItemID":"258600","TitleID":"154043","Volume":"Senders
+        Ch-Cu (1886-1918)","ItemUrl":"https://www.biodiversitylibrary.org/item/258600","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/154043","MaterialType":"Mixed
+        materials","PublicationDate":"1886","Authors":[{"Name":"Collins, J. Franklin
+        (James Franklin)"},{"Name":"Chandler, Eva,"},{"Name":"Cheney, Robert F.,"},{"Name":"Cherrington,
+        Mary Edna,"},{"Name":"Chesnut, V. K. (Victor King),"},{"Name":"Churchill,
+        Joseph Richmond,"},{"Name":"Clapp, Ida D.,"},{"Name":"Clapp, Marguerite S.,"},{"Name":"Clark,
+        Mary A.,"},{"Name":"Clarke, Cora H. (Cora Huidekoper),"},{"Name":"Clements,
+        Jennie H.,"},{"Name":"Clute, Willard Nelson,"},{"Name":"Collins, Frank S.
+        (Frank Shipley),"},{"Name":"Corbière, Louis,"},{"Name":"Coville, Frederick
+        V. (Frederick Vernon)"},{"Name":"Cowles, Henry Chandler,"},{"Name":"Crockett,
+        Alice L.,"},{"Name":"Croswell, Emily L.,"},{"Name":"Crump, W. B. (William
+        Bunting),"},{"Name":"Cummings, Clara E. (Clara Eaton),"},{"Name":"Cushman,
+        Joseph A. (Joseph Augustine),"}],"Genre":"Collection","Title":"James Franklin
+        Collins correspondence.  Senders Cheney-Cushman,"},{"BHLType":"Item","FoundIn":"Metadata","ItemID":"172483","TitleID":"94780","Volume":"Senders
+        A, 1872-1917","ItemUrl":"https://www.biodiversitylibrary.org/item/172483","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/94780","MaterialType":"Mixed
+        materials","PublicationDate":"1872","Authors":[{"Name":"Kennedy, George G.
+        (George Golding),"},{"Name":"Bacon, Alice Elizabeth,"},{"Name":"Bailey, L.
+        H. (Liberty Hyde),"},{"Name":"Bailey, William Whitman,"},{"Name":"Baker, Harvey
+        Humphrey,"},{"Name":"Barnes, Charles Reid,"},{"Name":"Bishop, James N. (James
+        Nathaniel),"},{"Name":"Brainerd, Ezra,"},{"Name":"Braithwaite, Robert,"},{"Name":"Briggs,
+        George K.,"},{"Name":"Britton, Elizabeth G. (Elizabeth Gertrude),"},{"Name":"Britton,
+        Nathaniel Lord,"},{"Name":"Brusati, Luigi,"},{"Name":"Churchill, Joseph Richmond,"},{"Name":"Collins,
+        Frank S. (Frank Shipley),"},{"Name":"Collins, J. Franklin (James Franklin)"},{"Name":"Crocker,
+        George G. (George Glover),"},{"Name":"Cummings, Prentiss,"},{"Name":"Cutter,
+        Marshall Munroe,"},{"Name":"Deane, Walter,"},{"Name":"Farlow, W. G. (William
+        Gilson),"},{"Name":"Faxon, Charles Edward,"},{"Name":"Faxon, Edwin,"},{"Name":"Faxon,
+        Walter,"},{"Name":"Fernald, Merritt Lyndon,"},{"Name":"Floyd, Frederick Gillan, ,"},{"Name":"Gibbs,
+        W. B.,"},{"Name":"Goodale, George L. (George Lincoln),"},{"Name":"Greenough,
+        Charles P. (Charles Pelham),"},{"Name":"Grout, A. J. (Abel Joel),"},{"Name":"Hancock,
+        John,"},{"Name":"Heller, Amos Arthur,"},{"Name":"Hodges, Almon Danforth,"},{"Name":"Holzinger,
+        J. M. (John Michael),"},{"Name":"Hooker, Joseph Dalton,"},{"Name":"Huntington,
+        John Warren,"},{"Name":"Ingraham, Rhoby,"},{"Name":"Jesup, Henry G. (Henry
+        Griswold),"},{"Name":"Jones, L. R. (Lewis Ralph),"},{"Name":"Kidder, Nathaniel
+        Thayer,"},{"Name":"Lorenz, Annie,"},{"Name":"Lorenz, William Albert,"},{"Name":"Macoun,
+        James Melville,"},{"Name":"Macoun, John,"},{"Name":"Morong, Thomas,"},{"Name":"Rand,
+        Edward Lothrop"},{"Name":"Richardson, W. L. (William Lambert),"},{"Name":"Robertson,
+        J. Ross (John Ross),"},{"Name":"Robinson, Benjamin Lincoln,"},{"Name":"Ruskin,
+        John,"},{"Name":"Sargent, Charles Sprague,"},{"Name":"Thaxter, Roland,"},{"Name":"Tilden,
+        Josephine E. (Josephine Elizabeth)"},{"Name":"Tilton, George Henry,"},{"Name":"Trelease,
+        William,"},{"Name":"True, Rodney H. (Rodney Howard),"},{"Name":"Whorf, Edward
+        Henry,"},{"Name":"Williams, Blanche E. Wheeler,"},{"Name":"Williams, Emile
+        Francis,"},{"Name":"Harvard University,"},{"Name":"Quincy\u0027s Market (Boston,
+        Mass.),"}],"Genre":"Collection","Title":"George Golding Kennedy correspondence.  Senders
+        A-Z,"}]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=hickman%2C%20ken&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:35 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=janeway%2C%20l.%20p.&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:35 GMT
+      content-length: '2004'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[{"BHLType":"Part","FoundIn":"Metadata","Volume":"44","Authors":[{"Name":"Gottlieb,
+        L D"},{"Name":"Janeway, L P"}],"PartUrl":"https://www.biodiversitylibrary.org/part/171389","PartID":"171389","Genre":"Article","Title":"A
+        NEW SUBSPECIES OF CLARKIA MILDREDIAE (ONAGRACEAE)","ContainerTitle":"Madroño;
+        a West American journal of botany.","Date":"1997","PageRange":"245--252"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"61","Authors":[{"Name":"Zika,
+        Peter F."},{"Name":"Janeway, Lawrence P"},{"Name":"Wilson, Barbara L"}],"PartUrl":"https://www.biodiversitylibrary.org/part/237691","PartID":"237691","Genre":"Article","Title":"Carex
+        xerophila (Cyperaceae), a New Sedge from the Chaparral of Northern California","ContainerTitle":"Madroño;
+        a West American journal of botany.","Date":"2014","PageRange":"299--307"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"7","Authors":[{"Name":"Zika,
+        Peter F."},{"Name":"Janeway, Lawrence P"},{"Name":"Wilson, Barbara L"},{"Name":"Ahart,
+        Lowell"}],"PartUrl":"https://www.biodiversitylibrary.org/part/263566","PartID":"263566","Genre":"Article","Title":"CAREX
+        CYRTOSTACHYA (CYPERACEAE), A NEW SPECIES OF SEDGE ENDEMIC TO THE SIERRA NEVADA
+        OF CALIFORNIA","ContainerTitle":"Journal of the Botanical Research Institute
+        of Texas.","Issue":"1","Date":"2013","PageRange":"25--35"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"1","Authors":[{"Name":"Wilson,
+        Barbara L"},{"Name":"Brainerd, Richard E"},{"Name":"Janeway, Lawrence P"},{"Name":"Kuykendall,
+        Keli"},{"Name":"Lytjen, Danna"},{"Name":"Newhouse, Bruce"},{"Name":"Otting,
+        Nick"},{"Name":"Meyers, Stephen"},{"Name":"Zika, Peter F."}],"PartUrl":"https://www.biodiversitylibrary.org/part/161327","PartID":"161327","Genre":"Article","Title":"DESCRIPTION
+        OF CAREX KLAMATHENSIS (CYPERACEAE), A RARE SEDGE OF THE KLAMATH REGION OF
+        OREGON AND CALIFORNIA, U.S.A","ContainerTitle":"Journal of the Botanical Research
+        Institute of Texas.","Date":"2007","PageRange":"69--77"}]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=lo%2C%20belinda&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:35 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=mills%2C%20amanda&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:36 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=naumovich%2C%20lech&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:36 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=randolph-lowe%2C%20alex&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:36 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=rawlings%2C%20john&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:36 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=silvas-young%2C%20vicki&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:36 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=timby%2C%20sara&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:37 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=uhler%2C%20ellen&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:37 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=wagner%2C%20d.%20h.&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:37 GMT
+      content-length: '7794'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[{"BHLType":"Part","FoundIn":"Metadata","Volume":"2013-10","Authors":[{"Name":"Wagner,
+        David H.,"}],"PartUrl":"https://www.biodiversitylibrary.org/part/278846","PartID":"278846","Genre":"Article","Title":"Rivulariella,
+        gen. nov. (Jungermanniaceae), endemic to western North America","ContainerTitle":"Phytoneuron","Date":"2013","PageRange":"1--9"},{"BHLType":"Item","FoundIn":"Metadata","ItemID":"217339","TitleID":"124884","Volume":"no.1
+        (1979)","ItemUrl":"https://www.biodiversitylibrary.org/item/217339","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/124884","MaterialType":"Published
+        material","PublisherPlace":"Washington","PublisherName":"American Fern Society,","PublicationDate":"1979","Authors":[{"Name":"Wagner,
+        David H.,"}],"Genre":"Book","Title":"Systematics of Polystichum in western
+        North America, north of Mexico"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"5","Authors":[{"Name":"Darrach,
+        Mark E"},{"Name":"Wagner, David H.,"}],"PartUrl":"https://www.biodiversitylibrary.org/part/161887","PartID":"161887","Genre":"Article","Title":"LOMATIUM
+        PASTORALIS (APIACEAE), A NEW NARROW ENDEMIC SPECIES FROM NORTHEAST OREGON","ContainerTitle":"Journal
+        of the Botanical Research Institute of Texas.","Date":"2011","PageRange":"427--435"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"80","Authors":[{"Name":"Wagner,
+        Warren H.‏ (Warren Herbert),‏"},{"Name":"Wagner, F. S. (Florence Signaigo),"},{"Name":"Miller,
+        C N"},{"Name":"Wagner, David H.,"}],"PartUrl":"https://www.biodiversitylibrary.org/part/122561","PartID":"122561","Genre":"Article","Title":"New
+        observations on the royal fern hybrid Osmunda x ruggii","ContainerTitle":"Rhodora","Date":"1978","PageRange":"92--106."},{"BHLType":"Part","FoundIn":"Metadata","Volume":"5","Authors":[{"Name":"Lorence,
+        D H"},{"Name":"Wagner, Warren Lambert"}],"PartUrl":"https://www.biodiversitylibrary.org/part/16554","PartID":"16554","Genre":"Article","Title":"Another
+        new, nearly extinct species of Hibiscadelphus (Malvaceae) from the Hawaiian
+        Islands","ContainerTitle":"Novon a journal of botanical nomenclature from
+        the Missouri Botanical Garden.","Date":"1995","PageRange":"183--187"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"56","Authors":[{"Name":"Wagner,
+        Warren H.‏ (Warren Herbert),‏"},{"Name":"Hagenah, D J"}],"PartUrl":"https://www.biodiversitylibrary.org/part/124270","PartID":"124270","Genre":"Article","Title":"A
+        natural hybrid of Polystichum lonchitis and P. acrostichoides from the Bruce
+        Peninsula","ContainerTitle":"Rhodora","Date":"1954","PageRange":"1--6"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"87","Authors":[{"Name":"Nooden,
+        Larry D"},{"Name":"Wagner, Warren H.‏ (Warren Herbert),‏"}],"PartUrl":"https://www.biodiversitylibrary.org/part/230682","PartID":"230682","Genre":"Article","Title":"Photosynthetic
+        Capacity and Leaf Reorientation in Two Wintergreen Ferns, Polystichum acrostichoides
+        and Dryopteris intermedia","ContainerTitle":"American fern journal.","Date":"1997","PageRange":"143--149"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"6","Authors":[{"Name":"Lorence,
+        D H"},{"Name":"Wagner, Warren Lambert"}],"PartUrl":"https://www.biodiversitylibrary.org/part/28322","PartID":"28322","Genre":"Article","Title":"A
+        new species of Chamaesyce Section Sclerophyllae (Euphorbiaceae) from Kaua\u0027i","ContainerTitle":"Novon
+        a journal of botanical nomenclature from the Missouri Botanical Garden.","Date":"1996","PageRange":"68--71"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"38","Authors":[{"Name":"Levin,
+        Geoffrey A"},{"Name":"Hirshberg, Jerilynn"},{"Name":"Fuller, Ken"},{"Name":"Fuller,
+        Thomas C"},{"Name":"Barbe, G D"},{"Name":"Wagner, David H.,"}],"PartUrl":"https://www.biodiversitylibrary.org/part/171114","PartID":"171114","Genre":"Article","Title":"NOTEWORTHY
+        COLLECTIONS","ContainerTitle":"Madroño; a West American journal of botany.","Date":"1991","PageRange":"144--146"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"22","Authors":[{"Name":"Wagner,
+        Warren H.‏ (Warren Herbert),‏"},{"Name":"Wagner, F. S. (Florence Signaigo),"},{"Name":"Palmer,
+        Daniel D"},{"Name":"Hobdy, Robert W"}],"PartUrl":"https://www.biodiversitylibrary.org/part/186223","PartID":"186223","Genre":"Article","Title":"TAXONOMIC
+        NOTES ON THE PTERIDOPHYTES OF HAWAII— II","ContainerTitle":"Contributions
+        from the University of Michigan Herbarium.","Date":"1999","PageRange":"135--187"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"31","Authors":[{"Name":"Wagner,
+        James D"},{"Name":"Toft, Søren"},{"Name":"Wise, David H"}],"PartUrl":"https://www.biodiversitylibrary.org/part/229831","PartID":"229831","Genre":"Article","Title":"SPATIAL
+        STRATIFICATION IN LITTER DEPTH BY FOREST-FLOOR SPIDERS","ContainerTitle":"The
+        Journal of arachnology.","Issue":"1","Date":"2003","PageRange":"28--39"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"83","Authors":[{"Name":"Giles,
+        F E"},{"Name":"Wirth, Willis Wagner"},{"Name":"Messersmith, D H"}],"PartUrl":"https://www.biodiversitylibrary.org/part/57776","PartID":"57776","Genre":"Article","Title":"2
+        New Species Of Biting Midges And A Check List Of The Genus culicoides","ContainerTitle":"Proceedings
+        of the Entomological Society of Washington.","Date":"1981","PageRange":"537--543"},{"BHLType":"Part","FoundIn":"Metadata","Volume":"79","Authors":[{"Name":"Wirth,
+        Willis Wagner"},{"Name":"Messersmith, D H"}],"PartUrl":"https://www.biodiversitylibrary.org/part/56759","PartID":"56759","Genre":"Article","Title":"Notes
+        on the biting midges of the Seychelles (Diptera: Ceratopogonidae)","ContainerTitle":"Proceedings
+        of the Entomological Society of Washington.","Date":"1977","PageRange":"293--309"},{"BHLType":"Item","FoundIn":"Metadata","ItemID":"209776","TitleID":"119939","ItemUrl":"https://www.biodiversitylibrary.org/item/209776","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/119939","MaterialType":"Published
+        material","PublisherPlace":"Portland Or","PublisherName":"U.S. Department
+        of the Interior, Bureau of Land Management, Oregon-Washington State Office,","Authors":[{"Name":"Christy,
+        John A.,"},{"Name":"Wagner, David H.,"},{"Name":"United States. Bureau of
+        Land Management."},{"Name":"United States. Bureau of Land Management. Oregon
+        State Office."}],"Genre":"Book","Title":"Guide for the identification of rare,
+        threatened or sensitive bryophytes in the range of the northern spotted owl,
+        western Washington, western Oregon, and northwestern California /"},{"BHLType":"Item","FoundIn":"Metadata","ItemID":"212865","TitleID":"121822","ItemUrl":"https://www.biodiversitylibrary.org/item/212865","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/121822","MaterialType":"Published
+        material","PublisherPlace":"Salem Or","PublisherName":"U.S. Department of
+        the Interior, Bureau of Land Management, Salem District,","Authors":[{"Name":"Exeter,
+        Ronald L.,"},{"Name":"Harpel, Judith,"},{"Name":"Wagner, David H.,"},{"Name":"United
+        States. Bureau of Land Management."},{"Name":"United States. Bureau of Land
+        Management. Salem District."}],"Genre":"Book","Title":"Rare bryophytes of
+        Oregon /"},{"BHLType":"Item","FoundIn":"Metadata","ItemID":"169602","TitleID":"91985","ExternalUrl":"http://hdl.handle.net/2246/3686","ItemUrl":"https://www.biodiversitylibrary.org/item/169602","TitleUrl":"https://www.biodiversitylibrary.org/bibliography/91985","Authors":[{"Name":"Bolivar
+        y Pieltain, Cándido,‏"},{"Name":"Bonet, F. (Federico),"},{"Name":"Goodnight,
+        Clarence J. (Clarence James),"},{"Name":"Goodnight, Marie L. (Marie Louise),"},{"Name":"Maldonado
+        Koerdell, Manuel."},{"Name":"Osorio Tafall, Bibiano F."},{"Name":"Peláez,
+        D."},{"Name":"Wagner, Helmuth Otto,"}],"Genre":"Book","Title":"More Phalangida
+        from Mexico. American Museum novitates ; no. 1249"}]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=PublicationSearchAdvanced&authorname=yang%2C%20stella&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.71.1 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Fri, 31 Jul 2020 23:07:37 GMT
+      content-length: '45'
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"Status":"ok","ErrorMessage":"","Result":[]}'
+  recorded_at: 2020-07-31 23:07:39 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

@@ -16,8 +16,9 @@
 #' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
 #'
 #' # combine all into a data.frame
-#' as_df(x$`brachythecium albicans`)
-#' as_df(x)
+#' # FIXME: doesn't work
+#' # as_df(x$`bolboschoenus maritimus`)
+#' # as_df(x)
 #'
 #' # with collector names/authors
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
@@ -25,6 +26,8 @@
 #' authors <- res %>% sp_authors()
 #' outx <- structure(authors[1:15], class="spauthors") %>% sp_bhl_meta()
 #' outx
+#' outx$`cummings, alice`
+#' outx$`wagner, d. h.`
 #' }
 sp_bhl_meta <- function(x, key = NULL, progress = TRUE) {
   UseMethod("sp_bhl_meta")
@@ -59,35 +62,23 @@ sp_bhl_meta.sptaxonomy <- function(x, key = NULL, progress = TRUE) {
     if (progress) setTxtProgressBar(pb, i)
 
     # search to get namebankid
-    z <- tryCatch(bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
+    z <- tryCatch(rbhl::bhl_namesearch(name = x[[i]], key = key), error = function(e) e)
     if (inherits(z, "error")) {
       if (grepl("API key|Unauthorized", z$message)) {
-        stop("need an API key for BHL, or key incorrect, go to\nhttp://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
+        stop("need an API key for BHL, or key incorrect, go to\nhttps://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
       }
     }
     if (z$NameConfirmed[1] == "" || inherits(z, "error")) {
       out[[x[i]]] <- list()
     } else {
       # get BHL pages with that namebankid
-      yy <- tryCatch(bhl_namemetadata(name = z$NameConfirmed[1], key = key),
+      yy <- tryCatch(rbhl::bhl_namemetadata(name = z$NameConfirmed[1], key = key, as = "table"),
                      error = function(e) e)
       if (inherits(yy, "error")) {
         out[[x[i]]] <- structure(list(), class = 'bhl_meta_single')
       } else {
-        # success - get page details for each result
-        out[[x[i]]] <-
-          structure(
-            lapply(yy$Result[[1]]$Titles, function(z) {
-              pgs <- setdfrbind(lapply(z$Items, function(w) do.call("rbind.data.frame", w$Pages)))
-              z$Items <- lapply(z$Items, function(v) {
-                v$Pages <- NULL
-                v
-              })
-              merge(
-                z,
-                pgs[, !names(pgs) %in%  c('Volume', 'Year')],
-                by = "ItemID")
-            }), class = 'bhl_meta_single')
+        out[[ x[i] ]] <- structure(tibble::as_tibble(setdfrbind(yy$Titles[[1]]$Items)),
+          class = c('tbl', 'data.frame', 'bhl_meta_single'))
       }
     }
   }
@@ -98,31 +89,19 @@ sp_bhl_meta.sptaxonomy <- function(x, key = NULL, progress = TRUE) {
 sp_bhl_meta.spauthors <- function(x, key = NULL, progress = TRUE) {
   out <- vector(mode = "list", length = length(x))
   for (i in seq_along(x)) {
-    cat(paste0("working on ", x[i]), sep = "\n")
-    z <- tryCatch(bhl_partsearch(author = x[i], key = key), error = function(e) e)
+    # cat(paste0("working on ", x[i]), sep = "\n")
+    # out[[i]] <- tryCatch(bhl_publicationsearchadv(authorname = unclass(x[i]), key = key), error = function(e) e)
+    z <- tryCatch(bhl_publicationsearchadv(authorname = unclass(x[i]), key = key), error = function(e) e)
     if (inherits(z, "error")) {
       if (grepl("API key|Unauthorized", z$message)) {
-        stop("need an API key for BHL, or key incorrect, go to\nhttp://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
+        stop("need an API key for BHL, or key incorrect, go to\nhttps://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
       }
     }
 
-    if (is.null(z$data) || inherits(z, "error")) {
+    if (is.null(z) || inherits(z, "error")) {
       out[[i]] <- NULL
     } else {
-      # get page details for each result
-      partls <- vector(mode = "list", length = NROW(z$data))
-      for (j in seq_len(NROW(z$data))) {
-        pgs <- z$data[j, ]$Pages[[1]]
-        mn <- z$data[j, names(z$data) %in% c('PartUrl', 'PartID', 'ItemID', 'Title',
-                                             'ContainerTItle', 'Volume', 'Date', 'Authors')]
-        partls[[j]] <- if (NROW(pgs) == 0) {
-          mn
-        } else {
-          pgs <- pgs[, !names(pgs) %in%  c('Volume', 'Year', 'ItemID')]
-          suppressWarnings(cbind(mn, pgs))
-        }
-      }
-      out[[x[i]]] <- structure(partls, class = 'bhl_meta_single')
+      out[[x[i]]] <- structure(z, class = c('tbl', 'data.frame', 'bhl_meta_single'))
     }
   }
   structure(spcl(out), class = "bhl_meta")

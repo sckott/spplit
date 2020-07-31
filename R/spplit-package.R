@@ -2,6 +2,7 @@
 #' @description Find related literature data for species occurrences.
 #' @importFrom spocc occ
 #' @importFrom rbhl bhl_namesearch bhl_namemetadata bhl_getpageocrtext bhl_partsearch bhl_getpagemetadata
+#' bhl_publicationsearchadv
 #' @importFrom whisker whisker.render
 #' @importFrom data.table setDF rbindlist
 #' @importFrom tibble as_data_frame
