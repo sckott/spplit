@@ -3,8 +3,6 @@ spplit
 
 
 
-[![Build Status](https://travis-ci.org/ropenscilabs/spplit.svg?branch=master)](https://travis-ci.org/ropenscilabs/spplit)
-
 `spplit` - connect species occurrence data to literature
 
 Possible workflow:
