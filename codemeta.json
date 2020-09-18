@@ -5,19 +5,18 @@
   ],
   "@type": "SoftwareSourceCode",
   "identifier": "spplit",
-  "description": "Combine literature and species occurrence data. Literature\n    data sources include the Biodiversity Heritage Library, and species\n    occurrence data sources include the Global Biodiversity Information\n    Facility (GBIF; <http://www.gbif.org/>) and the Integrated Digitized\n    Biocollections (iDigBio; <https://www.idigbio.org/>). More data\n    sources to come.",
-  "name": "spplit: Combine Literature and Species Occurrence Data",
-  "codeRepository": "https://github.com/ropenscilabs/spplit",
-  "issueTracker": "https://github.com/ropenscilabs/spplit/issues",
+  "description": "Combine literature and species occurrence data. Literature\n    data sources include the Biodiversity Heritage Library\n    (<https://www.biodiversitylibrary.org/>), and species\n    occurrence data sources include the Global Biodiversity Information\n    Facility (GBIF; <https://www.gbif.org/>) and the Integrated Digitized\n    Biocollections (iDigBio; <https://www.idigbio.org/>).",
+  "name": "spplit: Combine Species Occurrence Data and Literature",
+  "codeRepository": "https://github.com/sckott/spplit",
+  "issueTracker": "https://github.com/sckott/spplit/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.5.9350",
+  "version": "0.0.7.92",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.5.1",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.5.1 Patched (2018-08-12 r75119)",
+  "runtimePlatform": "R version 4.0.2 Patched (2020-09-01 r79114)",
   "author": [
     {
       "@type": "Person",
@@ -35,19 +34,6 @@
     }
   ],
   "softwareSuggestions": [
-    {
-      "@type": "SoftwareApplication",
-      "identifier": "roxygen2",
-      "name": "roxygen2",
-      "version": ">= 5.0.1",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=roxygen2"
-    },
     {
       "@type": "SoftwareApplication",
       "identifier": "knitr",
@@ -84,6 +70,30 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=shiny"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "vcr",
+      "name": "vcr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=vcr"
     }
   ],
   "softwareRequirements": [
@@ -171,10 +181,29 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rplos"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "fulltext",
+      "name": "fulltext",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=fulltext"
     }
   ],
-  "contIntegration": "https://travis-ci.org/ropenscilabs/spplit",
-  "readme": "https://github.com/ropenscilabs/spplit/blob/master/README.md",
-  "fileSize": "1717.904KB",
-  "keywords": ["rstats", "r", "r-package"]
+  "readme": "https://github.com/sckott/spplit/blob/master/README.md",
+  "fileSize": "0KB",
+  "keywords": [
+    "rstats",
+    "r",
+    "r-package"
+  ],
+  "relatedLink": "https://sckott.github.io/spplit",
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {}
 }

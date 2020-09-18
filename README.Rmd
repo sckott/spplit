@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![R-check](https://github.com/ropenscilabs/spplit/workflows/R-check/badge.svg)](https://github.com/ropenscilabs/spplit/actions/)
+[![R-check](https://github.com/sckott/spplit/workflows/R-check/badge.svg)](https://github.com/sckott/spplit/actions/)
 
 
 `spplit` - connect species occurrence data to literature
@@ -25,13 +25,22 @@ Possible workflow:
 * (optionally: vizualize ocr text with matches)
 * save corpus
 
+
+New setup, proposed workflow:
+
+* `spocc::occ()` to get occurrence data
+* `sp_lit_meta()`
+* `sp_lit_text()`
+* `sp_lit_names()`
+* `sp_parse_names()`
+
 ## Install
 
 install `rgbif` and `spocc`, then install `spplit`
 
 ```{r eval=FALSE}
 install.packages(c("rgbif", "spocc"))
-remotes::install_github("ropenscilabs/spplit")
+remotes::install_github("sckott/spplit")
 ```
 
 ```{r}
@@ -79,7 +88,7 @@ findFreqTerms(tdm, lowfreq = 10)
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 3) %>% 
   sp_list() %>% 
-  sp_plos()
+  sp_plos_fetch()
 ```
 
 ## Example - connect GBIF species occurrence -> collector names -> BHL author names
@@ -109,6 +118,6 @@ viewer(out)
 ## Meta
 
 * A collaboration with [California Academy of Sciences](http://www.calacademy.org/)
-* Please [report any issues or bugs](https://github.com/ropenscilabs/spplit/issues)
+* Please [report any issues or bugs](https://github.com/sckott/spplit/issues)
 * License: MIT
-* Please note that this package is released with a [Contributor Code of Conduct](https://ropensci.org/code-of-conduct/). By contributing to this project, you agree to abide by its terms.
+* Please note that the spplit project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

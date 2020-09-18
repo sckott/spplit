@@ -59,6 +59,7 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
+          remotes::install_github(c("ropensci/namext"))
           remotes::install_cran(c("rcmdcheck", "rgbif", "shiny", "vcr"))
         shell: Rscript {0}
 

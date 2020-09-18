@@ -8,3 +8,4 @@ Makefile
 CODE_OF_CONDUCT.md
 ^codemeta\.json$
 .github
+^CODE_OF_CONDUCT\.md$

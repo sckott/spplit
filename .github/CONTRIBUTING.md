@@ -34,17 +34,6 @@ GitHub username, and links to relevant issue(s)/PR(s).
 
 ### Code of Conduct
 
-Please note that the {{{ package }}} project is released with a
+Please note that the spplit project is released with a
 [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this
 project you agree to abide by its terms.
-
-### See rOpenSci [contributing guide](https://devguide.ropensci.org/contributingguide.html)
-for further details.
-
-### Discussion forum
-
-Check out our [discussion forum](https://discuss.ropensci.org) if you think your issue requires a longer form discussion.
-
-### Thanks for contributing!
-
-This contributing guide is adapted from the tidyverse contributing guide available at https://raw.githubusercontent.com/r-lib/usethis/master/inst/templates/tidy-contributing.md 

@@ -1,7 +1,7 @@
 spplit
 ======
 
-[![R-check](https://github.com/ropenscilabs/spplit/workflows/R-check/badge.svg)](https://github.com/ropenscilabs/spplit/actions/)
+[![R-check](https://github.com/sckott/spplit/workflows/R-check/badge.svg)](https://github.com/sckott/spplit/actions/)
 
 `spplit` - connect species occurrence data to literature
 
@@ -20,8 +20,8 @@ install dev versions of `rgbif` and `spocc` first, then install `spplit`
 
 
 ```r
-devtools::install_github(c("ropensci/rgbif", "ropensci/spocc"))
-devtools::install_github("ropenscilabs/spplit")
+remotes::install_github(c("ropensci/rgbif", "ropensci/spocc"))
+remotes::install_github("sckott/spplit")
 ```
 
 
@@ -89,7 +89,6 @@ viewer(out)
 ## Meta
 
 * A collaboration with [California Academy of Sciences](http://www.calacademy.org/)
-* Please [report any issues or bugs](https://github.com/ropenscilabs/spplit/issues)
+* Please [report any issues or bugs](https://github.com/sckott/spplit/issues)
 * License: MIT
-* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
-
+* Please note that the spplit project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

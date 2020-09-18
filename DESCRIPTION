@@ -10,9 +10,9 @@ Version: 0.0.7.92
 License: MIT + file LICENSE
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"), 
     email = "myrmecocystus@gmail.com")
-URL: https://github.com/ropenscilabs/spplit (devel)
-    https://docs.ropensci.org/spplit (docs)
-BugReports: https://github.com/ropenscilabs/spplit/issues
+URL: https://github.com/sckott/spplit (devel)
+    https://sckott.github.io/spplit (docs)
+BugReports: https://github.com/sckott/spplit/issues
 LazyData: true
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
@@ -25,11 +25,13 @@ Imports:
     magrittr,
     data.table,
     tibble,
-    rplos
+    rplos,
+    fulltext
 Suggests:
     knitr,
     rgbif (>= 0.9.3),
     shiny,
     testthat,
     vcr
+Remotes: sckott/namext
 RoxygenNote: 7.1.1
