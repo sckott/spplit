@@ -14,7 +14,7 @@ A typical workflow looks like:
 \itemize{
 \item Search for occurrences from GBIF or iDigBio - see \code{\link[=sp_occ_gbif]{sp_occ_gbif()}}
 and \code{\link[=sp_occ_idigbio]{sp_occ_idigbio()}}
-\item Get a species list - see \code{\link[=sp_list]{sp_list()}}
+\item Get a species list - see \code{\link[=sp_spp]{sp_spp()}}
 \item Get BHL metadata - see \code{\link[=sp_bhl_meta]{sp_bhl_meta()}}
 \item Get BHL OCR'ed text - see \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
 \item Save text to disk for later use - OR - analyze data - see \code{\link[=sp_bhl_save]{sp_bhl_save()}}
@@ -32,22 +32,6 @@ either all items as an \code{bhl_meta} object or individual items as
 }
 }
 
-\section{BHL Authentication}{
-
-For access to Biodiveristy Heritage Library data, you'll need an API key from them.
-To get one fill out the brief form at \url{http://www.biodiversitylibrary.org/getapikey.aspx} -
-they'll ask for your name and email address.
-
-To use the key, do one of:
-\itemize{
-\item pass it in the \code{key} parameter in \code{\link[=sp_bhl_meta]{sp_bhl_meta()}} and \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
-\item store as an environment variable (as \code{BHL_KEY}) either in your \code{.Renviron}
-file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
-\code{.bash_profile}, or \code{.zshrc})
-\item store as an R option (as \code{bhl_key}) in your \code{.Rprofile} file
-}
-}
-
 \examples{
 \dontrun{
 library("spplit")
@@ -57,7 +41,7 @@ geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.0
 res <- sp_occ_idigbio(geometry = geom, limit = 3)
 
 ## Get a species list
-spplist <- sp_list(res)
+spplist <- sp_spp(res)
 
 ## Get BHL metadata
 bhlmeta <- sp_bhl_meta(spplist)

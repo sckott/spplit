@@ -23,7 +23,7 @@ Uses \code{\link[rplos:plos_fulltext]{rplos::plos_fulltext()}} to fetch full tex
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 50)
-z <- res \%>\% sp_list() \%>\% sp_plos_meta()
+z <- res \%>\% sp_spp() \%>\% sp_plos_meta()
 sp_plos_fetch(z[[3]])
 sp_plos_fetch(z[1:3])
 

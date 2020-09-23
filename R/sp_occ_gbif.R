@@ -28,11 +28,11 @@
 #' geom <- 'POLYGON((30.1 10.1, 10 20, 20 60, 60 60, 30.1 10.1))'
 #'
 #' res <- sp_occ_gbif(geometry = geom)
-#' res %>% sp_list()
-#' x <- res %>% sp_list() %>% sp_bhl_meta()
+#' res %>% sp_spp()
+#' x <- res %>% sp_spp() %>% sp_bhl_meta()
 #' ocred <- x[1:10] %>% sp_bhl_ocr
 #' ocred %>% sp_bhl_save()
-#' #res %>% sp_list() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
+#' #res %>% sp_spp() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
 #'
 #' sp_occ_gbif(geometry = geom, args = c(basisOfRecord = 'PRESERVED_SPECIMEN'))
 #' sp_occ_gbif(geometry = geom, args = c(basisOfRecord = 'OBSERVATION'))

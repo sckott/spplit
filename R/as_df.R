@@ -9,8 +9,8 @@
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' res %>% sp_list()
-#' x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta()
+#' res %>% sp_spp()
+#' x <- res %>% sp_spp() %>% .[1:2] %>% sp_bhl_meta()
 #'
 #' ##
 #' as_df(x$`allium amplectens`)

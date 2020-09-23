@@ -24,7 +24,7 @@
 #' res <- sp_occ_gbif(geometry = geom, limit = 300)
 #'
 #' # get species list first, then pass to sp_plos_meta
-#' res %>% sp_list() %>% sp_plos_meta()
+#' res %>% sp_spp() %>% sp_plos_meta()
 #'
 #' # or, pass directly to sp_plos_meta, and species list is extracted automatically
 #' res %>% sp_plos_meta()
@@ -51,7 +51,7 @@ sp_plos_meta.list <- function(x, progress = TRUE, ...) {
 
 #' @export
 sp_plos_meta.occdatind <- function(x, progress = TRUE, ...) {
-  sp_plos_meta(sp_list(x), ...)
+  sp_plos_meta(sp_spp(x), ...)
 }
 
 #' @export

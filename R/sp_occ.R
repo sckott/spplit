@@ -1,7 +1,8 @@
-#' Search for occurrences in iDigBio
+#' Search for occurrences in iDigBio or GBIF
 #'
 #' @export
 #' @param query (character) Scientific names, optional
+#' @param from (character) one or more of: idigbio, gbif (default: gbif)
 #' @param geometry WKT or bounding box, optional
 #' @param limit (integer) Number results to return
 #' @param cas_coll (character) CAS collection name OR a collection code. See Details.
@@ -25,7 +26,7 @@
 #' OR a recordset, see [idigbio_recordsets]
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ_idigbio(geometry = geom)
+#' res <- sp_occ(from = "gbif", geometry = geom)
 #' res %>% sp_spp()
 #' x <- res %>% sp_spp() %>% sp_bhl_meta()
 #' ocred <- x[1:10] %>% sp_bhl_ocr
@@ -33,25 +34,25 @@
 #' #res %>% sp_spp() %>% sp_bhl_meta() %>% sp_bhl_ocr %>% sp_bhl_save()
 #'
 #' # geometry and class arachnida
-#' sp_occ_idigbio(geometry = geom, args = c(order = 'Asterales'))
-#' sp_occ_idigbio(geometry = geom, args = c(order = 'squamata'), cas_coll = "herpetology")
+#' sp_occ(geometry = geom, args = c(order = 'Asterales'))
+#' sp_occ(geometry = geom, args = c(order = 'squamata'), cas_coll = "herpetology")
 #'
 #' # just class arachnida - FIXME, no results
 #' library("httr")
-#' # sp_occ_idigbio(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
+#' # sp_occ(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 #'
 #' # specify CAS collection (default: botany)
 #' ## single
-#' sp_occ_idigbio(geometry = geom, cas_coll = "entomology")
-#' sp_occ_idigbio(geometry = geom, cas_coll = "botany")
-#' sp_occ_idigbio(geometry = geom, cas_coll = "herpetology")
+#' sp_occ(geometry = geom, cas_coll = "entomology")
+#' sp_occ(geometry = geom, cas_coll = "botany")
+#' sp_occ(geometry = geom, cas_coll = "herpetology")
 #' ## all collections
-#' sp_occ_idigbio(geometry = geom, cas_coll = "all")
+#' sp_occ(geometry = geom, cas_coll = "all")
 #' ## multiple collections
-#' sp_occ_idigbio(geometry = geom, cas_coll = c("entomology", "herpetology"))
+#' sp_occ(geometry = geom, cas_coll = c("entomology", "herpetology"))
 #' }
-sp_occ_idigbio <- function(query = NULL, geometry = NULL, limit = 10,
-                           cas_coll = "botany", args = NULL, ...) {
+sp_occ <- function(query = NULL, from = "gbif", geometry = NULL, limit = 10,
+  cas_coll = "botany", args = NULL, ...) {
 
   cas_coll <- match.arg(cas_coll, c("all", names(idigbio_recordsets)), several.ok = TRUE)
   if (length(cas_coll) == 1 && all(cas_coll == "all")) cas_coll <- names(idigbio_recordsets)

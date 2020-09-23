@@ -10,7 +10,7 @@
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' (x <- res %>% sp_list() %>% .[1:2] %>% sp_bhl_meta())
+#' (x <- res %>% sp_spp() %>% .[1:2] %>% sp_bhl_meta())
 #'
 #' # pass in a single taxon
 #' res <- sp_bhl_ocr(x$`allium falcifolium`)
@@ -38,8 +38,8 @@ sp_bhl_ocr.bhl_meta <- function(x, key = NULL, progress = TRUE) {
 
 #' @export
 sp_bhl_ocr.bhl_meta_single <- function(x, key = NULL, progress = TRUE) {
-  toclz(lapply_prog(x, function(w) {
-    stats::setNames(lapply(w$PageID, bhl_getpageocrtext_safe, key = key), w$PageID)
+  toclz(lapply_prog(x$Pages, function(w) {
+    stats::setNames(lapply(w$PageID, bhl_getpageocrtext_safe, key = key, ocr = TRUE), w$PageID)
   }, progress = progress), "bhl_ocr")
 }
 

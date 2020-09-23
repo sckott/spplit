@@ -1,12 +1,13 @@
 #' @title spplit
 #' @description Find related literature data for species occurrences.
-#' @importFrom spocc occ
+#' @importFrom spocc occ occ2df 
 #' @importFrom rbhl bhl_namesearch bhl_namemetadata bhl_getpageocrtext bhl_partsearch bhl_getpagemetadata
 #' bhl_publicationsearchadv
 #' @importFrom whisker whisker.render
 #' @importFrom data.table setDF rbindlist
 #' @importFrom tibble as_data_frame
 #' @importFrom utils txtProgressBar setTxtProgressBar
+#' @importFrom fulltext ftxt_cache ft_collect ft_get ft_search
 #' @name spplit-package
 #' @aliases spplit
 #' @docType package
@@ -17,7 +18,7 @@
 #' 
 #' - Search for occurrences from GBIF or iDigBio - see [sp_occ_gbif()]
 #' and [sp_occ_idigbio()]
-#' - Get a species list - see [sp_list()]
+#' - Get a species list - see [sp_spp()]
 #' - Get BHL metadata - see [sp_bhl_meta()]
 #' - Get BHL OCR'ed text - see [sp_bhl_ocr()]
 #' - Save text to disk for later use - OR - analyze data - see [sp_bhl_save()]
@@ -30,6 +31,29 @@
 #'  either all items as an `bhl_meta` object or individual items as
 #'  `bhl_meta_single` objects
 #'
+#' @examples \dontrun{
+#' library("spplit")
+#'
+#' ## Get occurrences
+#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
+#' res <- sp_occ_idigbio(geometry = geom, limit = 3)
+#'
+#' ## Get a species list
+#' spplist <- sp_spp(res)
+#'
+#' ## Get BHL metadata
+#' bhlmeta <- sp_bhl_meta(spplist)
+#'
+#' ## Get OCR text
+#' ocred <- sp_bhl_ocr(bhlmeta[1:2])
+#'
+#' ## Save text to disk
+#' sp_bhl_save(ocred)
+#' }
+NULL
+
+#' Authentication
+#' 
 #' @section BHL Authentication:
 #' For access to Biodiveristy Heritage Library data, you'll need an API key from them.
 #' To get one fill out the brief form at <http://www.biodiversitylibrary.org/getapikey.aspx> -
@@ -42,26 +66,7 @@
 #' file, or wherever you store your environment variables (e.g., `.bashrc`, or
 #' `.bash_profile`, or `.zshrc`)
 #' - store as an R option (as `bhl_key`) in your `.Rprofile` file
-#'
-#' @examples \dontrun{
-#' library("spplit")
-#'
-#' ## Get occurrences
-#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ_idigbio(geometry = geom, limit = 3)
-#'
-#' ## Get a species list
-#' spplist <- sp_list(res)
-#'
-#' ## Get BHL metadata
-#' bhlmeta <- sp_bhl_meta(spplist)
-#'
-#' ## Get OCR text
-#' ocred <- sp_bhl_ocr(bhlmeta[1:2])
-#'
-#' ## Save text to disk
-#' sp_bhl_save(ocred)
-#' }
+#' @name spplit_auth
 NULL
 
 #' Named list of length seven

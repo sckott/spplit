@@ -60,10 +60,19 @@ trydefault_ <- function(expr, default, quiet = FALSE) {
   result
 }
 
-bhl_getpageocrtext_safe <- fail_with(NA_character_, rbhl::bhl_getpageocrtext, quiet = TRUE)
+bhl_getpageocrtext_safe <- fail_with(NA_character_, rbhl::bhl_getpagemetadata, quiet = TRUE)
 plos_fulltext_safe <- fail_with(NA_character_, rplos::plos_fulltext, quiet = TRUE)
 
 setdfrbind <- function(x) {
   (data.table::setDF(
     data.table::rbindlist(x, use.names = TRUE, fill = TRUE)))
+}
+setdfrbindtbl <- function(x) {
+  tibble::as_tibble((data.table::setDF(
+    data.table::rbindlist(x, use.names = TRUE, fill = TRUE))))
+}
+
+no_method <- function(fun, x) {
+  stop(sprintf("no '%s' method for objects of class '%s'", fun, class(x)[1L]),
+    call. = FALSE)
 }
