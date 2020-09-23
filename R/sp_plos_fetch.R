@@ -3,12 +3,12 @@
 #' @export
 #' @param x An object of class `plos_meta` or `plos_meta_single`
 #' @param progress (logical) print a progress bar. default: `TRUE`
-#' @param ... curl options passed on to [httr::GET()]
+#' @param ... curl options passed on to [crul::verb-GET]
 #' @details Uses [rplos::plos_fulltext()] to fetch full text XML
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom, limit = 50)
-#' z <- res %>% sp_spp() %>% sp_plos_meta()
+#' z <- sp_plos_meta(sp_spp(res))
 #' sp_plos_fetch(z[[3]])
 #' sp_plos_fetch(z[1:3])
 #'

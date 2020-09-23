@@ -57,18 +57,16 @@ OR a recordset, see \link{idigbio_recordsets}
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ(from = "gbif", geometry = geom)
-res \%>\% sp_spp()
-x <- res \%>\% sp_spp() \%>\% sp_bhl_meta()
-ocred <- x[1:10] \%>\% sp_bhl_ocr
-ocred \%>\% sp_bhl_save()
-#res \%>\% sp_spp() \%>\% sp_bhl_meta() \%>\% sp_bhl_ocr \%>\% sp_bhl_save()
+sp_spp(res)
+x <- sp_bhl_meta(sp_spp(res))
+ocred <- sp_bhl_ocr(x[1:10])
+sp_bhl_save(ocred)
 
 # geometry and class arachnida
 sp_occ(geometry = geom, args = c(order = 'Asterales'))
 sp_occ(geometry = geom, args = c(order = 'squamata'), cas_coll = "herpetology")
 
 # just class arachnida - FIXME, no results
-library("httr")
 # sp_occ(args = c(class='arachnida'), cas_coll = "entomology", callopts=verbose())
 
 # specify CAS collection (default: botany)

@@ -11,7 +11,7 @@ sp_plos_meta(x, progress = TRUE, ...)
 
 \item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 
-\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \description{
 Get PLOS metadata based on a species list
@@ -41,10 +41,10 @@ geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.0
 res <- sp_occ_gbif(geometry = geom, limit = 300)
 
 # get species list first, then pass to sp_plos_meta
-res \%>\% sp_spp() \%>\% sp_plos_meta()
+sp_plos_meta(sp_spp(res))
 
 # or, pass directly to sp_plos_meta, and species list is extracted automatically
-res \%>\% sp_plos_meta()
+sp_plos_meta(res)
 
 # combine all into a data.frame
 as_df(z$`allium amplectens`)

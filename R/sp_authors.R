@@ -11,12 +11,12 @@
 #' # idigbio
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_idigbio(geometry = geom)
-#' res %>% sp_authors()
+#' sp_authors(res)
 #'
 #' # gbif
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' res %>% sp_authors()
+#' sp_authors(res)
 #' }
 sp_authors <- function(x, which = "recorded") {
   UseMethod("sp_authors")

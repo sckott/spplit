@@ -12,8 +12,8 @@
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' res %>% sp_spp()
-#' x <- res %>% sp_spp() %>% .[1:2] %>% sp_bhl_meta()
+#' sp_spp(res)
+#' x <- sp_bhl_meta(sp_spp(res)[1:2])
 #'
 #' # combine all into a data.frame
 #' # FIXME: doesn't work
@@ -23,7 +23,7 @@
 #' # with collector names/authors
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom, limit = 50)
-#' authors <- res %>% sp_authors()
+#' authors <- sp_authors(res)
 #' outx <- structure(authors[1:15], class="spauthors") %>% sp_bhl_meta()
 #' outx
 #' outx$`cummings, alice`

@@ -9,8 +9,8 @@
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' x <- res %>% sp_spp() %>% sp_bhl_meta()
-#' out <- x[1:3] %>% sp_bhl_ocr
+#' x <- sp_bhl_meta(sp_spp(res))
+#' out <- sp_bhl_ocr(x[1:3])
 #'
 #' # view a single species
 #' viewer(out$`allium amplectens`)

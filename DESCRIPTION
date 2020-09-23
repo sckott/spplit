@@ -22,7 +22,6 @@ Imports:
     spocc (>= 0.5.0),
     rbhl,
     whisker,
-    magrittr,
     data.table,
     tibble,
     rplos,
@@ -30,7 +29,6 @@ Imports:
 Suggests:
     knitr,
     rgbif (>= 0.9.3),
-    shiny,
     testthat,
     vcr
 Remotes: ropensci/namext

@@ -9,7 +9,7 @@
 #' @examples \dontrun{
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- sp_occ_gbif(geometry = geom)
-#' (x <- res %>% sp_spp() %>% .[1:2] %>% sp_lit_meta())
+#' (x <- sp_lit_meta(sp_spp(res)[1:2]))
 #'
 #' # pass in a one taxon
 #' res <- sp_lit_text(x$`allium falcifolium`)

@@ -11,7 +11,7 @@ sp_plos_fetch(x, progress = TRUE, ...)
 
 \item{progress}{(logical) print a progress bar. default: \code{TRUE}}
 
-\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}}
+\item{...}{curl options passed on to \link[crul:verb-GET]{crul::verb-GET}}
 }
 \description{
 Get PLOS full text
@@ -23,7 +23,7 @@ Uses \code{\link[rplos:plos_fulltext]{rplos::plos_fulltext()}} to fetch full tex
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 50)
-z <- res \%>\% sp_spp() \%>\% sp_plos_meta()
+z <- sp_plos_meta(sp_spp(res))
 sp_plos_fetch(z[[3]])
 sp_plos_fetch(z[1:3])
 

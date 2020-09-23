@@ -3,7 +3,7 @@
 #' @export
 #' @param x (character/list) A vector or list of character strings to search on
 #' @param progress (logical) print a progress bar. default: `TRUE`
-#' @param ... curl options passed on to [httr::GET()]
+#' @param ... curl options passed on to [crul::verb-GET]
 #'
 #' @section Defaults:
 #' A set of defaults are used, based on what we think are very reasonable
@@ -24,10 +24,10 @@
 #' res <- sp_occ_gbif(geometry = geom, limit = 300)
 #'
 #' # get species list first, then pass to sp_plos_meta
-#' res %>% sp_spp() %>% sp_plos_meta()
+#' sp_plos_meta(sp_spp(res))
 #'
 #' # or, pass directly to sp_plos_meta, and species list is extracted automatically
-#' res %>% sp_plos_meta()
+#' sp_plos_meta(res)
 #'
 #' # combine all into a data.frame
 #' as_df(z$`allium amplectens`)

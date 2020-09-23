@@ -28,7 +28,7 @@ then we give each folder a random folder name.
 \dontrun{
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- sp_occ_gbif(geometry = geom, limit = 5)
-(x <- res \%>\% sp_spp() \%>\% sp_bhl_meta() \%>\% .[1:3] \%>\% sp_bhl_ocr())
+(x <- sp_bhl_ocr(sp_bhl_meta(sp_spp(res))[1:3]))
 
 # write all to disk, each element of list to a separate directory
 ## with names
@@ -37,7 +37,7 @@ sp_bhl_save(x)
 sp_bhl_save(unname(x))
 
 # you can just save some ocr'ed elements
-x[1:2] \%>\% sp_bhl_save()
+sp_bhl_save(x[1:2])
 
 # just one
 ## single index includes name
