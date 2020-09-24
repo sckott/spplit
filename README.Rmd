@@ -13,20 +13,9 @@ knitr::opts_chunk$set(
 
 [![R-check](https://github.com/sckott/spplit/workflows/R-check/badge.svg)](https://github.com/sckott/spplit/actions/)
 
-
 `spplit` - connect species occurrence data to literature
 
-Possible workflow:
-
-* get species occurrences
-* get species list
-* get BHL metadata
-* get BHL ocr page content -> to corpus
-* (optionally: vizualize ocr text with matches)
-* save corpus
-
-
-New setup, proposed workflow:
+docs: <https://sckott.github.io/spplit/>
 
 * `spocc::occ()` to get occurrence data
 * `sp_lit_meta()` gather metadata from taxonomic names from occurrence data
