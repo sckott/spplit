@@ -94,71 +94,30 @@
 <a href="#spplit" class="anchor"></a>spplit</h1></div>
 
 <p><code>spplit</code> - connect species occurrence data to literature</p>
-<p>Possible workflow:</p>
+<p>docs: <a href="https://sckott.github.io/spplit/" class="uri">https://sckott.github.io/spplit/</a></p>
 <ul>
-<li>get species occurrences</li>
-<li>get species list</li>
-<li>get BHL metadata</li>
-<li>get BHL ocr page content -&gt; to corpus</li>
-<li>(optionally: vizualize ocr text with matches)</li>
-<li>save corpus</li>
+<li>
+<code><a href="https://docs.ropensci.org/spocc/reference/occ.html">spocc::occ()</a></code> to get occurrence data</li>
+<li>
+<code><a href="reference/sp_lit_meta.html">sp_lit_meta()</a></code> gather metadata from taxonomic names from occurrence data</li>
+<li>
+<code><a href="reference/sp_lit_text.html">sp_lit_text()</a></code> gather full text from literature metadata</li>
+<li>
+<code><a href="reference/sp_lit_names.html">sp_lit_names()</a></code> extract names from full text</li>
+<li>
+<code>sp_parse_names()</code> parse names into components</li>
 </ul>
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
-<p>install dev versions of <code>rgbif</code> and <code>spocc</code> first, then install <code>spplit</code></p>
+<p>install <code>rgbif</code> and <code>spocc</code>, then install <code>spplit</code></p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ropensci/rgbif"</span>, <span class="st">"ropensci/spocc"</span>))
+<span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"ropensci/namext"</span>))
 <span class="kw">remotes</span>::<span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"sckott/spplit"</span>)
 </pre></div>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st"><a href="https://github.com/sckott/spplit">"spplit"</a></span>)
 </pre></div>
-</div>
-<div id="example---connect-idigbio-species-occurrence-data-to-bhl" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example---connect-idigbio-species-occurrence-data-to-bhl" class="anchor"></a>Example - connect iDigBio species occurrence data to BHL</h2>
-<p>For access to Biodiveristy Heritage Library data, you’ll need an API key from them. To get one fill out the brief form at <a href="https://www.biodiversitylibrary.org/getapikey.aspx" class="uri">https://www.biodiversitylibrary.org/getapikey.aspx</a> - they’ll ask for your name and email address.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">geom</span> <span class="op">&lt;-</span> <span class="st">'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
-<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu">sp_occ_idigbio</span>(geometry = <span class="kw">geom</span>, limit = <span class="fl">3</span>) <span class="op">%&gt;%</span> 
-  <span class="fu">sp_list</span>() <span class="op">%&gt;%</span> 
-  <span class="fu">sp_bhl_meta</span>() <span class="op">%&gt;%</span> <span class="kw">.</span>[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>] <span class="op">%&gt;%</span> 
-  <span class="fu">sp_bhl_ocr</span>()
-</pre></div>
-<p>After getting text, could do one of a number of things:</p>
-<p>a) Save text to disk (or any database, etc.)</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu">sp_bhl_save</span>()
-</pre></div>
-<p>b) Mine the text</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st">"tm"</span>)
-<span class="kw">src</span> <span class="op">&lt;-</span> <span class="fu">VectorSource</span>(<span class="fu"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(<span class="kw">res</span>, use.names = <span class="fl">FALSE</span>))
-<span class="kw">corp</span> <span class="op">&lt;-</span> <span class="fu">VCorpus</span>(<span class="kw">src</span>)
-<span class="kw">corp</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span>(<span class="kw">corp</span>, <span class="kw">removeWords</span>, <span class="fu">stopwords</span>(<span class="st">"english"</span>))
-<span class="kw">corp</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span>(<span class="kw">corp</span>, <span class="kw">stripWhitespace</span>)
-<span class="kw">corp</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span>(<span class="kw">corp</span>, <span class="kw">removePunctuation</span>)
-<span class="kw">tdm</span> <span class="op">&lt;-</span> <span class="fu">TermDocumentMatrix</span>(<span class="kw">corp</span>)
-<span class="fu">findFreqTerms</span>(<span class="kw">tdm</span>, lowfreq = <span class="fl">10</span>)
-<span class="co">#&gt;  [1] "328"        "albizia"    "bot"        "brown"      "fig"       </span>
-<span class="co">#&gt;  [6] "genera"     "java"       "key"        "long"       "lophantha" </span>
-<span class="co">#&gt; [11] "malesia"    "merr"       "new"        "non"        "schefflera"</span>
-<span class="co">#&gt; [16] "species"    "the"        "tubers"</span>
-</pre></div>
-</div>
-<div id="viewer" class="section level2">
-<h2 class="hasAnchor">
-<a href="#viewer" class="anchor"></a>Viewer</h2>
-<p>there’s a tool for visualizing results from OCR. It’s still a work in progress.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="kw">geom</span> <span class="op">&lt;-</span> <span class="st">'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
-<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu">sp_occ_gbif</span>(geometry = <span class="kw">geom</span>)
-<span class="kw">x</span> <span class="op">&lt;-</span> <span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu">sp_list</span>() <span class="op">%&gt;%</span> <span class="fu">sp_bhl_meta</span>()
-<span class="kw">out</span> <span class="op">&lt;-</span> <span class="kw">x</span>[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>] <span class="op">%&gt;%</span> <span class="kw">sp_bhl_ocr</span>
-<span class="fu">viewer</span>(<span class="kw">out</span>)
-</pre></div>
-<p><img src="inst/img/viewer_eg1.png" alt="image"></p>
 </div>
 <div id="meta" class="section level2">
 <h2 class="hasAnchor">
