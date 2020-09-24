@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Named list of length seven — gbif_datasets • spplit</title>
+<title>Authentication — spplit_auth • spplit</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Named list of length seven — gbif_datasets" />
-<meta property="og:description" content="Each element named with the California Academy of Sciences collection
-name" />
+<meta property="og:title" content="Authentication — spplit_auth" />
+<meta property="og:description" content="Authentication" />
 
 
 
@@ -127,23 +126,32 @@ name" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Named list of length seven</h1>
+    <h1>Authentication</h1>
     <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/spplit-package.R'><code>R/spplit-package.R</code></a></small>
-    <div class="hidden name"><code>gbif_datasets.Rd</code></div>
+    <div class="hidden name"><code>spplit_auth.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Each element named with the California Academy of Sciences collection
-name</p>
+    <p>Authentication</p>
     </div>
 
 
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <h2 class="hasAnchor" id="bhl-authentication"><a class="anchor" href="#bhl-authentication"></a>BHL Authentication</h2>
 
-    <p>Each element has one character string that represents the
-collection codes for CAS in the GBIF database. These codes can be
-used to search GBIF.</p>
+    
+
+<p>For access to Biodiveristy Heritage Library data, you'll need an API key from them.
+To get one fill out the brief form at <a href='http://www.biodiversitylibrary.org/getapikey.aspx'>http://www.biodiversitylibrary.org/getapikey.aspx</a> -
+they'll ask for your name and email address.</p>
+<p>To use the key, do one of:</p><ul>
+<li><p>pass it in the <code>key</code> parameter in <code><a href='sp_lit_meta.html'>sp_lit_meta()</a></code></p></li>
+<li><p>store as an environment variable (as <code>BHL_KEY</code>) either in your <code>.Renviron</code>
+file, or wherever you store your environment variables (e.g., <code>.bashrc</code>, or
+<code>.bash_profile</code>, or <code>.zshrc</code>)</p></li>
+<li><p>store as an R option (as <code>bhl_key</code>) in your <code>.Rprofile</code> file</p></li>
+</ul>
+
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spplit</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.92</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.94</span>
       </span>
     </div>
 
@@ -120,7 +120,7 @@
 <p>An example in R:</p>
 <p><code><a href="https://rdrr.io/r/base/c.html">c(-120, 40, -100, 45)</a></code></p>
 <p>where -120 is the min longitude, 40 is the min latitude, -100 is the max longitude and 45 is the max latitude.</p>
-<p>You can pass a bounding box to the <code>geometry</code> parameter in <code><a href="../reference/sp_occ_gbif.html">sp_occ_gbif()</a></code>, or <code><a href="../reference/sp_occ_idigbio.html">sp_occ_idigbio()</a></code>.</p>
+<p>You can pass a bounding box to the <code>geometry</code> parameter in <code>sp_occ_gbif()</code>, or <code>sp_occ_idigbio()</code>.</p>
 </div>
 <div id="wkt" class="section level2">
 <h2 class="hasAnchor">
@@ -129,7 +129,7 @@
 <p>The only type of WKT class you can use here is <code>POLYGON</code>. Other classes are defined in WKT, but GBIF doesn’t support any other class.</p>
 <p>A simple example of a WKT string of a <code>POLYGON</code> class is:</p>
 <pre><code>POLYGON ((30 10, 40 40, 20 40, 10 20, 30 10))</code></pre>
-<p>You can pass a WKT string for a <code>POLYGON</code> to the <code>geometry</code> parameter in <code><a href="../reference/sp_occ_gbif.html">sp_occ_gbif()</a></code>, or <code><a href="../reference/sp_occ_idigbio.html">sp_occ_idigbio()</a></code>.</p>
+<p>You can pass a WKT string for a <code>POLYGON</code> to the <code>geometry</code> parameter in <code>sp_occ_gbif()</code>, or <code>sp_occ_idigbio()</code>.</p>
 <p>An easy to use website for getting WKT after drawing a shape on a map is <a href="http://arthur-e.github.io/Wicket/sandbox-gmaps3.html" class="uri">http://arthur-e.github.io/Wicket/sandbox-gmaps3.html</a>.</p>
 <p>You can get WKT from within R using the <code>wellknown</code> package <a href="https://cran.r-project.org/package=wellknown" class="uri">https://cran.r-project.org/package=wellknown</a>. With <code>wellknown</code> you can get WKT from R objects, and convert GeoJSON to WKT as well. For example:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
@@ -158,7 +158,7 @@
 <p>Then use the <code>SpatialPolygons</code> class object for a geometry based search:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="st"><a href="https://github.com/sckott/spplit">"spplit"</a></span>)
-<span class="fu"><a href="../reference/sp_occ_gbif.html">sp_occ_gbif</a></span>(geometry = <span class="kw">poly</span>, limit = <span class="fl">10</span>)
+<span class="fu">sp_occ_gbif</span>(geometry = <span class="kw">poly</span>, limit = <span class="fl">10</span>)
 <span class="co">#&gt; Geometry [&lt;geo1&gt; (10)] </span>
 <span class="co">#&gt; # A tibble: 10 × 70</span>
 <span class="co">#&gt;                       name longitude latitude  prov         issues</span>

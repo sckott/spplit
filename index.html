@@ -36,7 +36,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">spplit</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.92</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.94</span>
       </span>
     </div>
 
@@ -121,15 +121,15 @@
 <p>For access to Biodiveristy Heritage Library data, you’ll need an API key from them. To get one fill out the brief form at <a href="https://www.biodiversitylibrary.org/getapikey.aspx" class="uri">https://www.biodiversitylibrary.org/getapikey.aspx</a> - they’ll ask for your name and email address.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="kw">geom</span> <span class="op">&lt;-</span> <span class="st">'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
-<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/sp_occ_idigbio.html">sp_occ_idigbio</a></span>(geometry = <span class="kw">geom</span>, limit = <span class="fl">3</span>) <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="reference/sp_list.html">sp_list</a></span>() <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="reference/sp_bhl_meta.html">sp_bhl_meta</a></span>() <span class="op">%&gt;%</span> <span class="kw">.</span>[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>] <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="reference/sp_bhl_ocr.html">sp_bhl_ocr</a></span>()
+<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu">sp_occ_idigbio</span>(geometry = <span class="kw">geom</span>, limit = <span class="fl">3</span>) <span class="op">%&gt;%</span> 
+  <span class="fu">sp_list</span>() <span class="op">%&gt;%</span> 
+  <span class="fu">sp_bhl_meta</span>() <span class="op">%&gt;%</span> <span class="kw">.</span>[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>] <span class="op">%&gt;%</span> 
+  <span class="fu">sp_bhl_ocr</span>()
 </pre></div>
 <p>After getting text, could do one of a number of things:</p>
 <p>a) Save text to disk (or any database, etc.)</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu"><a href="reference/sp_bhl_save.html">sp_bhl_save</a></span>()
+<span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu">sp_bhl_save</span>()
 </pre></div>
 <p>b) Mine the text</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
@@ -153,10 +153,10 @@
 <p>there’s a tool for visualizing results from OCR. It’s still a work in progress.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
 <span class="kw">geom</span> <span class="op">&lt;-</span> <span class="st">'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
-<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/sp_occ_gbif.html">sp_occ_gbif</a></span>(geometry = <span class="kw">geom</span>)
-<span class="kw">x</span> <span class="op">&lt;-</span> <span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu"><a href="reference/sp_list.html">sp_list</a></span>() <span class="op">%&gt;%</span> <span class="fu"><a href="reference/sp_bhl_meta.html">sp_bhl_meta</a></span>()
+<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu">sp_occ_gbif</span>(geometry = <span class="kw">geom</span>)
+<span class="kw">x</span> <span class="op">&lt;-</span> <span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu">sp_list</span>() <span class="op">%&gt;%</span> <span class="fu">sp_bhl_meta</span>()
 <span class="kw">out</span> <span class="op">&lt;-</span> <span class="kw">x</span>[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>] <span class="op">%&gt;%</span> <span class="kw">sp_bhl_ocr</span>
-<span class="fu"><a href="reference/viewer.html">viewer</a></span>(<span class="kw">out</span>)
+<span class="fu">viewer</span>(<span class="kw">out</span>)
 </pre></div>
 <p><img src="inst/img/viewer_eg1.png" alt="image"></p>
 </div>

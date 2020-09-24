@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spplit</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.92</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.94</span>
       </span>
     </div>
 
@@ -111,7 +111,7 @@
 <li>Get BHL OCR’ed text</li>
 <li>Save text to disk for later use - OR - analyze data</li>
 </ul>
-<p>A note about pipes: pipes (<code><a href="../reference/%&gt;%.html">%&gt;%</a></code>) are a relatively new thing in R. They make constructing what you want to do in R much easier, and should be easier for others to read as well. We use pipes in examples here, but you don’t have to use pipes.</p>
+<p>A note about pipes: pipes (<code><a href="https://rdrr.io/pkg/magrittr/man/pipe.html">%&gt;%</a></code>) are a relatively new thing in R. They make constructing what you want to do in R much easier, and should be easier for others to read as well. We use pipes in examples here, but you don’t have to use pipes.</p>
 <div id="load-spplit" class="section level2">
 <h2 class="hasAnchor">
 <a href="#load-spplit" class="anchor"></a>load spplit</h2>
@@ -127,10 +127,10 @@
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="kw">wkt</span> <span class="op">&lt;-</span> <span class="st">'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
 </pre></div>
-<p>Use <code><a href="../reference/sp_occ_idigbio.html">sp_occ_idigbio()</a></code> to execute a query against iDigBio data. For brevity we’re limiting to 3 results, but you can set it at whatever you like, keeping in mind that the larger the <code>limit</code> value, the longer the query will take.</p>
+<p>Use <code>sp_occ_idigbio()</code> to execute a query against iDigBio data. For brevity we’re limiting to 3 results, but you can set it at whatever you like, keeping in mind that the larger the <code>limit</code> value, the longer the query will take.</p>
 <p>By default we’re using the botany collection from the CalAcademy. If perhaps searching across all collections makes more sense let me know and we can change that. You can easily change the CalAcademy collection being searched with the <code>cas_coll</code> parameter.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/sp_occ_idigbio.html">sp_occ_idigbio</a></span>(geometry = <span class="kw">wkt</span>, limit = <span class="fl">3</span>)
+<span class="kw">res</span> <span class="op">&lt;-</span> <span class="fu">sp_occ_idigbio</span>(geometry = <span class="kw">wkt</span>, limit = <span class="fl">3</span>)
 <span class="kw">res</span>
 <span class="co">#&gt; Geometry [&lt;geo1&gt; (3)] </span>
 <span class="co">#&gt; Source: local data frame [3 x 77]</span>
@@ -170,7 +170,7 @@
 <a href="#get-a-species-list" class="anchor"></a>Get a species list</h2>
 <p>After getting back some occurrence data, but before getting some data from the BHL, we need a species list because there’s no point in sending duplicate queries to BHL.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="kw">spplist</span> <span class="op">&lt;-</span> <span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/sp_list.html">sp_list</a></span>()
+<span class="kw">spplist</span> <span class="op">&lt;-</span> <span class="kw">res</span> <span class="op">%&gt;%</span> <span class="fu">sp_list</span>()
 <span class="kw">spplist</span>
 <span class="co">#&gt; [1] "albizia lophantha"     "beckmannia syzigachne" "draba aureola"</span>
 </pre></div>
@@ -180,7 +180,7 @@
 <a href="#get-bhl-metadata" class="anchor"></a>Get BHL metadata</h2>
 <p>For BHL, we first need to search BHL for the species list we just made. Some taxa may be in BHL and some may not. The returned data we’ll get in this step will contain the information we need to get pages from texts that contain information about the taxa of interest.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="kw">bhldat</span> <span class="op">&lt;-</span> <span class="kw">spplist</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/sp_bhl_meta.html">sp_bhl_meta</a></span>()
+<span class="kw">bhldat</span> <span class="op">&lt;-</span> <span class="kw">spplist</span> <span class="op">%&gt;%</span> <span class="fu">sp_bhl_meta</span>()
 <span class="kw">bhldat</span>
 <span class="co">#&gt; &lt;bhl metadata&gt;</span>
 <span class="co">#&gt;   Count: 3</span>
@@ -191,7 +191,7 @@
 </pre></div>
 <p>You can combine BHL metadata into a data.frame for easier viewing/manipulation:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="fu"><a href="../reference/as_df.html">as_df</a></span>(<span class="kw">bhldat</span>)
+<span class="fu">as_df</span>(<span class="kw">bhldat</span>)
 <span class="co">#&gt; $`albizia lophantha`</span>
 <span class="co">#&gt; Source: local data frame [21 x 31]</span>
 <span class="co">#&gt; </span>
@@ -271,7 +271,7 @@
 <a href="#get-ocr-text" class="anchor"></a>Get OCR text</h2>
 <p>Now that we have metadata, we want to get OCR pages - or text of digitized pages that has been generated through Optical Character Recognition.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="kw">ocrdat</span> <span class="op">&lt;-</span> <span class="kw">bhldat</span> <span class="op">%&gt;%</span> <span class="fu"><a href="../reference/sp_bhl_ocr.html">sp_bhl_ocr</a></span>()
+<span class="kw">ocrdat</span> <span class="op">&lt;-</span> <span class="kw">bhldat</span> <span class="op">%&gt;%</span> <span class="fu">sp_bhl_ocr</span>()
 <span class="kw">ocrdat</span>
 <span class="co">#&gt; $`albizia lophantha`</span>
 <span class="co">#&gt; &lt;bhl ocr'ed text&gt;</span>
@@ -321,7 +321,7 @@
 <p>Note that the OCR text we get back has essentially no structure. It’s simply plain text, and there’s little metadata to work with.</p>
 <p>You can view the pages with a utility in this package, which will open a separate browser tab in your default browser for each taxon. Each taxon page has a different panel for each BHL item, where each item can have many pages.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="fu"><a href="../reference/viewer.html">viewer</a></span>(<span class="kw">ocrdat</span>)
+<span class="fu">viewer</span>(<span class="kw">ocrdat</span>)
 </pre></div>
 <div class="figure">
 <img src="../man/figures/viewer_eg1.png" alt=""><p class="caption">img</p>
@@ -333,12 +333,12 @@
 <a href="#save-text-to-disk" class="anchor"></a>Save text to disk</h2>
 <p>After all the work above, you’ll likely want to save the OCR pages to disk before quitting your R session.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="fu"><a href="../reference/sp_bhl_save.html">sp_bhl_save</a></span>(<span class="kw">ocrdat</span>)
+<span class="fu">sp_bhl_save</span>(<span class="kw">ocrdat</span>)
 <span class="co">#&gt; ocr text written to files in ./albizia_lophantha</span>
 <span class="co">#&gt; ocr text written to files in ./beckmannia_syzigachne</span>
 <span class="co">#&gt; ocr text written to files in ./draba_aureola</span>
 </pre></div>
-<p>By default, <code><a href="../reference/sp_bhl_save.html">sp_bhl_save()</a></code> saves each each taxon to a separate folder, where each taxon folder will have every page as a separate file. In cases where it’s ambiguous what the name of the folder should be we give it a random alphanumeric string for a name.</p>
+<p>By default, <code>sp_bhl_save()</code> saves each each taxon to a separate folder, where each taxon folder will have every page as a separate file. In cases where it’s ambiguous what the name of the folder should be we give it a random alphanumeric string for a name.</p>
 </div>
 </div>
   </div>

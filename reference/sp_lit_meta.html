@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Named list of length seven — gbif_datasets • spplit</title>
+<title>Get literature metadata based on a species list — sp_lit_meta • spplit</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Named list of length seven — gbif_datasets" />
-<meta property="og:description" content="Each element named with the California Academy of Sciences collection
-name" />
+<meta property="og:title" content="Get literature metadata based on a species list — sp_lit_meta" />
+<meta property="og:description" content="Get literature metadata based on a species list" />
 
 
 
@@ -127,24 +126,72 @@ name" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Named list of length seven</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/spplit-package.R'><code>R/spplit-package.R</code></a></small>
-    <div class="hidden name"><code>gbif_datasets.Rd</code></div>
+    <h1>Get literature metadata based on a species list</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/sp_lit_meta.R'><code>R/sp_lit_meta.R</code></a></small>
+    <div class="hidden name"><code>sp_lit_meta.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Each element named with the California Academy of Sciences collection
-name</p>
+    <p>Get literature metadata based on a species list</p>
     </div>
 
+    <pre class="usage"><span class='fu'>sp_lit_meta</span>(<span class='kw'>x</span>, from = <span class='st'>"pubmed"</span>, limit = <span class='fl'>25</span>, progress = <span class='fl'>TRUE</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>input</p></td>
+    </tr>
+    <tr>
+      <th>from</th>
+      <td><p>(character) source to search for literature. one of more of
+pubmed, bhl. default: pubmed</p></td>
+    </tr>
+    <tr>
+      <th>limit</th>
+      <td><p>(integer/numeric) number of literature search results to
+return</p></td>
+    </tr>
+    <tr>
+      <th>progress</th>
+      <td><p>(logical) print a progress bar. default: <code>TRUE</code></p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a list</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Each element has one character string that represents the
-collection codes for CAS in the GBIF database. These codes can be
-used to search GBIF.</p>
+    <p>See <a href='spplit_auth.html'>spplit_auth</a> for authentication</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='co'># occurrence data</span>
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://docs.ropensci.org/spocc'>spocc</a></span>)
+<span class='kw'>geom</span> <span class='op'>&lt;-</span> <span class='st'>'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
+<span class='kw'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/spocc/reference/occ.html'>occ</a></span>(geometry = <span class='kw'>geom</span>, from = <span class='st'>"gbif"</span>, limit = <span class='fl'>15</span>)
+
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://docs.ropensci.org/spocc'>spocc</a></span>)
+<span class='kw'>taxa</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Pinus contorta'</span>, <span class='st'>'Accipiter striatus'</span>)
+<span class='kw'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/spocc/reference/occ.html'>occ</a></span>(query=<span class='kw'>taxa</span>, from = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"gbif"</span>, <span class='st'>"bison"</span>), limit = <span class='fl'>15</span>)
+<span class='kw'>res</span>
+<span class='kw'>res</span><span class='op'>$</span><span class='kw'>gbif</span>
+<span class='kw'>res</span><span class='op'>$</span><span class='kw'>bison</span>
+
+<span class='co'># get literature metadata</span>
+<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'>sp_lit_meta</span>(x = <span class='kw'>res</span>, from = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"pubmed"</span>, <span class='st'>"bhl"</span>))
+<span class='kw'>x</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>gbif</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>gbif</span><span class='op'>$</span><span class='kw'>pubmed</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>gbif</span><span class='op'>$</span><span class='kw'>bhl</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>bison</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>bison</span><span class='op'>$</span><span class='kw'>pubmed</span>
+<span class='kw'>x</span><span class='op'>$</span><span class='kw'>bison</span><span class='op'>$</span><span class='kw'>bhl</span>
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

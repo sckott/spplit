@@ -72,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">spplit</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.92</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.7.94</span>
       </span>
     </div>
 
@@ -137,68 +137,7 @@
 
 
 
-    <h2 class="hasAnchor" id="usage"><a class="anchor" href="#usage"></a>Usage</h2>
 
-    
-
-<p>A typical workflow looks like:</p><ul>
-<li><p>Search for occurrences from GBIF or iDigBio - see <code><a href='sp_occ_gbif.html'>sp_occ_gbif()</a></code>
-and <code><a href='sp_occ_idigbio.html'>sp_occ_idigbio()</a></code></p></li>
-<li><p>Get a species list - see <code><a href='sp_list.html'>sp_list()</a></code></p></li>
-<li><p>Get BHL metadata - see <code><a href='sp_bhl_meta.html'>sp_bhl_meta()</a></code></p></li>
-<li><p>Get BHL OCR'ed text - see <code><a href='sp_bhl_ocr.html'>sp_bhl_ocr()</a></code></p></li>
-<li><p>Save text to disk for later use - OR - analyze data - see <code><a href='sp_bhl_save.html'>sp_bhl_save()</a></code></p></li>
-</ul>
-
-    <h2 class="hasAnchor" id="other-tools"><a class="anchor" href="#other-tools"></a>Other tools</h2>
-
-    
-
-<ul>
-<li><p><code><a href='viewer.html'>viewer()</a></code> - accepts output from <code><a href='sp_bhl_ocr.html'>sp_bhl_ocr()</a></code>, opening
-up a human friendly viewer of the text in your default browser</p></li>
-<li><p><code><a href='as_df.html'>as_df()</a></code> - accepts output from <code><a href='sp_bhl_meta.html'>sp_bhl_meta()</a></code>,
-either all items as an <code>bhl_meta</code> object or individual items as
-<code>bhl_meta_single</code> objects</p></li>
-</ul>
-
-    <h2 class="hasAnchor" id="bhl-authentication"><a class="anchor" href="#bhl-authentication"></a>BHL Authentication</h2>
-
-    
-
-<p>For access to Biodiveristy Heritage Library data, you'll need an API key from them.
-To get one fill out the brief form at <a href='http://www.biodiversitylibrary.org/getapikey.aspx'>http://www.biodiversitylibrary.org/getapikey.aspx</a> -
-they'll ask for your name and email address.</p>
-<p>To use the key, do one of:</p><ul>
-<li><p>pass it in the <code>key</code> parameter in <code><a href='sp_bhl_meta.html'>sp_bhl_meta()</a></code> and <code><a href='sp_bhl_ocr.html'>sp_bhl_ocr()</a></code></p></li>
-<li><p>store as an environment variable (as <code>BHL_KEY</code>) either in your <code>.Renviron</code>
-file, or wherever you store your environment variables (e.g., <code>.bashrc</code>, or
-<code>.bash_profile</code>, or <code>.zshrc</code>)</p></li>
-<li><p>store as an R option (as <code>bhl_key</code>) in your <code>.Rprofile</code> file</p></li>
-</ul>
-
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='https://github.com/sckott/spplit'>"spplit"</a></span>)
-
-<span class='co'>## Get occurrences</span>
-<span class='kw'>geom</span> <span class='op'>&lt;-</span> <span class='st'>'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'</span>
-<span class='kw'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_occ_idigbio.html'>sp_occ_idigbio</a></span>(geometry = <span class='kw'>geom</span>, limit = <span class='fl'>3</span>)
-
-<span class='co'>## Get a species list</span>
-<span class='kw'>spplist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_list.html'>sp_list</a></span>(<span class='kw'>res</span>)
-
-<span class='co'>## Get BHL metadata</span>
-<span class='kw'>bhlmeta</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_bhl_meta.html'>sp_bhl_meta</a></span>(<span class='kw'>spplist</span>)
-
-<span class='co'>## Get OCR text</span>
-<span class='kw'>ocred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_bhl_ocr.html'>sp_bhl_ocr</a></span>(<span class='kw'>bhlmeta</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>])
-
-<span class='co'>## Save text to disk</span>
-<span class='fu'><a href='sp_bhl_save.html'>sp_bhl_save</a></span>(<span class='kw'>ocred</span>)
-}
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

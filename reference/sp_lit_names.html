@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Named list of length seven — gbif_datasets • spplit</title>
+<title>Extract scientific names from articles — sp_lit_names • spplit</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Named list of length seven — gbif_datasets" />
-<meta property="og:description" content="Each element named with the California Academy of Sciences collection
-name" />
+<meta property="og:title" content="Extract scientific names from articles — sp_lit_names" />
+<meta property="og:description" content="Depends on non-CRAN package namext" />
 
 
 
@@ -127,24 +126,53 @@ name" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Named list of length seven</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/spplit-package.R'><code>R/spplit-package.R</code></a></small>
-    <div class="hidden name"><code>gbif_datasets.Rd</code></div>
+    <h1>Extract scientific names from articles</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/sp_lit_names.R'><code>R/sp_lit_names.R</code></a></small>
+    <div class="hidden name"><code>sp_lit_names.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Each element named with the California Academy of Sciences collection
-name</p>
+    <p>Depends on non-CRAN package namext</p>
     </div>
 
+    <pre class="usage"><span class='fu'>sp_lit_names</span>(<span class='kw'>x</span>, progress = <span class='fl'>TRUE</span>, <span class='kw'>...</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>An object of class <code>sp_lit_text</code> or <code>sp_lit_text_one</code></p></td>
+    </tr>
+    <tr>
+      <th>progress</th>
+      <td><p>(logical) print a progress bar. default: <code>TRUE</code></p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments passed on to <code><a href='https://docs.ropensci.org/namext/reference/name_extract.html'>namext::name_extract()</a></code></p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a data.frame</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Each element has one character string that represents the
-collection codes for CAS in the GBIF database. These codes can be
-used to search GBIF.</p>
+    <p>make sure to install gnfinder first
+<a href='https://github.com/gnames/gnfinder'>https://github.com/gnames/gnfinder</a></p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='https://docs.ropensci.org/spocc'>spocc</a></span>)
+<span class='kw'>taxa</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Pinus contorta'</span>, <span class='st'>'Accipiter striatus'</span>)
+<span class='kw'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://docs.ropensci.org/spocc/reference/occ.html'>occ</a></span>(query=<span class='kw'>taxa</span>, from = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"gbif"</span>, <span class='st'>"bison"</span>), limit = <span class='fl'>15</span>)
+<span class='kw'>w</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_lit_meta.html'>sp_lit_meta</a></span>(x = <span class='kw'>res</span>, from = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"pubmed"</span>, <span class='st'>"bhl"</span>))
+<span class='kw'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='sp_lit_text.html'>sp_lit_text</a></span>(x = <span class='kw'>w</span>[[<span class='fl'>1</span>]], from = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"pubmed"</span>, <span class='st'>"bhl"</span>))
+<span class='fu'>sp_lit_names</span>(x = <span class='kw'>out</span><span class='op'>$</span><span class='kw'>bhl</span><span class='op'>$</span><span class='kw'>OcrText</span>)
+<span class='fu'>sp_lit_names</span>(x = <span class='kw'>out</span><span class='op'>$</span><span class='kw'>bhl</span>)
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

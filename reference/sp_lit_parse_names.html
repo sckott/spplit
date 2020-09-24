@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Named list of length seven — gbif_datasets • spplit</title>
+<title>Parse scientific names — sp_lit_parse_names • spplit</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,8 @@
 
 
 
-<meta property="og:title" content="Named list of length seven — gbif_datasets" />
-<meta property="og:description" content="Each element named with the California Academy of Sciences collection
-name" />
+<meta property="og:title" content="Parse scientific names — sp_lit_parse_names" />
+<meta property="og:description" content="Depends on non-CRAN package rgnparser" />
 
 
 
@@ -127,23 +126,41 @@ name" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Named list of length seven</h1>
-    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/spplit-package.R'><code>R/spplit-package.R</code></a></small>
-    <div class="hidden name"><code>gbif_datasets.Rd</code></div>
+    <h1>Parse scientific names</h1>
+    <small class="dont-index">Source: <a href='https://github.com/sckott/spplit/blob/master/R/sp_lit_parse_names.R'><code>R/sp_lit_parse_names.R</code></a></small>
+    <div class="hidden name"><code>sp_lit_parse_names.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Each element named with the California Academy of Sciences collection
-name</p>
+    <p>Depends on non-CRAN package rgnparser</p>
     </div>
 
+    <pre class="usage"><span class='fu'>sp_lit_parse_names</span>(<span class='kw'>x</span>, progress = <span class='fl'>TRUE</span>, <span class='kw'>...</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>An object of class <code>sp_lit_text</code> or <code>sp_lit_text_one</code></p></td>
+    </tr>
+    <tr>
+      <th>progress</th>
+      <td><p>(logical) print a progress bar. default: <code>TRUE</code></p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>arguments passed on to <code>rgnparser::gn_parse_tidy()</code></p></td>
+    </tr>
+    </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a data.frame</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Each element has one character string that represents the
-collection codes for CAS in the GBIF database. These codes can be
-used to search GBIF.</p>
+    <p>make sure to install gnparser first
+<a href='https://gitlab.com/gogna/gnparser'>https://gitlab.com/gogna/gnparser</a></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
