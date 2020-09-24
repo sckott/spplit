@@ -3,7 +3,6 @@
 #' @importFrom spocc occ occ2df 
 #' @importFrom rbhl bhl_namesearch bhl_namemetadata bhl_getpageocrtext bhl_partsearch bhl_getpagemetadata
 #' bhl_publicationsearchadv
-#' @importFrom whisker whisker.render
 #' @importFrom data.table setDF rbindlist
 #' @importFrom tibble as_data_frame
 #' @importFrom utils txtProgressBar setTxtProgressBar
@@ -12,44 +11,6 @@
 #' @aliases spplit
 #' @docType package
 #' @keywords package
-#'
-#' @section Usage:
-#' A typical workflow looks like:
-#' 
-#' - Search for occurrences from GBIF or iDigBio - see [sp_occ_gbif()]
-#' and [sp_occ_idigbio()]
-#' - Get a species list - see [sp_spp()]
-#' - Get BHL metadata - see [sp_bhl_meta()]
-#' - Get BHL OCR'ed text - see [sp_bhl_ocr()]
-#' - Save text to disk for later use - OR - analyze data - see [sp_bhl_save()]
-#'
-#' @section Other tools:
-#' 
-#' - [viewer()] - accepts output from [sp_bhl_ocr()], opening
-#'  up a human friendly viewer of the text in your default browser
-#' - [as_df()] - accepts output from [sp_bhl_meta()],
-#'  either all items as an `bhl_meta` object or individual items as
-#'  `bhl_meta_single` objects
-#'
-#' @examples \dontrun{
-#' library("spplit")
-#'
-#' ## Get occurrences
-#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ_idigbio(geometry = geom, limit = 3)
-#'
-#' ## Get a species list
-#' spplist <- sp_spp(res)
-#'
-#' ## Get BHL metadata
-#' bhlmeta <- sp_bhl_meta(spplist)
-#'
-#' ## Get OCR text
-#' ocred <- sp_bhl_ocr(bhlmeta[1:2])
-#'
-#' ## Save text to disk
-#' sp_bhl_save(ocred)
-#' }
 NULL
 
 #' Authentication
@@ -61,7 +22,7 @@ NULL
 #'
 #' To use the key, do one of:
 #' 
-#' - pass it in the `key` parameter in [sp_bhl_meta()] and [sp_bhl_ocr()]
+#' - pass it in the `key` parameter in [sp_lit_meta()]
 #' - store as an environment variable (as `BHL_KEY`) either in your `.Renviron`
 #' file, or wherever you store your environment variables (e.g., `.bashrc`, or
 #' `.bash_profile`, or `.zshrc`)

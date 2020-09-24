@@ -21,14 +21,14 @@ Language: en-US
 Imports:
     spocc (>= 0.5.0),
     rbhl,
-    whisker,
     data.table,
     tibble,
-    rplos,
-    fulltext
+    fulltext,
+    DBI,
+    RSQLite
 Suggests:
     knitr,
-    rgbif (>= 0.9.3),
+    namext,
     testthat,
     vcr
 Remotes: ropensci/namext

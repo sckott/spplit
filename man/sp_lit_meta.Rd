@@ -33,6 +33,7 @@ library(spocc)
 geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 res <- occ(geometry = geom, from = "gbif", limit = 15)
 
+library(spocc)
 taxa <- c('Pinus contorta', 'Accipiter striatus')
 res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
 res
@@ -40,9 +41,13 @@ res$gbif
 res$bison
 
 # get literature metadata
-x <- sp_lit_meta(x = res, from = "pubmed")
+x <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
 x
-x[[1]]
-x[[3]]
+x$gbif
+x$gbif$pubmed
+x$gbif$bhl
+x$bison
+x$bison$pubmed
+x$bison$bhl
 }
 }

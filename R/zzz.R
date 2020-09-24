@@ -60,7 +60,7 @@ trydefault_ <- function(expr, default, quiet = FALSE) {
   result
 }
 
-bhl_getpageocrtext_safe <- fail_with(NA_character_, rbhl::bhl_getpagemetadata, quiet = TRUE)
+bhl_getpagemetadata_safe <- fail_with(NA_character_, rbhl::bhl_getpagemetadata, quiet = TRUE)
 plos_fulltext_safe <- fail_with(NA_character_, rplos::plos_fulltext, quiet = TRUE)
 
 setdfrbind <- function(x) {

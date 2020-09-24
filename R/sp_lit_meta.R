@@ -15,6 +15,7 @@
 #' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
 #' res <- occ(geometry = geom, from = "gbif", limit = 15)
 #' 
+#' library(spocc)
 #' taxa <- c('Pinus contorta', 'Accipiter striatus')
 #' res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
 #' res
@@ -22,10 +23,14 @@
 #' res$bison
 #' 
 #' # get literature metadata
-#' x <- sp_lit_meta(x = res, from = "pubmed")
+#' x <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
 #' x
-#' x[[1]]
-#' x[[3]]
+#' x$gbif
+#' x$gbif$pubmed
+#' x$gbif$bhl
+#' x$bison
+#' x$bison$pubmed
+#' x$bison$bhl
 #' }
 sp_lit_meta <- function(x, from = "pubmed", limit = 25, progress = TRUE) {
   UseMethod("sp_lit_meta")
@@ -46,7 +51,9 @@ sp_lit_meta.occdat <- function(x, from = "pubmed", limit = 25, progress = TRUE) 
   x <- Filter(function(w) sum(sapply(w$data, NROW)) > 0, x)
   x <- lapply(x, structure, class = "occdatind")
   out <- list()
-  for (i in seq_along(x)) out[[i]] <- sp_lit_meta(x[[i]], from, limit, progress)
+  for (i in seq_along(x)) {
+    out[[ names(x)[i] ]] <- sp_lit_meta(x[[i]], from, limit, progress)
+  }
   return(out)
 }
 #' @export
@@ -91,36 +98,28 @@ bhl_namemetadata_many <- function(z) {
 
 meta_plugins_bhl <- function(from, x, limit) {
   if (!any(grepl("bhl", from))) return(meta_empty(from, x))
-  # query <- entrez_query(unique(c(names(x$data), occ2df(x)$name)))
-  # z <- tryCatch(fulltext::ft_search(query, from="entrez"),
-  # error = function(e) e)
-  
   z <- bhl_namesearch_many(unique(c(names(x$data), occ2df(x)$name)))
   if (inherits(z, "error")) {
     if (grepl("API key|Unauthorized", z$message)) {
       stop("need an API key for BHL, or key incorrect, go to\nhttps://www.biodiversitylibrary.org/getapikey.aspx to get a key", call. = FALSE)
     }
   }
-  if (z$NameConfirmed[1] == "" || inherits(z, "error")) {
-    out[[x[i]]] <- list()
-  } else {
-    # get BHL pages with that namebankid
-    yy <- tryCatch(rbhl::bhl_namemetadata(name = z$NameConfirmed[1], as = "table"),
-                   error = function(e) e)
-    if (inherits(yy, "error")) {
-      out[[x[i]]] <- structure(list(), class = 'bhl_meta_single')
-    } else {
-      out[[ x[i] ]] <- structure(tibble::as_tibble(setdfrbind(yy$Titles[[1]]$Items)),
-        class = c('tbl', 'data.frame', 'bhl_meta_single'))
-    }
-  }
-  
-
-  if (NROW(z$entrez$data) == 0 || inherits(z, "error")) {
+  # local SQLite
+  con <- DBI::dbConnect(RSQLite::SQLite(), "/Users/sckott/Downloads/bhl-data/Data/bhl.sqlite")
+  res <- DBI::dbSendQuery(con, 
+    sprintf("SELECT * FROM pagename WHERE NameConfirmed IN ('%s') LIMIT %s",
+      paste0(z, collapse="', '"), limit
+    )
+  )
+  df <- DBI::dbFetch(res)
+  if (NROW(df) == 0 || inherits(df, "error")) {
     tibble::tibble()
   } else {
-    tibble::as_tibble(z$entrez$data)
+    tibble::as_tibble(df)
   }
+  # remote API
+  # yy <- tryCatch(rbhl::bhl_namemetadata(name = z, as = "table"),
+  #                error = function(e) e)
 }
 
 entrez_query <- function(m) {

@@ -60,7 +60,7 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_github(c("ropensci/namext"))
-          remotes::install_cran(c("rcmdcheck", "rgbif", "shiny", "vcr"))
+          remotes::install_cran(c("rcmdcheck", "rgbif", "vcr"))
         shell: Rscript {0}
 
       - name: Session info

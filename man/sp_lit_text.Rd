@@ -24,18 +24,14 @@ See \link{spplit_auth} for authentication
 }
 \examples{
 \dontrun{
-geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ_gbif(geometry = geom)
-(x <- sp_lit_meta(sp_spp(res)[1:2]))
-
-# pass in a one taxon
-res <- sp_lit_text(x$`allium falcifolium`)
-sp_lit_text(x$`castilleja rubicundula`)
-
-# or many taxa
-sp_lit_text(x[1:2])
-
-# or all of them at once
-sp_lit_text(x)
+library(spocc)
+taxa <- c('Pinus contorta', 'Accipiter striatus')
+res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
+w <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
+w
+w[[1]]$bhl
+# x = w[[1]]; from = c("pubmed", "bhl")
+out <- sp_lit_text(x = w[[1]], from = c("pubmed", "bhl"))
+out
 }
 }

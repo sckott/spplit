@@ -10,14 +10,13 @@
 #' <https://github.com/gnames/gnfinder>
 #' @return a data.frame
 #' @examples \dontrun{
-#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ(geometry = geom, from = "gbif", limit = 15)
-#' spp <- sp_spp(res)
-#' z <- sp_lit_text(spp)
-#' z
-#' z[1]
-#' sp_lit_names(z[1])
-#' sp_lit_names(z)
+#' library(spocc)
+#' taxa <- c('Pinus contorta', 'Accipiter striatus')
+#' res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
+#' w <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
+#' out <- sp_lit_text(x = w[[1]], from = c("pubmed", "bhl"))
+#' sp_lit_names(x = out$bhl$OcrText)
+#' sp_lit_names(x = out$bhl)
 #' }
 sp_lit_names <- function(x, progress = TRUE, ...) {
   UseMethod("sp_lit_names")
@@ -29,21 +28,23 @@ sp_lit_names.default <- function(x, progress = TRUE, ...) {
 }
 
 #' @export
-sp_lit_names.sp_lit_text <- function(x, progress = TRUE, ...) {
-  lapply_prog(x, sp_lit_names, ..., progress = progress)
+sp_lit_names.data.frame <- function(x, progress = TRUE, ...) {
+  tmp <- sp_lit_names(x$text, progress = progress)
+  x$names <- lapply(tmp, "[[", "names")
+  return(x)
 }
 
 #' @export
-sp_lit_names.sp_lit_text_one <- function(x, progress = TRUE, ...) {
-  "xxxx"
+sp_lit_names.character <- function(x, progress = TRUE, ...) {
+  lapply_prog(x, sp_lit_names_one, progress = progress)
 }
 
-#' @export
-sp_lit_names.list <- function(x, ..., progress = TRUE) {
-  lapply_prog(x, function(w) {
-    if (!class(w) %in% c("sp_lit_text_one", "sp_lit_text"))
-      stop("All inputs must be of class 'sp_lit_text_one'",
-        call. = FALSE)
-    sp_lit_names(w, ...)
-  }, progress = progress)
+# z = x[1]
+sp_lit_names_one <- function(z) {
+  check4pkg("namext")
+  tfile <- tempfile()
+  writeLines(z, tfile)
+  on.exit(unlink(tfile))
+  tt <- namext::name_extract(tfile)
+  tt
 }

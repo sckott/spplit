@@ -14,7 +14,7 @@ they'll ask for your name and email address.
 
 To use the key, do one of:
 \itemize{
-\item pass it in the \code{key} parameter in \code{\link[=sp_bhl_meta]{sp_bhl_meta()}} and \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
+\item pass it in the \code{key} parameter in \code{\link[=sp_lit_meta]{sp_lit_meta()}}
 \item store as an environment variable (as \code{BHL_KEY}) either in your \code{.Renviron}
 file, or wherever you store your environment variables (e.g., \code{.bashrc}, or
 \code{.bash_profile}, or \code{.zshrc})

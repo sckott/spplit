@@ -25,13 +25,12 @@ make sure to install gnfinder first
 }
 \examples{
 \dontrun{
-geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ(geometry = geom, from = "gbif", limit = 15)
-spp <- sp_spp(res)
-z <- sp_lit_text(spp)
-z
-z[1]
-sp_lit_names(z[1])
-sp_lit_names(z)
+library(spocc)
+taxa <- c('Pinus contorta', 'Accipiter striatus')
+res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
+w <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
+out <- sp_lit_text(x = w[[1]], from = c("pubmed", "bhl"))
+sp_lit_names(x = out$bhl$OcrText)
+sp_lit_names(x = out$bhl)
 }
 }

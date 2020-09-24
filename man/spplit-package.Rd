@@ -8,49 +8,4 @@
 \description{
 Find related literature data for species occurrences.
 }
-\section{Usage}{
-
-A typical workflow looks like:
-\itemize{
-\item Search for occurrences from GBIF or iDigBio - see \code{\link[=sp_occ_gbif]{sp_occ_gbif()}}
-and \code{\link[=sp_occ_idigbio]{sp_occ_idigbio()}}
-\item Get a species list - see \code{\link[=sp_spp]{sp_spp()}}
-\item Get BHL metadata - see \code{\link[=sp_bhl_meta]{sp_bhl_meta()}}
-\item Get BHL OCR'ed text - see \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}
-\item Save text to disk for later use - OR - analyze data - see \code{\link[=sp_bhl_save]{sp_bhl_save()}}
-}
-}
-
-\section{Other tools}{
-
-\itemize{
-\item \code{\link[=viewer]{viewer()}} - accepts output from \code{\link[=sp_bhl_ocr]{sp_bhl_ocr()}}, opening
-up a human friendly viewer of the text in your default browser
-\item \code{\link[=as_df]{as_df()}} - accepts output from \code{\link[=sp_bhl_meta]{sp_bhl_meta()}},
-either all items as an \code{bhl_meta} object or individual items as
-\code{bhl_meta_single} objects
-}
-}
-
-\examples{
-\dontrun{
-library("spplit")
-
-## Get occurrences
-geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-res <- sp_occ_idigbio(geometry = geom, limit = 3)
-
-## Get a species list
-spplist <- sp_spp(res)
-
-## Get BHL metadata
-bhlmeta <- sp_bhl_meta(spplist)
-
-## Get OCR text
-ocred <- sp_bhl_ocr(bhlmeta[1:2])
-
-## Save text to disk
-sp_bhl_save(ocred)
-}
-}
 \keyword{package}

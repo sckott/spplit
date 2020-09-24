@@ -7,19 +7,15 @@
 #' @return An object of class `lit_text`, or a list of such objects
 #' @details See [spplit_auth] for authentication
 #' @examples \dontrun{
-#' geom <- 'POLYGON((-124.07 41.48,-119.99 41.48,-119.99 35.57,-124.07 35.57,-124.07 41.48))'
-#' res <- sp_occ_gbif(geometry = geom)
-#' (x <- sp_lit_meta(sp_spp(res)[1:2]))
-#'
-#' # pass in a one taxon
-#' res <- sp_lit_text(x$`allium falcifolium`)
-#' sp_lit_text(x$`castilleja rubicundula`)
-#'
-#' # or many taxa
-#' sp_lit_text(x[1:2])
-#'
-#' # or all of them at once
-#' sp_lit_text(x)
+#' library(spocc)
+#' taxa <- c('Pinus contorta', 'Accipiter striatus')
+#' res <- occ(query=taxa, from = c("gbif", "bison"), limit = 15)
+#' w <- sp_lit_meta(x = res, from = c("pubmed", "bhl"))
+#' w
+#' w[[1]]$bhl
+#' # x = w[[1]]; from = c("pubmed", "bhl")
+#' out <- sp_lit_text(x = w[[1]], from = c("pubmed", "bhl"))
+#' out
 #' }
 sp_lit_text <- function(x, from = "pubmed", progress = TRUE) {
   UseMethod("sp_lit_text")
@@ -32,30 +28,40 @@ sp_lit_text.default <- function(x, from = "pubmed", progress = TRUE) {
 
 #' @export
 sp_lit_text.lit_meta <- function(x, from = "pubmed", progress = TRUE) {
-  lapply_prog(x, sp_lit_text, progress = progress)
-}
-
-#' @export
-sp_lit_text.lit_meta_one <- function(x, from = "pubmed", progress = TRUE) {
-  toclz(lapply_prog(x$Pages, function(w) {
-    stats::setNames(lapply(w$PageID, bhl_getpageocrtext_safe, ocr = TRUE), w$PageID)
-  }, progress = progress), "lit_text")
+  out <- list()
+  out_pubmed <- text_plugin_pubmed(x, from, progress)
+  out_bhl <- text_plugin_bhl(x, from, progress)
+  out <- list(pubmed = out_pubmed, bhl = out_bhl)
+  structure(out, class = "lit_text")
 }
 
 #' @export
 sp_lit_text.list <- function(x, from = "pubmed", progress = TRUE) {
-  lapply_prog(x, function(w) {
-    if (!class(w) %in% c("lit_meta_one", "lit_meta")) stop("All inputs must be of class 'lit_meta_one'", call. = FALSE)
-    sp_lit_text(w)
-  }, progress = progress)
+  lapply(x, sp_lit_text, from = from, progress = progress)
 }
 
-#' @export
-print.lit_text <- function(x, ...) {
-  cat_n("<bhl ocr'ed text>")
-  cat_n(paste0("  Count: ", length(x)))
-  cat_n("  no. pages / total character count [1st 10]: ")
-  for (i in nomas(seq_along(x))) {
-    cat_n(sprintf("    %s / %s", length(x[[i]]), sum(vapply(x[[i]], nchar, 1))))
-  }
+# print.lit_text <- function(x, ...) {
+#   cat_n("<bhl ocr'ed text>")
+#   cat_n(paste0("  Count: ", length(x)))
+#   cat_n("  no. pages / total character count [1st 10]: ")
+#   for (i in nomas(seq_along(x))) {
+#     cat_n(sprintf("    %s / %s", length(x[[i]]), sum(vapply(x[[i]], nchar, 1))))
+#   }
+# }
+
+# helpers
+text_plugin_bhl <- function(x, from, progress) {
+  if (!any(grepl("bhl", from))) return(meta_empty(from, x))
+  out <- lapply_prog(x$bhl$PageID, function(w) {
+    bhl_getpagemetadata_safe(w, ocr = TRUE)
+  }, progress = progress)
+  tibble::as_tibble(merge(x$bhl, setdfrbind(out), by = "PageID"))
+}
+text_plugin_pubmed <- function(x, from, progress) {
+  if (!any(grepl("pubmed", from))) return(meta_empty(from, x))
+  w <- fulltext::ft_get(x$pubmed$doi, from="entrez")
+  w <- fulltext::ft_collect(w)
+  txt <- w$entrez$data$data
+  tibble::as_tibble(
+    merge(x$pubmed, tibble::tibble(uid = names(txt), text = txt), by = "uid"))
 }

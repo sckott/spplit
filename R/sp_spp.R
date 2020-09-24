@@ -33,10 +33,10 @@
 sp_spp <- function(x) UseMethod("sp_spp")
 sp_spp.default <- function(x) no_method("sp_spp", x)
 sp_spp.occdatind <- function(x) {
-  if (is.null(x$data)) return(x)
-  if (all(sapply(x$data, length) == 0)) return(x)
-  name_str <- switch(x$meta$source, gbif="name", idigbio="canonicalname")
-  unique(x$data[[i]][[name_str]])
+  # if (is.null(x$data)) return(x)
+  # if (all(sapply(x$data, length) == 0)) return(x)
+  # name_str <- switch(x$meta$source, gbif="name", idigbio="canonicalname")
+  # unique(x$data[[i]][[name_str]])
   # for (i in seq_along(x$data)) {
     # attr(x$data[[i]], "spp") <- unique(x$data[[i]][[name_str]])
   # }
