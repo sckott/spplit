@@ -1,0 +1,450 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=%28Pinus%20contorta%5BOrganism%5D%29%20OR%20%28Accipiter%20striatus%5BOrganism%5D%29%20OR%20%28Pinus%20contorta%20Douglas%20ex%20Loudon%5BOrganism%5D%29%20OR%20%28Pinus%20contorta%20var.%20contorta%5BOrganism%5D%29%20OR%20%28Accipiter%20striatus%20Vieillot%2C%201808%5BOrganism%5D%29&retmode=xml&usehistory=n&retmax=10&email=david.winter%40gmail.com&tool=rentrez&api_key=eea6131e94f20ca3f84bb345e8a4f9f4c108
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      server: Finatra
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      content-security-policy: upgrade-insecure-requests
+      x-ratelimit-remaining: '9'
+      ncbi-phid: 939B596B6E912A6500003F4BE8D07D92.1.1.m_1
+      cache-control: private
+      ncbi-sid: 83ACB99473D29AFA_ED97SID
+      content-encoding: gzip
+      x-ratelimit-limit: '10'
+      access-control-allow-origin: '*'
+      content-type: text/xml; charset=UTF-8
+      set-cookie: ncbi_sid=83ACB99473D29AFA_ED97SID; domain=.nih.gov; path=/; expires=Fri,
+        24 Sep 2021 00:40:27 GMT
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      transfer-encoding: chunked
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjwhRE9DVFlQRSBlU2VhcmNoUmVzdWx0IFBVQkxJQyAiLS8vTkxNLy9EVEQgZXNlYXJjaCAyMDA2MDYyOC8vRU4iICJodHRwczovL2V1dGlscy5uY2JpLm5sbS5uaWguZ292L2V1dGlscy9kdGQvMjAwNjA2MjgvZXNlYXJjaC5kdGQiPgo8ZVNlYXJjaFJlc3VsdD48Q291bnQ+Nzk2PC9Db3VudD48UmV0TWF4PjEwPC9SZXRNYXg+PFJldFN0YXJ0PjA8L1JldFN0YXJ0PjxRdWVyeUtleT4xPC9RdWVyeUtleT48V2ViRW52Pk1DSURfNWY2YmVhZmIzYmRiYzQxZWM4NDA1ZWFlPC9XZWJFbnY+PElkTGlzdD4KPElkPjc0NjQwMzY8L0lkPgo8SWQ+NzQ1NDk5NTwvSWQ+CjxJZD43NDI5MTc1PC9JZD4KPElkPjc0MTIzMjg8L0lkPgo8SWQ+NzM2OTAyODwvSWQ+CjxJZD43MzgwNDYxPC9JZD4KPElkPjczNzQ1OTA8L0lkPgo8SWQ+NzM1MTc4MDwvSWQ+CjxJZD43MzM2NTM5PC9JZD4KPElkPjcwMTAwNDQ8L0lkPgo8L0lkTGlzdD48VHJhbnNsYXRpb25TZXQvPjxUcmFuc2xhdGlvblN0YWNrPiAgIDxUZXJtU2V0PiAgICA8VGVybT5QaW51cyBjb250b3J0YVtPcmdhbmlzbTpub2V4cF08L1Rlcm0+ICAgIDxGaWVsZD5PcmdhbmlzbTwvRmllbGQ+ICAgIDxDb3VudD43NTM8L0NvdW50PiAgICA8RXhwbG9kZT5OPC9FeHBsb2RlPiAgIDwvVGVybVNldD4gICA8VGVybVNldD4gICAgPFRlcm0+QWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXTwvVGVybT4gICAgPEZpZWxkPk9yZ2FuaXNtPC9GaWVsZD4gICAgPENvdW50PjQ3PC9Db3VudD4gICAgPEV4cGxvZGU+TjwvRXhwbG9kZT4gICA8L1Rlcm1TZXQ+ICAgPE9QPk9SPC9PUD4gIDwvVHJhbnNsYXRpb25TdGFjaz48UXVlcnlUcmFuc2xhdGlvbj5QaW51cyBjb250b3J0YVtPcmdhbmlzbTpub2V4cF0gT1IgQWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXTwvUXVlcnlUcmFuc2xhdGlvbj48RXJyb3JMaXN0PjxQaHJhc2VOb3RGb3VuZD5QaW51cyBjb250b3J0YSBEb3VnbGFzIGV4IExvdWRvbltPcmdhbmlzbTpub2V4cF08L1BocmFzZU5vdEZvdW5kPjxQaHJhc2VOb3RGb3VuZD5QaW51cyBjb250b3J0YSB2YXIuIGNvbnRvcnRhW09yZ2FuaXNtOm5vZXhwXTwvUGhyYXNlTm90Rm91bmQ+PFBocmFzZU5vdEZvdW5kPkFjY2lwaXRlciBzdHJpYXR1cyBWaWVpbGxvdCwgMTgwOFtPcmdhbmlzbTpub2V4cF08L1BocmFzZU5vdEZvdW5kPjwvRXJyb3JMaXN0PjwvZVNlYXJjaFJlc3VsdD4K
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pmc&retmode=json&version=2.0&id=7464036%2C7454995%2C7429175%2C7412328%2C7369028%2C7380461%2C7374590%2C7351780%2C7336539%2C7010044&email=david.winter%40gmail.com&tool=rentrez&api_key=eea6131e94f20ca3f84bb345e8a4f9f4c108
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      server: Finatra
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      content-security-policy: upgrade-insecure-requests
+      x-ratelimit-remaining: '8'
+      ncbi-phid: 939B596B6E912A6500002E4BE948DA6B.1.1.m_1
+      cache-control: private
+      ncbi-sid: 83ACB99473D29AFA_ED97SID
+      content-encoding: gzip
+      x-ratelimit-limit: '10'
+      access-control-allow-origin: '*'
+      content-type: application/json; charset=UTF-8
+      set-cookie: ncbi_sid=83ACB99473D29AFA_ED97SID; domain=.nih.gov; path=/; expires=Fri,
+        24 Sep 2021 00:40:27 GMT
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      transfer-encoding: chunked
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJoZWFkZXIiOnsidHlwZSI6ImVzdW1tYXJ5IiwidmVyc2lvbiI6IjAuMyJ9LCJyZXN1bHQiOnsidWlkcyI6WyI3NDY0MDM2IiwiNzQ1NDk5NSIsIjc0MjkxNzUiLCI3NDEyMzI4IiwiNzM2OTAyOCIsIjczODA0NjEiLCI3Mzc0NTkwIiwiNzM1MTc4MCIsIjczMzY1MzkiLCI3MDEwMDQ0Il0sIjc0NjQwMzYiOnsidWlkIjoiNzQ2NDAzNiIsInB1YmRhdGUiOiIyMDIwIEF1ZyAxMiIsImVwdWJkYXRlIjoiMjAyMCBBdWcgMTIiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQbGFudHMgKEJhc2VsKSIsImF1dGhvcnMiOlt7Im5hbWUiOiJUYXNuaW0gUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiR3JpZXMgUiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWF0dHNzb24gSiIsImF1dGh0eXBlIjoiQXV0aG9yIn1dLCJ0aXRsZSI6IklkZW50aWZpY2F0aW9uIG9mIFRocmVlIE1vbm9mdW5jdGlvbmFsIERpdGVycGVuZSBTeW50aGFzZXMgd2l0aCBTcGVjaWZpYyBFbnp5bWUgQWN0aXZpdGllcyBFeHByZXNzZWQgZHVyaW5nIEhlYXJ0d29vZCBGb3JtYXRpb24gaW4gV2VzdGVybiBSZWRjZWRhciAoVGh1amEgcGxpY2F0YSkgVHJlZXMiLCJ2b2x1bWUiOiI5IiwiaXNzdWUiOiI4IiwicGFnZXMiOiIxMDE4IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI4MDY3ODkifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMzM5MC9wbGFudHM5MDgxMDE4In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQ2NDAzNiJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUGxhbnRzIiwic29ydGRhdGUiOiIyMDIwLzA4LzEyIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA5LzA0In0sIjc0NTQ5OTUiOnsidWlkIjoiNzQ1NDk5NSIsInB1YmRhdGUiOiIyMDIwIEF1ZyAyOCIsImVwdWJkYXRlIjoiMjAyMCBBdWcgMjgiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQTG9TIE9uZSIsImF1dGhvcnMiOlt7Im5hbWUiOiJDaG9pIERZIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJXaXR0aWcgVFciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IktsdWV2ZXIgQk0iLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJBbiBldmFsdWF0aW9uIG9mIGJpcmQgYW5kIGJhdCBtb3J0YWxpdHkgYXQgd2luZCB0dXJiaW5lcyBpbiB0aGUgTm9ydGhlYXN0ZXJuIFVuaXRlZCBTdGF0ZXMiLCJ2b2x1bWUiOiIxNSIsImlzc3VlIjoiOCIsInBhZ2VzIjoiZTAyMzgwMzQiLCJhcnRpY2xlaWRzIjpbeyJpZHR5cGUiOiJwbWlkIiwidmFsdWUiOiIzMjg1Nzc4MCJ9LHsiaWR0eXBlIjoiZG9pIiwidmFsdWUiOiIxMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM4MDM0In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQ1NDk5NSJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUExvUyBPTkUiLCJzb3J0ZGF0ZSI6IjIwMjAvMDgvMjggMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDkvMDIifSwiNzQyOTE3NSI6eyJ1aWQiOiI3NDI5MTc1IiwicHViZGF0ZSI6IjIwMjAgSnVsIDEiLCJlcHViZGF0ZSI6IjIwMjAgSnVsIDEiLCJwcmludHB1YmRhdGUiOiIyMDIwIEF1ZyAxIiwic291cmNlIjoiQmlvc2NpZW5jZSIsImF1dGhvcnMiOlt7Im5hbWUiOiJDb29wIEpEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJQYXJrcyBTQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3RldmVucy1SdW1hbm4gQ1MiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkNyYXVzYmF5IFNEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIaWd1ZXJhIFBFIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIdXJ0ZWF1IE1EIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJUZXBsZXkgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2hpdG1hbiBFIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJBc3NhbCBUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDb2xsaW5zIEJNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJEYXZpcyBLVCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRG9icm93c2tpIFMiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZhbGsgREEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZvcm53YWx0IFBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJGdWzDqSBQWiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSGFydmV5IEJKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJLYW5lIFZSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJMaXR0bGVmaWVsZCBDRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWFyZ29saXMgRVEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5vcnRoIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhcmlzaWVuIE1BIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJQcmljaGFyZCBTIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSb2RtYW4gS0MiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJXaWxkZmlyZS1Ecml2ZW4gRm9yZXN0IENvbnZlcnNpb24gaW4gV2VzdGVybiBOb3J0aCBBbWVyaWNhbiBMYW5kc2NhcGVzIiwidm9sdW1lIjoiNzAiLCJpc3N1ZSI6IjgiLCJwYWdlcyI6IjY1OS02NzMiLCJhcnRpY2xlaWRzIjpbeyJpZHR5cGUiOiJwbWlkIiwidmFsdWUiOiIzMjgyMTA2NiJ9LHsiaWR0eXBlIjoiZG9pIiwidmFsdWUiOiIxMC4xMDkzL2Jpb3NjaS9iaWFhMDYxIn0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQyOTE3NSJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiQmlvc2NpZW5jZSIsInNvcnRkYXRlIjoiMjAyMC8wNy8wMSAwMDowMCIsInBtY2xpdmVkYXRlIjoiMjAyMC8wOC8xOSJ9LCI3NDEyMzI4Ijp7InVpZCI6Ijc0MTIzMjgiLCJwdWJkYXRlIjoiMjAyMCBKdWwgMTQiLCJlcHViZGF0ZSI6IjIwMjAgSnVsIDE0IiwicHJpbnRwdWJkYXRlIjoiIiwic291cmNlIjoiTWF0ZXJpYWxzIChCYXNlbCkiLCJhdXRob3JzIjpbeyJuYW1lIjoiUmVzY2Fsdm8gRkoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlRpbWJvbG1hcyBDIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJCcmF2byBSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHYWxsZWdvIEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJFeHBlcmltZW50YWwgYW5kIE51bWVyaWNhbCBBbmFseXNpcyBvZiBNaXhlZCBJLTIxNCBQb3BsYXIvUGludXMgU3lsdmVzdHJpcyBMYW1pbmF0ZWQgVGltYmVyIFN1YmplY3RlZCB0byBCZW5kaW5nIExvYWRpbmdzIiwidm9sdW1lIjoiMTMiLCJpc3N1ZSI6IjE0IiwicGFnZXMiOiIzMTM0IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2NzQzNTUifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMzM5MC9tYTEzMTQzMTM0In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQxMjMyOCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiTWF0ZXJpYWxzIiwic29ydGRhdGUiOiIyMDIwLzA3LzE0IDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA4LzE3In0sIjczNjkwMjgiOnsidWlkIjoiNzM2OTAyOCIsInB1YmRhdGUiOiIyMDIwIEp1bCAxNiIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMTYiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQZWVySiIsImF1dGhvcnMiOlt7Im5hbWUiOiJMZW9uYXJkIExUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJNaWtrZWxzb24gSyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSGFvIFoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkJyb2RpZSBFTCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2lsbGlhbXMgS0giLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlNoYXJwIEpPIiwiYXV0aHR5cGUiOiJBdXRob3IifV0sInRpdGxlIjoiQSBjb21wYXJpc29uIG9mIGxvZGdlcG9sZSBhbmQgc3BydWNlIG5lZWRsZSBjaGVtaXN0cnkgaW1wYWN0cyBvbiB0ZXJyZXN0cmlhbCBiaW9nZW9jaGVtaWNhbCBwcm9jZXNzZXMgZHVyaW5nIGlzb2xhdGVkIGRlY29tcG9zaXRpb24iLCJ2b2x1bWUiOiI4IiwiaXNzdWUiOiIiLCJwYWdlcyI6ImU5NTM4IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI3NDI4MDQifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuNzcxNy9wZWVyai45NTM4In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzM2OTAyOCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUGVlckoiLCJzb3J0ZGF0ZSI6IjIwMjAvMDcvMTYgMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDcvMzEifSwiNzM4MDQ2MSI6eyJ1aWQiOiI3MzgwNDYxIiwicHViZGF0ZSI6IjIwMjAgSnVsIDI0IiwiZXB1YmRhdGUiOiIyMDIwIEp1bCAyNCIsInByaW50cHViZGF0ZSI6IiIsInNvdXJjZSI6IkogSW5zZWN0IFNjaSIsImF1dGhvcnMiOlt7Im5hbWUiOiJCYWxvZ2ggU0wiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkJqw7Zya2x1bmQgTiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSHViZXIgRFAiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkxpbmRncmVuIEJTIiwiYXV0aHR5cGUiOiJBdXRob3IifV0sInRpdGxlIjoiUmFuZG9tIGFuZCBEaXJlY3RlZCBNb3ZlbWVudCBieSBXYXJyZW4gUm9vdCBDb2xsYXIgV2VldmlscyAoQ29sZW9wdGVyYTogQ3VyY3VsaW9uaWRhZSksIFJlbGF0aXZlIHRvIFNpemUgYW5kIERpc3RhbmNlIG9mIEhvc3QgTG9kZ2Vwb2xlIFBpbmUgVHJlZXMiLCJ2b2x1bWUiOiIyMCIsImlzc3VlIjoiNCIsInBhZ2VzIjoiOSIsImFydGljbGVpZHMiOlt7ImlkdHlwZSI6InBtaWQiLCJ2YWx1ZSI6IjMyNzA2ODcyIn0seyJpZHR5cGUiOiJkb2kiLCJ2YWx1ZSI6IjEwLjEwOTMvamlzZXNhL2llYWEwNjMifSx7ImlkdHlwZSI6InBtY2lkIiwidmFsdWUiOiJQTUM3MzgwNDYxIn1dLCJmdWxsam91cm5hbG5hbWUiOiJKb3VybmFsIG9mIEluc2VjdCBTY2llbmNlIiwic29ydGRhdGUiOiIyMDIwLzA3LzI0IDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzI5In0sIjczNzQ1OTAiOnsidWlkIjoiNzM3NDU5MCIsInB1YmRhdGUiOiIyMDIwIEp1bCAyMSIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMjEiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJTY2kgUmVwIiwiYXV0aG9ycyI6W3sibmFtZSI6IlphbW9yYS1OYXNjYSBMQiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRGltYXJjbyBSRCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTmFzc2luaSBEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJBbHZlYXIgUEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik1heW9yYWwgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTnXDsWV6IE1BIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSZWx2YSBNQSIsImF1dGh0eXBlIjoiQXV0aG9yIn1dLCJ0aXRsZSI6IlNoZWVwIGZlZWRpbmcgcHJlZmVyZW5jZSBhcyBhIHRvb2wgdG8gY29udHJvbCBwaW5lIGludmFzaW9uIGluIFBhdGFnb25pYTogaW5mbHVlbmNlIG9mIGZvbGlhciB0b3VnaG5lc3MsIHRlcnBlbm9pZHMgYW5kIHJlc2luIGNvbnRlbnQiLCJ2b2x1bWUiOiIxMCIsImlzc3VlIjoiIiwicGFnZXMiOiIxMjExMyIsImFydGljbGVpZHMiOlt7ImlkdHlwZSI6InBtaWQiLCJ2YWx1ZSI6IjMyNjk0NTQ3In0seyJpZHR5cGUiOiJkb2kiLCJ2YWx1ZSI6IjEwLjEwMzgvczQxNTk4LTAyMC02ODc0OC15In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzM3NDU5MCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiU2NpZW50aWZpYyBSZXBvcnRzIiwic29ydGRhdGUiOiIyMDIwLzA3LzIxIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzIyIn0sIjczNTE3ODAiOnsidWlkIjoiNzM1MTc4MCIsInB1YmRhdGUiOiIyMDIwIEp1bCAxMCIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMTAiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJTY2kgUmVwIiwiYXV0aG9ycyI6W3sibmFtZSI6IlBpZ2VvbiBLRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWFjTmVhcm5leSBEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIZWJibGV3aGl0ZSBNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJNdXNpYW5pIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5ldWZlbGQgTCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiQ3JhbnN0b24gSiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3RlbmhvdXNlIEciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlNjaG1pZWdlbG93IEYiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZpbm5lZ2FuIEwiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJUaGUgZGVuc2l0eSBvZiBhbnRocm9wb2dlbmljIGZlYXR1cmVzIGV4cGxhaW5zIHNlYXNvbmFsIGFuZCBiZWhhdmlvdXItYmFzZWQgZnVuY3Rpb25hbCByZXNwb25zZXMgaW4gc2VsZWN0aW9uIG9mIGxpbmVhciBmZWF0dXJlcyBieSBhIHNvY2lhbCBwcmVkYXRvciIsInZvbHVtZSI6IjEwIiwiaXNzdWUiOiIiLCJwYWdlcyI6IjExNDM3IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2NTE0MTkifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMTAzOC9zNDE1OTgtMDIwLTY4MTUxLTcifSx7ImlkdHlwZSI6InBtY2lkIiwidmFsdWUiOiJQTUM3MzUxNzgwIn1dLCJmdWxsam91cm5hbG5hbWUiOiJTY2llbnRpZmljIFJlcG9ydHMiLCJzb3J0ZGF0ZSI6IjIwMjAvMDcvMTAgMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDcvMTQifSwiNzMzNjUzOSI6eyJ1aWQiOiI3MzM2NTM5IiwicHViZGF0ZSI6IjIwMTAgRGVjIiwiZXB1YmRhdGUiOiIiLCJwcmludHB1YmRhdGUiOiIyMDEwIERlYyIsInNvdXJjZSI6Ik1pY3JvYmlvbG9neSAoUmVhZGluZykiLCJhdXRob3JzIjpbeyJuYW1lIjoiR3JpZmZpbiBNQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3Bha293aWN6IERKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHaWFub3VsaXMgVEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlN0cm9iZWwgU0EiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJWb2xhdGlsZSBvcmdhbmljIGNvbXBvdW5kIHByb2R1Y3Rpb24gYnkgb3JnYW5pc21zIGluIHRoZSBnZW51cyBBc2NvY29yeW5lIGFuZCBhIHJlLWV2YWx1YXRpb24gb2YgbXljby1kaWVzZWwgcHJvZHVjdGlvbiBieSBOUlJMIDUwMDcyIiwidm9sdW1lIjoiMTU2IiwiaXNzdWUiOiJQdCAxMiIsInBhZ2VzIjoiMzgxNC0zODI5IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMjA3MDU2NTgifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMTA5OS9taWMuMC4wNDEzMjctMCJ9LHsiaWR0eXBlIjoicG1jaWQiLCJ2YWx1ZSI6IlBNQzczMzY1MzkifV0sImZ1bGxqb3VybmFsbmFtZSI6Ik1pY3JvYmlvbG9neSIsInNvcnRkYXRlIjoiMjAxMC8xMi8wMSAwMDowMCIsInBtY2xpdmVkYXRlIjoiMjAyMC8wNy8wNyJ9LCI3MDEwMDQ0Ijp7InVpZCI6IjcwMTAwNDQiLCJwdWJkYXRlIjoiMjAxNyBKdWwgMTIiLCJlcHViZGF0ZSI6IjIwMTcgSnVsIDEyIiwicHJpbnRwdWJkYXRlIjoiIiwic291cmNlIjoiRUZTQSBKIiwiYXV0aG9ycyI6W3sibmFtZSI6IkVGU0EgUGFuZWzCoG9uIFBsYW50IEhlYWx0aCAoUExIKSIsImF1dGh0eXBlIjoiQ29sbGVjdGl2ZU5hbWUifSx7Im5hbWUiOiJKZWdlciBNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDYWZmaWVyIEQiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkNhbmRyZXNzZSBUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDaGF0eml2YXNzaWxpb3UgRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRGVobmVu4oCQU2NobXV0eiBLIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHaWxpb2xpIEciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ikdyw6lnb2lyZSBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJKYXF1ZXMgTWlyZXQgSkEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik1hY0xlb2QgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTmF2YWphcyBOYXZhcnJvIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5pZXJlIEIiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhcm5lbGwgUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiUG90dGluZyBSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSYWZvc3MgVCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiVXJlayBHIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWYW4gQnJ1Z2dlbiBBIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWYW4gRGVyIFdlcmYgVyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2VzdCBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJXaW50ZXIgUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiQm9iZXJnIEoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBvcnRhIFB1Z2xpYSBBIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWZXR0cmFpbm8gQU0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhdXRhc3NvIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlJvc3NpIFYiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJQZXN0IHJpc2sgYXNzZXNzbWVudCBvZiBBdHJvcGVsbGlzIHNwcC4gZm9yIHRoZSBFVSB0ZXJyaXRvcnkiLCJ2b2x1bWUiOiIxNSIsImlzc3VlIjoiNyIsInBhZ2VzIjoiZTA0ODc3IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2MjU1NDQifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMjkwMy9qLmVmc2EuMjAxNy40ODc3In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzAxMDA0NCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiRUZTQSBKb3VybmFsIiwic29ydGRhdGUiOiIyMDE3LzA3LzEyIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzAyIn19fQo=
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Pinus_contorta&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      content-length: '45'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W119
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Accipiter_striatus&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      content-length: '45'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W119
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Pinus%20contorta%20Douglas%20ex%20Loudon&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      content-length: '224'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W3siTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIERvdWdsYXMgZXggTG91ZG9uIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgRG91Z2xhcyBleCBMb3Vkb24gKDE4MzgpIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBjb250b3J0YSBEb3VnbGFzIGV4IExvdWRvbiJ9XX0=
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Pinus%20contorta%20var.%20contorta&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      content-length: '653'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W3siTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIERvdWdsYXMgZXggTG91ZGVuIHZhci4gbGF0aWZvbGlhIEVuZ2VsbS4gZXggUy4gV2F0c29uIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBib2xhbmRlcmkifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGJvbGFuZGVyaSAoUGFybC4pIEtvZWhuZSJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHZhci4gY29udG9ydGEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGNvbnRvcnRhIERvdWdsLiBleCBMb3VkLiJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHZhci4gY29udG9ydGEgRG91Z2xhcyBleCBMb3Vkb24ifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGxhdGlmb2xpYSJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHZhci4gbGF0aWZvbGlhIEVuZ2VsbS4ifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIG11cnJheWFuYSJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHZhci4gbXVycmF5YW5hIChCYWxmLikgRW5nZWxtLiJ9XX0=
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Accipiter%20striatus%20Vieillot%2C%201808&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:27 GMT
+      content-length: '151'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W3siTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyBWaWVpbGxvdCAxODA4In0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIFZpZWlsbG90LCAxODA4In1dfQ==
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pmc&term=%28Pinus%20contorta%5BOrganism%5D%29%20OR%20%28Accipiter%20striatus%5BOrganism%5D%29%20OR%20%28Pinus%20contorta%5BOrganism%5D%29%20OR%20%28Accipiter%20striatus%5BOrganism%5D%29&retmode=xml&usehistory=n&retmax=10&email=david.winter%40gmail.com&tool=rentrez&api_key=eea6131e94f20ca3f84bb345e8a4f9f4c108
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 24 Sep 2020 00:40:29 GMT
+      server: Finatra
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      content-security-policy: upgrade-insecure-requests
+      x-ratelimit-remaining: '9'
+      ncbi-phid: 939B596B6E912A650000364BEBA6BD12.1.1.m_1
+      cache-control: private
+      ncbi-sid: 83ACB99473D29AFA_ED97SID
+      content-encoding: gzip
+      x-ratelimit-limit: '10'
+      access-control-allow-origin: '*'
+      content-type: text/xml; charset=UTF-8
+      set-cookie: ncbi_sid=83ACB99473D29AFA_ED97SID; domain=.nih.gov; path=/; expires=Fri,
+        24 Sep 2021 00:40:30 GMT
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      transfer-encoding: chunked
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjwhRE9DVFlQRSBlU2VhcmNoUmVzdWx0IFBVQkxJQyAiLS8vTkxNLy9EVEQgZXNlYXJjaCAyMDA2MDYyOC8vRU4iICJodHRwczovL2V1dGlscy5uY2JpLm5sbS5uaWguZ292L2V1dGlscy9kdGQvMjAwNjA2MjgvZXNlYXJjaC5kdGQiPgo8ZVNlYXJjaFJlc3VsdD48Q291bnQ+Nzk2PC9Db3VudD48UmV0TWF4PjEwPC9SZXRNYXg+PFJldFN0YXJ0PjA8L1JldFN0YXJ0PjxRdWVyeUtleT4xPC9RdWVyeUtleT48V2ViRW52Pk1DSURfNWY2YmVhZmU0ZTJkNzU2NDE0NDk4MjliPC9XZWJFbnY+PElkTGlzdD4KPElkPjc0NjQwMzY8L0lkPgo8SWQ+NzQ1NDk5NTwvSWQ+CjxJZD43NDI5MTc1PC9JZD4KPElkPjc0MTIzMjg8L0lkPgo8SWQ+NzM2OTAyODwvSWQ+CjxJZD43MzgwNDYxPC9JZD4KPElkPjczNzQ1OTA8L0lkPgo8SWQ+NzM1MTc4MDwvSWQ+CjxJZD43MzM2NTM5PC9JZD4KPElkPjcwMTAwNDQ8L0lkPgo8L0lkTGlzdD48VHJhbnNsYXRpb25TZXQvPjxUcmFuc2xhdGlvblN0YWNrPiAgIDxUZXJtU2V0PiAgICA8VGVybT5QaW51cyBjb250b3J0YVtPcmdhbmlzbTpub2V4cF08L1Rlcm0+ICAgIDxGaWVsZD5PcmdhbmlzbTwvRmllbGQ+ICAgIDxDb3VudD43NTM8L0NvdW50PiAgICA8RXhwbG9kZT5OPC9FeHBsb2RlPiAgIDwvVGVybVNldD4gICA8VGVybVNldD4gICAgPFRlcm0+QWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXTwvVGVybT4gICAgPEZpZWxkPk9yZ2FuaXNtPC9GaWVsZD4gICAgPENvdW50PjQ3PC9Db3VudD4gICAgPEV4cGxvZGU+TjwvRXhwbG9kZT4gICA8L1Rlcm1TZXQ+ICAgPE9QPk9SPC9PUD4gICA8VGVybVNldD4gICAgPFRlcm0+UGludXMgY29udG9ydGFbT3JnYW5pc206bm9leHBdPC9UZXJtPiAgICA8RmllbGQ+T3JnYW5pc208L0ZpZWxkPiAgICA8Q291bnQ+NzUzPC9Db3VudD4gICAgPEV4cGxvZGU+TjwvRXhwbG9kZT4gICA8L1Rlcm1TZXQ+ICAgPE9QPk9SPC9PUD4gICA8VGVybVNldD4gICAgPFRlcm0+QWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXTwvVGVybT4gICAgPEZpZWxkPk9yZ2FuaXNtPC9GaWVsZD4gICAgPENvdW50PjQ3PC9Db3VudD4gICAgPEV4cGxvZGU+TjwvRXhwbG9kZT4gICA8L1Rlcm1TZXQ+ICAgPE9QPk9SPC9PUD4gIDwvVHJhbnNsYXRpb25TdGFjaz48UXVlcnlUcmFuc2xhdGlvbj5QaW51cyBjb250b3J0YVtPcmdhbmlzbTpub2V4cF0gT1IgQWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXSBPUiBQaW51cyBjb250b3J0YVtPcmdhbmlzbTpub2V4cF0gT1IgQWNjaXBpdGVyIHN0cmlhdHVzW09yZ2FuaXNtOm5vZXhwXTwvUXVlcnlUcmFuc2xhdGlvbj48L2VTZWFyY2hSZXN1bHQ+Cg==
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pmc&retmode=json&version=2.0&id=7464036%2C7454995%2C7429175%2C7412328%2C7369028%2C7380461%2C7374590%2C7351780%2C7336539%2C7010044&email=david.winter%40gmail.com&tool=rentrez&api_key=eea6131e94f20ca3f84bb345e8a4f9f4c108
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 24 Sep 2020 00:40:31 GMT
+      server: Finatra
+      strict-transport-security: max-age=31536000; includeSubDomains; preload
+      content-security-policy: upgrade-insecure-requests
+      x-ratelimit-remaining: '9'
+      ncbi-phid: 939B596B6E912A650000494BEC57638C.1.1.m_1
+      cache-control: private
+      ncbi-sid: 83ACB99473D29AFA_ED97SID
+      content-encoding: gzip
+      x-ratelimit-limit: '10'
+      access-control-allow-origin: '*'
+      content-type: application/json; charset=UTF-8
+      set-cookie: ncbi_sid=83ACB99473D29AFA_ED97SID; domain=.nih.gov; path=/; expires=Fri,
+        24 Sep 2021 00:40:31 GMT
+      x-ua-compatible: IE=Edge
+      x-xss-protection: 1; mode=block
+      transfer-encoding: chunked
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJoZWFkZXIiOnsidHlwZSI6ImVzdW1tYXJ5IiwidmVyc2lvbiI6IjAuMyJ9LCJyZXN1bHQiOnsidWlkcyI6WyI3NDY0MDM2IiwiNzQ1NDk5NSIsIjc0MjkxNzUiLCI3NDEyMzI4IiwiNzM2OTAyOCIsIjczODA0NjEiLCI3Mzc0NTkwIiwiNzM1MTc4MCIsIjczMzY1MzkiLCI3MDEwMDQ0Il0sIjc0NjQwMzYiOnsidWlkIjoiNzQ2NDAzNiIsInB1YmRhdGUiOiIyMDIwIEF1ZyAxMiIsImVwdWJkYXRlIjoiMjAyMCBBdWcgMTIiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQbGFudHMgKEJhc2VsKSIsImF1dGhvcnMiOlt7Im5hbWUiOiJUYXNuaW0gUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiR3JpZXMgUiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWF0dHNzb24gSiIsImF1dGh0eXBlIjoiQXV0aG9yIn1dLCJ0aXRsZSI6IklkZW50aWZpY2F0aW9uIG9mIFRocmVlIE1vbm9mdW5jdGlvbmFsIERpdGVycGVuZSBTeW50aGFzZXMgd2l0aCBTcGVjaWZpYyBFbnp5bWUgQWN0aXZpdGllcyBFeHByZXNzZWQgZHVyaW5nIEhlYXJ0d29vZCBGb3JtYXRpb24gaW4gV2VzdGVybiBSZWRjZWRhciAoVGh1amEgcGxpY2F0YSkgVHJlZXMiLCJ2b2x1bWUiOiI5IiwiaXNzdWUiOiI4IiwicGFnZXMiOiIxMDE4IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI4MDY3ODkifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMzM5MC9wbGFudHM5MDgxMDE4In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQ2NDAzNiJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUGxhbnRzIiwic29ydGRhdGUiOiIyMDIwLzA4LzEyIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA5LzA0In0sIjc0NTQ5OTUiOnsidWlkIjoiNzQ1NDk5NSIsInB1YmRhdGUiOiIyMDIwIEF1ZyAyOCIsImVwdWJkYXRlIjoiMjAyMCBBdWcgMjgiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQTG9TIE9uZSIsImF1dGhvcnMiOlt7Im5hbWUiOiJDaG9pIERZIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJXaXR0aWcgVFciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IktsdWV2ZXIgQk0iLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJBbiBldmFsdWF0aW9uIG9mIGJpcmQgYW5kIGJhdCBtb3J0YWxpdHkgYXQgd2luZCB0dXJiaW5lcyBpbiB0aGUgTm9ydGhlYXN0ZXJuIFVuaXRlZCBTdGF0ZXMiLCJ2b2x1bWUiOiIxNSIsImlzc3VlIjoiOCIsInBhZ2VzIjoiZTAyMzgwMzQiLCJhcnRpY2xlaWRzIjpbeyJpZHR5cGUiOiJwbWlkIiwidmFsdWUiOiIzMjg1Nzc4MCJ9LHsiaWR0eXBlIjoiZG9pIiwidmFsdWUiOiIxMC4xMzcxL2pvdXJuYWwucG9uZS4wMjM4MDM0In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQ1NDk5NSJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUExvUyBPTkUiLCJzb3J0ZGF0ZSI6IjIwMjAvMDgvMjggMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDkvMDIifSwiNzQyOTE3NSI6eyJ1aWQiOiI3NDI5MTc1IiwicHViZGF0ZSI6IjIwMjAgSnVsIDEiLCJlcHViZGF0ZSI6IjIwMjAgSnVsIDEiLCJwcmludHB1YmRhdGUiOiIyMDIwIEF1ZyAxIiwic291cmNlIjoiQmlvc2NpZW5jZSIsImF1dGhvcnMiOlt7Im5hbWUiOiJDb29wIEpEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJQYXJrcyBTQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3RldmVucy1SdW1hbm4gQ1MiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkNyYXVzYmF5IFNEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIaWd1ZXJhIFBFIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIdXJ0ZWF1IE1EIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJUZXBsZXkgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2hpdG1hbiBFIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJBc3NhbCBUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDb2xsaW5zIEJNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJEYXZpcyBLVCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRG9icm93c2tpIFMiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZhbGsgREEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZvcm53YWx0IFBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJGdWzDqSBQWiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSGFydmV5IEJKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJLYW5lIFZSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJMaXR0bGVmaWVsZCBDRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWFyZ29saXMgRVEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5vcnRoIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhcmlzaWVuIE1BIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJQcmljaGFyZCBTIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSb2RtYW4gS0MiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJXaWxkZmlyZS1Ecml2ZW4gRm9yZXN0IENvbnZlcnNpb24gaW4gV2VzdGVybiBOb3J0aCBBbWVyaWNhbiBMYW5kc2NhcGVzIiwidm9sdW1lIjoiNzAiLCJpc3N1ZSI6IjgiLCJwYWdlcyI6IjY1OS02NzMiLCJhcnRpY2xlaWRzIjpbeyJpZHR5cGUiOiJwbWlkIiwidmFsdWUiOiIzMjgyMTA2NiJ9LHsiaWR0eXBlIjoiZG9pIiwidmFsdWUiOiIxMC4xMDkzL2Jpb3NjaS9iaWFhMDYxIn0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQyOTE3NSJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiQmlvc2NpZW5jZSIsInNvcnRkYXRlIjoiMjAyMC8wNy8wMSAwMDowMCIsInBtY2xpdmVkYXRlIjoiMjAyMC8wOC8xOSJ9LCI3NDEyMzI4Ijp7InVpZCI6Ijc0MTIzMjgiLCJwdWJkYXRlIjoiMjAyMCBKdWwgMTQiLCJlcHViZGF0ZSI6IjIwMjAgSnVsIDE0IiwicHJpbnRwdWJkYXRlIjoiIiwic291cmNlIjoiTWF0ZXJpYWxzIChCYXNlbCkiLCJhdXRob3JzIjpbeyJuYW1lIjoiUmVzY2Fsdm8gRkoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlRpbWJvbG1hcyBDIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJCcmF2byBSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHYWxsZWdvIEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJFeHBlcmltZW50YWwgYW5kIE51bWVyaWNhbCBBbmFseXNpcyBvZiBNaXhlZCBJLTIxNCBQb3BsYXIvUGludXMgU3lsdmVzdHJpcyBMYW1pbmF0ZWQgVGltYmVyIFN1YmplY3RlZCB0byBCZW5kaW5nIExvYWRpbmdzIiwidm9sdW1lIjoiMTMiLCJpc3N1ZSI6IjE0IiwicGFnZXMiOiIzMTM0IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2NzQzNTUifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMzM5MC9tYTEzMTQzMTM0In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzQxMjMyOCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiTWF0ZXJpYWxzIiwic29ydGRhdGUiOiIyMDIwLzA3LzE0IDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA4LzE3In0sIjczNjkwMjgiOnsidWlkIjoiNzM2OTAyOCIsInB1YmRhdGUiOiIyMDIwIEp1bCAxNiIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMTYiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJQZWVySiIsImF1dGhvcnMiOlt7Im5hbWUiOiJMZW9uYXJkIExUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJNaWtrZWxzb24gSyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSGFvIFoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkJyb2RpZSBFTCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2lsbGlhbXMgS0giLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlNoYXJwIEpPIiwiYXV0aHR5cGUiOiJBdXRob3IifV0sInRpdGxlIjoiQSBjb21wYXJpc29uIG9mIGxvZGdlcG9sZSBhbmQgc3BydWNlIG5lZWRsZSBjaGVtaXN0cnkgaW1wYWN0cyBvbiB0ZXJyZXN0cmlhbCBiaW9nZW9jaGVtaWNhbCBwcm9jZXNzZXMgZHVyaW5nIGlzb2xhdGVkIGRlY29tcG9zaXRpb24iLCJ2b2x1bWUiOiI4IiwiaXNzdWUiOiIiLCJwYWdlcyI6ImU5NTM4IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI3NDI4MDQifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuNzcxNy9wZWVyai45NTM4In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzM2OTAyOCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiUGVlckoiLCJzb3J0ZGF0ZSI6IjIwMjAvMDcvMTYgMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDcvMzEifSwiNzM4MDQ2MSI6eyJ1aWQiOiI3MzgwNDYxIiwicHViZGF0ZSI6IjIwMjAgSnVsIDI0IiwiZXB1YmRhdGUiOiIyMDIwIEp1bCAyNCIsInByaW50cHViZGF0ZSI6IiIsInNvdXJjZSI6IkogSW5zZWN0IFNjaSIsImF1dGhvcnMiOlt7Im5hbWUiOiJCYWxvZ2ggU0wiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkJqw7Zya2x1bmQgTiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiSHViZXIgRFAiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkxpbmRncmVuIEJTIiwiYXV0aHR5cGUiOiJBdXRob3IifV0sInRpdGxlIjoiUmFuZG9tIGFuZCBEaXJlY3RlZCBNb3ZlbWVudCBieSBXYXJyZW4gUm9vdCBDb2xsYXIgV2VldmlscyAoQ29sZW9wdGVyYTogQ3VyY3VsaW9uaWRhZSksIFJlbGF0aXZlIHRvIFNpemUgYW5kIERpc3RhbmNlIG9mIEhvc3QgTG9kZ2Vwb2xlIFBpbmUgVHJlZXMiLCJ2b2x1bWUiOiIyMCIsImlzc3VlIjoiNCIsInBhZ2VzIjoiOSIsImFydGljbGVpZHMiOlt7ImlkdHlwZSI6InBtaWQiLCJ2YWx1ZSI6IjMyNzA2ODcyIn0seyJpZHR5cGUiOiJkb2kiLCJ2YWx1ZSI6IjEwLjEwOTMvamlzZXNhL2llYWEwNjMifSx7ImlkdHlwZSI6InBtY2lkIiwidmFsdWUiOiJQTUM3MzgwNDYxIn1dLCJmdWxsam91cm5hbG5hbWUiOiJKb3VybmFsIG9mIEluc2VjdCBTY2llbmNlIiwic29ydGRhdGUiOiIyMDIwLzA3LzI0IDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzI5In0sIjczNzQ1OTAiOnsidWlkIjoiNzM3NDU5MCIsInB1YmRhdGUiOiIyMDIwIEp1bCAyMSIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMjEiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJTY2kgUmVwIiwiYXV0aG9ycyI6W3sibmFtZSI6IlphbW9yYS1OYXNjYSBMQiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRGltYXJjbyBSRCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTmFzc2luaSBEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJBbHZlYXIgUEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik1heW9yYWwgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTnXDsWV6IE1BIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSZWx2YSBNQSIsImF1dGh0eXBlIjoiQXV0aG9yIn1dLCJ0aXRsZSI6IlNoZWVwIGZlZWRpbmcgcHJlZmVyZW5jZSBhcyBhIHRvb2wgdG8gY29udHJvbCBwaW5lIGludmFzaW9uIGluIFBhdGFnb25pYTogaW5mbHVlbmNlIG9mIGZvbGlhciB0b3VnaG5lc3MsIHRlcnBlbm9pZHMgYW5kIHJlc2luIGNvbnRlbnQiLCJ2b2x1bWUiOiIxMCIsImlzc3VlIjoiIiwicGFnZXMiOiIxMjExMyIsImFydGljbGVpZHMiOlt7ImlkdHlwZSI6InBtaWQiLCJ2YWx1ZSI6IjMyNjk0NTQ3In0seyJpZHR5cGUiOiJkb2kiLCJ2YWx1ZSI6IjEwLjEwMzgvczQxNTk4LTAyMC02ODc0OC15In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzM3NDU5MCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiU2NpZW50aWZpYyBSZXBvcnRzIiwic29ydGRhdGUiOiIyMDIwLzA3LzIxIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzIyIn0sIjczNTE3ODAiOnsidWlkIjoiNzM1MTc4MCIsInB1YmRhdGUiOiIyMDIwIEp1bCAxMCIsImVwdWJkYXRlIjoiMjAyMCBKdWwgMTAiLCJwcmludHB1YmRhdGUiOiIiLCJzb3VyY2UiOiJTY2kgUmVwIiwiYXV0aG9ycyI6W3sibmFtZSI6IlBpZ2VvbiBLRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTWFjTmVhcm5leSBEIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJIZWJibGV3aGl0ZSBNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJNdXNpYW5pIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5ldWZlbGQgTCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiQ3JhbnN0b24gSiIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3RlbmhvdXNlIEciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlNjaG1pZWdlbG93IEYiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkZpbm5lZ2FuIEwiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJUaGUgZGVuc2l0eSBvZiBhbnRocm9wb2dlbmljIGZlYXR1cmVzIGV4cGxhaW5zIHNlYXNvbmFsIGFuZCBiZWhhdmlvdXItYmFzZWQgZnVuY3Rpb25hbCByZXNwb25zZXMgaW4gc2VsZWN0aW9uIG9mIGxpbmVhciBmZWF0dXJlcyBieSBhIHNvY2lhbCBwcmVkYXRvciIsInZvbHVtZSI6IjEwIiwiaXNzdWUiOiIiLCJwYWdlcyI6IjExNDM3IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2NTE0MTkifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMTAzOC9zNDE1OTgtMDIwLTY4MTUxLTcifSx7ImlkdHlwZSI6InBtY2lkIiwidmFsdWUiOiJQTUM3MzUxNzgwIn1dLCJmdWxsam91cm5hbG5hbWUiOiJTY2llbnRpZmljIFJlcG9ydHMiLCJzb3J0ZGF0ZSI6IjIwMjAvMDcvMTAgMDA6MDAiLCJwbWNsaXZlZGF0ZSI6IjIwMjAvMDcvMTQifSwiNzMzNjUzOSI6eyJ1aWQiOiI3MzM2NTM5IiwicHViZGF0ZSI6IjIwMTAgRGVjIiwiZXB1YmRhdGUiOiIiLCJwcmludHB1YmRhdGUiOiIyMDEwIERlYyIsInNvdXJjZSI6Ik1pY3JvYmlvbG9neSAoUmVhZGluZykiLCJhdXRob3JzIjpbeyJuYW1lIjoiR3JpZmZpbiBNQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiU3Bha293aWN6IERKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHaWFub3VsaXMgVEEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlN0cm9iZWwgU0EiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJWb2xhdGlsZSBvcmdhbmljIGNvbXBvdW5kIHByb2R1Y3Rpb24gYnkgb3JnYW5pc21zIGluIHRoZSBnZW51cyBBc2NvY29yeW5lIGFuZCBhIHJlLWV2YWx1YXRpb24gb2YgbXljby1kaWVzZWwgcHJvZHVjdGlvbiBieSBOUlJMIDUwMDcyIiwidm9sdW1lIjoiMTU2IiwiaXNzdWUiOiJQdCAxMiIsInBhZ2VzIjoiMzgxNC0zODI5IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMjA3MDU2NTgifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMTA5OS9taWMuMC4wNDEzMjctMCJ9LHsiaWR0eXBlIjoicG1jaWQiLCJ2YWx1ZSI6IlBNQzczMzY1MzkifV0sImZ1bGxqb3VybmFsbmFtZSI6Ik1pY3JvYmlvbG9neSIsInNvcnRkYXRlIjoiMjAxMC8xMi8wMSAwMDowMCIsInBtY2xpdmVkYXRlIjoiMjAyMC8wNy8wNyJ9LCI3MDEwMDQ0Ijp7InVpZCI6IjcwMTAwNDQiLCJwdWJkYXRlIjoiMjAxNyBKdWwgMTIiLCJlcHViZGF0ZSI6IjIwMTcgSnVsIDEyIiwicHJpbnRwdWJkYXRlIjoiIiwic291cmNlIjoiRUZTQSBKIiwiYXV0aG9ycyI6W3sibmFtZSI6IkVGU0EgUGFuZWzCoG9uIFBsYW50IEhlYWx0aCAoUExIKSIsImF1dGh0eXBlIjoiQ29sbGVjdGl2ZU5hbWUifSx7Im5hbWUiOiJKZWdlciBNIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDYWZmaWVyIEQiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IkNhbmRyZXNzZSBUIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJDaGF0eml2YXNzaWxpb3UgRSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiRGVobmVu4oCQU2NobXV0eiBLIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJHaWxpb2xpIEciLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ikdyw6lnb2lyZSBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJKYXF1ZXMgTWlyZXQgSkEiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik1hY0xlb2QgQSIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiTmF2YWphcyBOYXZhcnJvIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6Ik5pZXJlIEIiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhcm5lbGwgUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiUG90dGluZyBSIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJSYWZvc3MgVCIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiVXJlayBHIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWYW4gQnJ1Z2dlbiBBIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWYW4gRGVyIFdlcmYgVyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiV2VzdCBKIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJXaW50ZXIgUyIsImF1dGh0eXBlIjoiQXV0aG9yIn0seyJuYW1lIjoiQm9iZXJnIEoiLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBvcnRhIFB1Z2xpYSBBIiwiYXV0aHR5cGUiOiJBdXRob3IifSx7Im5hbWUiOiJWZXR0cmFpbm8gQU0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlBhdXRhc3NvIE0iLCJhdXRodHlwZSI6IkF1dGhvciJ9LHsibmFtZSI6IlJvc3NpIFYiLCJhdXRodHlwZSI6IkF1dGhvciJ9XSwidGl0bGUiOiJQZXN0IHJpc2sgYXNzZXNzbWVudCBvZiBBdHJvcGVsbGlzIHNwcC4gZm9yIHRoZSBFVSB0ZXJyaXRvcnkiLCJ2b2x1bWUiOiIxNSIsImlzc3VlIjoiNyIsInBhZ2VzIjoiZTA0ODc3IiwiYXJ0aWNsZWlkcyI6W3siaWR0eXBlIjoicG1pZCIsInZhbHVlIjoiMzI2MjU1NDQifSx7ImlkdHlwZSI6ImRvaSIsInZhbHVlIjoiMTAuMjkwMy9qLmVmc2EuMjAxNy40ODc3In0seyJpZHR5cGUiOiJwbWNpZCIsInZhbHVlIjoiUE1DNzAxMDA0NCJ9XSwiZnVsbGpvdXJuYWxuYW1lIjoiRUZTQSBKb3VybmFsIiwic29ydGRhdGUiOiIyMDE3LzA3LzEyIDAwOjAwIiwicG1jbGl2ZWRhdGUiOiIyMDIwLzA3LzAyIn19fQo=
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Pinus_contorta&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:31 GMT
+      content-length: '45'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W119
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Accipiter_striatus&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:31 GMT
+      content-length: '45'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W119
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Pinus%20contorta&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:31 GMT
+      content-length: '1472'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W3siTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgRG91Zy4gZXguIExvdWQuIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgRG91Z2wuIGV4IExvdWQuIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgRG91Z2xhcyBleCBMb3VkZW4ifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSBEb3VnbGFzIGV4IExvdWRlbiB2YXIuIGxhdGlmb2xpYSBFbmdlbG0uIGV4IFMuIFdhdHNvbiJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIERvdWdsYXMgZXggTG91ZG9uIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgRG91Z2xhcyBleCBMb3Vkb24gKDE4MzgpIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgY29udG9ydGEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSBsYXRpZm9saWEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSBtdXJyYXlhbmEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSBzc3AuIGJvbGFuZGVyaSJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHNzcC4gbGF0aWZvbGlhIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgc3NwLiBtdXJyYXlhbmEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSBzdWJzcC4gYm9sYW5kZXJpIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgc3Vic3AuIG11cnJheWFuYSAoR3Jldi4gXHUwMDI2IEJhbGYuKSBDcml0Y2hmaWVsZCJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHN1YnNwLiBtdXJyeWFuYSJ9LHsiTmFtZUNvbmZpcm1lZCI6IlBpbnVzIGNvbnRvcnRhIHZhci4gYm9sYW5kZXJpIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBib2xhbmRlcmkgKFBhcmwuKSBLb2VobmUifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGNvbnRvcnRhIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBjb250b3J0YSBEb3VnbC4gZXggTG91ZC4ifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGNvbnRvcnRhIERvdWdsYXMgZXggTG91ZG9uIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBsYXRpZm9saWEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIGxhdGlmb2xpYSBFbmdlbG0uIn0seyJOYW1lQ29uZmlybWVkIjoiUGludXMgY29udG9ydGEgdmFyLiBtdXJyYXlhbmEifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBjb250b3J0YSB2YXIuIG11cnJheWFuYSAoQmFsZi4pIEVuZ2VsbS4ifSx7Ik5hbWVDb25maXJtZWQiOiJQaW51cyBzdWJzZWN0LiBDb250b3J0YSJ9XX0=
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2
+- request:
+    method: get
+    uri: https://www.biodiversitylibrary.org/api3?op=NameSearch&name=Accipiter%20striatus&apikey=8f7e89db-2ec3-4408-a160-c3dc416b118d&format=json
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      User-Agent: libcurl/7.72.0 r-curl/4.3 crul/1.0.0
+      Accept-Encoding: gzip, deflate
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: '200'
+      message: OK
+      explanation: Request fulfilled, document follows
+    headers:
+      status: HTTP/1.1 200 OK
+      cache-control: private
+      content-type: application/json; charset=utf-8
+      x-server-name: BHL1
+      content-security-policy: frame-ancestors 'self' http://*.societanaturalistinapoli.it;
+      access-control-allow-origin: '*'
+      access-control-allow-methods: GET,HEAD,OPTIONS,POST
+      access-control-allow-headers: Access-Control-Allow-Headers, Origin,Accept, X-Requested-With,
+        Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers
+      date: Thu, 24 Sep 2020 00:40:31 GMT
+      content-length: '768'
+    body:
+      encoding: ASCII-8BIT
+      file: no
+      string: eyJTdGF0dXMiOiJvayIsIkVycm9yTWVzc2FnZSI6IiIsIlJlc3VsdCI6W3siTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyJ9LHsiTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyBWaWVpbGxvdCAxODA4In0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIFZpZWlsbG90LCAxODA3In0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIFZpZWlsbG90LCAxODA4In0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIGNoaW9ub2dhc3RlciJ9LHsiTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyBlcnl0aHJvbmVtaXVzIn0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIGZyaW5naWxsb2lkZXMgVmlnb3JzLCAxODI3In0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIG1hZHJlbnNpcyJ9LHsiTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyBwZXJvYnNjdXJ1cyJ9LHsiTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyBzdHJpYXR1cyAoVmllaWxsb3QsIDE4MDcpIn0seyJOYW1lQ29uZmlybWVkIjoiQWNjaXBpdGVyIHN0cmlhdHVzIHN1dHRvbmkifSx7Ik5hbWVDb25maXJtZWQiOiJBY2NpcGl0ZXIgc3RyaWF0dXMgdmVsb3gifSx7Ik5hbWVDb25maXJtZWQiOiJBY2NpcGl0ZXIgc3RyaWF0dXMgdmVuYXRvciJ9LHsiTmFtZUNvbmZpcm1lZCI6IkFjY2lwaXRlciBzdHJpYXR1cyB2ZW50cmFsaXMifV19
+  recorded_at: 2020-09-24 00:40:33 GMT
+  recorded_with: vcr/0.5.4, webmockr/0.6.2

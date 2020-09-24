@@ -106,6 +106,7 @@ meta_plugins_bhl <- function(from, x, limit) {
   }
   # local SQLite
   con <- DBI::dbConnect(RSQLite::SQLite(), "/Users/sckott/Downloads/bhl-data/Data/bhl.sqlite")
+  on.exit(DBI::dbDisconnect(con))
   res <- DBI::dbSendQuery(con, 
     sprintf("SELECT * FROM pagename WHERE NameConfirmed IN ('%s') LIMIT %s",
       paste0(z, collapse="', '"), limit
